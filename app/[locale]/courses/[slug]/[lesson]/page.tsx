@@ -101,6 +101,15 @@ import { arLessonContrastMedia } from '@/content/ar/lessons/contrast-media'
 import { arLessonCTArtifacts } from '@/content/ar/lessons/ct-artifacts'
 
 /* =========================================================
+   ARABIC — MRI BASICS
+========================================================= */
+
+import { arLessonMRIIntroduction } from '@/content/ar/lessons/mri-introduction'
+import { arLessonMRISafety } from '@/content/ar/lessons/mri-safety'
+import { arLessonMRISequences } from '@/content/ar/lessons/mri-sequences'
+import { arLessonMRIImageQuality } from '@/content/ar/lessons/mri-image-quality'
+
+/* =========================================================
    ARABIC — CHEST X-RAY
 ========================================================= */
 
@@ -141,15 +150,7 @@ import { arLessonMammographyImageQualityCompression } from '@/content/ar/lessons
 import { arLessonMammographyRadiationSafety } from '@/content/ar/lessons/mammography-radiation-safety'
 import { arLessonMammographyImageReview } from '@/content/ar/lessons/mammography-image-review'
 
-/* =========================================================
-   ROUTE CONFIG
-========================================================= */
-
 export const dynamicParams = true
-
-/* =========================================================
-   TYPES
-========================================================= */
 
 type LessonSection = {
   title: string
@@ -210,6 +211,13 @@ const ctLessonsEn: Record<string, LessonData> = {
   'ct-image-quality': enLessonCTImageQuality,
   'contrast-media': enLessonContrastMedia,
   'ct-artifacts': enLessonCTArtifacts,
+}
+
+const mriLessonsAr: Record<string, LessonData> = {
+  'mri-introduction': arLessonMRIIntroduction,
+  'mri-safety': arLessonMRISafety,
+  'mri-sequences': arLessonMRISequences,
+  'mri-image-quality': arLessonMRIImageQuality,
 }
 
 const mriLessonsEn: Record<string, LessonData> = {
@@ -308,7 +316,6 @@ const radiologyBasicsImagesAr: Record<string, string[]> = {
     'RB_L01_03_Radiology_Departments.webp',
     'RB_L01_04_Radiology_Workflow.webp',
   ],
-
   'xray-physics': [
     'RB_L02_01_Xray_Generation.webp',
     'RB_L02_02_Xray_Tube.webp',
@@ -316,13 +323,11 @@ const radiologyBasicsImagesAr: Record<string, string[]> = {
     'RB_L02_04_Xray_Beam.webp',
     'RB_L02_05_Attenuation.webp',
   ],
-
   'image-formation': [
     'RB_L03_01_Image_Formation.webp',
     'RB_L03_02_Attenuation_Path.webp',
     'RB_L03_03_Digital_Detector.webp',
   ],
-
   'image-quality': [
     'RB_L04_01_Image_Quality.webp',
     'RB_L04_02_Spatial_Resolution.webp',
@@ -330,7 +335,6 @@ const radiologyBasicsImagesAr: Record<string, string[]> = {
     'RB_L04_04_Image_Noise.webp',
     'RB_L04_05_Exposure_Quality.webp',
   ],
-
   'radiation-safety': [
     'RB_L05_01_Radiation_Safety.webp',
     'RB_L05_02_Time_Distance_Shielding.webp',
@@ -338,7 +342,6 @@ const radiologyBasicsImagesAr: Record<string, string[]> = {
     'RB_L05_04_Dosimetry.webp',
     'RB_L05_05_Safety_Workflow.webp',
   ],
-
   'patient-positioning': [
     'RB_L06_01_Patient_Positioning.webp',
     'RB_L06_02_AP_PA_Position.webp',
@@ -350,17 +353,106 @@ const radiologyBasicsImagesAr: Record<string, string[]> = {
 
 const radiologyBasicsImagesEn: Record<string, string[]> = {
   intro: [
-    'RB_EN_L01_01_Radiology_Overview.webp',
-    'RB_EN_L01_02_Imaging_Modalities.webp',
-    'RB_EN_L01_03_Radiology_Departments.webp',
-    'RB_EN_L01_04_Radiology_Workflow.webp',
+    'RB_EN_L01_01_Radiology_Overview.jpg',
+    'RB_L01_02_What_Is_Radiology.jpg',
+    'RB_L01_03_Major_Imaging_Modalities.jpg',
+    'RB_L01_04_Radiology_Examination_Workflow.jpg',
   ],
-
-  'xray-physics': [],
-  'image-formation': [],
-  'image-quality': [],
-  'radiation-safety': [],
+  'xray-physics': [
+    'RB_L02_01_XRay_Physics_Fundamentals.jpg',
+    'RB_L02_02_XRay_Beam_Energy.jpg',
+    'RB_L02_03_XRay_Interactions_With_Matter.jpg',
+    'RB_L02_04_XRay_Attenuation.jpg',
+    'RB_L02_05_Factors_Affecting_Attenuation.jpg',
+  ],
+  'image-formation': [
+    'RB_L03_01_Image_Formation_Basics.jpg',
+    'RB_L03_02_Image_Receptor_Digital_Formation.jpg',
+    'RB_L03_03_Pixel_Matrix_Digital_Image.jpg',
+    'RB_L03_04_Digital_Image_Formation.jpg',
+    'RB_L03_05_Digital_Image_Processing.jpg',
+  ],
+  'image-quality': [
+    'RB_L04_01_Image_Quality.jpg',
+    'RB_L04_02_Spatial_Resolution.jpg',
+    'RB_L04_03_Contrast_Resolution.jpg',
+    'RB_L04_04_Image_Noise.jpg',
+    'RB_L04_05_Exposure_Quality.png.jpg',
+  ],
+  'radiation-safety': [
+    'RB_QS_L02_01_Radiation_Safety_Fundamentals.jpg',
+    'RB_QS_L02_02_Radiation_Exposure_Principles.jpg',
+    'RB_QS_L02_03_ALARA_Principle.jpg',
+    'RB_QS_L02_04_Personal_Protection.jpg',
+    'RB_QS_L02_05_Radiation_Safety_Workflow.jpg',
+  ],
   'patient-positioning': [],
+}
+
+/* =========================================================
+   MRI IMAGES — VERIFIED FILE EXTENSIONS
+========================================================= */
+
+const mriImagesAr: Record<string, string[]> = {
+  'mri-introduction': [
+    'RB_MRI_L01_01_How_MRI_Works.webp',
+    'RB_MRI_L01_02_MRI_System_Components.webp',
+    'RB_MRI_L01_03_Signal_to_Image.webp',
+    'RB_MRI_L01_04_MRI_Planes_Orientation.webp',
+    'RB_MRI_L01_05_MRI_Signal_Basics.webp',
+  ],
+  'mri-safety': [
+    'RB_MRI_L02_01_MRI_Safety_Fundamentals.webp',
+    'RB_MRI_L02_02_MRI_Safety_Zones.webp',
+    'RB_MRI_L02_03_Ferromagnetic_Hazards.webp',
+    'RB_MRI_L02_04_Implants_Medical_Devices.webp',
+    'RB_MRI_L02_05_Patient_Screening.webp',
+  ],
+  'mri-sequences': [
+    'RB_MRI_L03_01_T1_Weighted_Imaging.webp',
+    'RB_MRI_L03_02_T2_Weighted_Imaging.webp',
+    'RB_MRI_L03_03_FLAIR.webp',
+    'RB_MRI_L03_04_DWI.webp',
+    'RB_MRI_L03_05_MRI_Sequences_Comparison.webp',
+  ],
+  'mri-image-quality': [
+    'RB_MRI_L04_01_MRI_Image_Quality.webp',
+    'RB_MRI_L04_02_SNR.webp',
+    'RB_MRI_L04_03_Spatial_Resolution.webp',
+    'RB_MRI_L04_04_Motion_Artifacts.webp',
+    'RB_MRI_L04_05_MRI_Image_Quality_Checklist.webp',
+  ],
+}
+
+const mriImagesEn: Record<string, string[]> = {
+  'mri-introduction': [
+    'RB_MRI_L01_01_How_MRI_Works.jpg',
+    'RB_MRI_L01_02_MRI_System_Components.jpg',
+    'RB_MRI_L01_03_Signal_to_Image.jpg',
+    'RB_MRI_L01_04_MRI_Planes_Orientation.jpg',
+    'RB_MRI_L01_05_MRI_Signal_Basics.jpg',
+  ],
+  'mri-safety': [
+    'RB_MRI_L02_01_MRI_Safety_Fundamentals.jpg',
+    'RB_MRI_L02_02_MRI_Safety_Zones.jpg',
+    'RB_MRI_L02_03_Ferromagnetic_Hazards.jpg',
+    'RB_MRI_L02_04_Implants_Medical_Devices.jpg',
+    'RB_MRI_L02_05_Patient_Screening.jpg',
+  ],
+  'mri-sequences': [
+    'RB_MRI_L03_01_T1_Weighted_Imaging.jpg',
+    'RB_MRI_L03_02_T2_Weighted_Imaging.jpg',
+    'RB_MRI_L03_03_FLAIR.jpg',
+    'RB_MRI_L03_04_DWI.jpg',
+    'RB_MRI_L03_05_MRI_Sequences_Comparison.jpg',
+  ],
+  'mri-image-quality': [
+    'RB_MRI_L04_01_Image_Quality.jpg',
+    'RB_MRI_L04_02_Spatial_Resolution.jpg',
+    'RB_MRI_L04_03_Contrast_Resolution.jpg',
+    'RB_MRI_L04_04_Image_Noise.jpg',
+    'RB_MRI_L04_05_Artifacts.jpg',
+  ],
 }
 
 const chestImagesAr: Record<string, string[]> = {
@@ -371,20 +463,37 @@ const chestImagesAr: Record<string, string[]> = {
     'RB_CXR_L01_04_Diaphragm_Costophrenic_Angles.png',
     'RB_CXR_L01_05_Anatomical_Landmarks.png',
   ],
-
-  'pa-ap-view': [],
-  'chest-image-quality': [],
-  'systematic-approach': [],
-  'common-findings': [],
-}
-
-const chestImagesEn: Record<string, string[]> = {
-  'chest-anatomy': [],
   'pa-ap': [],
   'chest-image-quality': [],
   'systematic-review': [],
   'common-signs': [],
-  'clinical-application': [],
+}
+
+const chestImagesEn: Record<string, string[]> = {
+  'chest-anatomy': [
+    'RB_CXR_L01_01_Chest_Anatomy_Overview.jpg',
+    'RB_CXR_L01_02_Heart_Lungs_Mediastinum.jpg',
+  ],
+  'pa-ap': [
+    'RB_CXR_L02_01_PA_vs_AP_Comparison.jpg',
+    'RB_CXR_L02_02_Cardiac_Magnification_Positioning.jpg',
+  ],
+  'chest-image-quality': [
+    'RB_CXR_L03_01_Image_Quality_Assessment.jpg',
+    'RB_CXR_L03_02_Rotation_Inspiration_Exposure.jpg',
+  ],
+  'systematic-review': [
+    'RB_CXR_L04_01_Systematic_Review_Approach.jpg',
+    'RB_CXR_L04_02_Airway_Lungs_Heart_Bones.jpg',
+  ],
+  'common-signs': [
+    'RB_CXR_L05_01_Common_Radiographic_Signs.jpg',
+    'RB_CXR_L05_02_Silhouette_Air_Bronchogram_Pleural_Signs.jpg',
+  ],
+  'clinical-application': [
+    'RB_CXR_L06_01_Clinical_Case_Approach.jpg',
+    'RB_CXR_L06_02_Common_Chest_Pathology_Cases.jpg',
+  ],
 }
 
 const ctImagesAr: Record<string, string[]> = {
@@ -397,7 +506,6 @@ const ctImagesAr: Record<string, string[]> = {
     'CT_L01_06_Window_Width_Level.png',
     'CT_L01_07_CT_Workflow.png',
   ],
-
   'ct-protocols': [
     'CT_L02_01_Protocol_Selection_HR.png',
     'CT_L02_02_Head_CT_Protocol_HR.png',
@@ -407,7 +515,6 @@ const ctImagesAr: Record<string, string[]> = {
     'CT_L02_06_CT_Dose_HR.png',
     'CT_L02_07_Protocol_Optimization_HR.webp',
   ],
-
   'ct-parameters': [
     'CT_L03_01_Pitch.png',
     'CT_L03_02_Slice_Thickness.png',
@@ -416,7 +523,6 @@ const ctImagesAr: Record<string, string[]> = {
     'CT_L03_05_Rotation_Time.webp',
     'CT_L03_06_Scan_Parameters_Overview.webp',
   ],
-
   'ct-image-quality': [
     'CT_L04_01_Spatial_Resolution.png',
     'CT_L04_02_MPR.png',
@@ -426,7 +532,6 @@ const ctImagesAr: Record<string, string[]> = {
     'CT_Masterclass_L04_IMG07_Image_Quality.webp',
     'CT_Masterclass_L04_IMG09_Dose_Optimization.webp',
   ],
-
   'contrast-media': [
     'CT_L05_01_Contrast_Media_Types.webp',
     'CT_L05_02_IV_Contrast_Injection.webp',
@@ -436,7 +541,6 @@ const ctImagesAr: Record<string, string[]> = {
     'CT_Masterclass_L02_IMG11_Final_Review.webp',
     'CT_Masterclass_L02_IMG12_Lesson_Summary.webp',
   ],
-
   'ct-artifacts': [
     'CT_L06_01_CT_Artifacts.png',
     'CT_L06_02_CT_Artifacts.webp',
@@ -445,51 +549,42 @@ const ctImagesAr: Record<string, string[]> = {
 
 const ctImagesEn: Record<string, string[]> = {
   'ct-basics': [
-    'CT_L01_01.webp',
-    'CT_L01_02.webp',
-    'CT_L01_03.webp',
-    'CT_L01_04.webp',
-    'CT_L01_05.webp',
+    'CT_L01_01_CT_Scanner_Anatomy.jpg',
+    'CT_L01_02_CT_Image_Formation.jpg',
+    'CT_L01_03_Pixel_vs_Voxel.jpg',
+    'CT_L01_04_CT_Axial_Coronal_Sagittal.jpg',
+    'CT_L01_05_Hounsfield_Units.jpg',
   ],
-
   'ct-protocols': [
-    'CT_L02_01.webp',
-    'CT_L02_02.webp',
-    'CT_L02_03.webp',
-    'CT_L02_04.webp',
-    'CT_L02_05.webp',
+    'CT_L02_01_CT_Protocol_Fundamentals.jpg',
+    'CT_L02_02_CT_Protocol_Selection.jpg',
+    'CT_L02_03_Scan_Coverage.jpg',
+    'CT_L02_04_Contrast_Protocol.jpg',
+    'CT_L02_05_Protocol_Optimization.jpg',
   ],
-
   'ct-parameters': [
-    'CT_L03_01.webp',
-    'CT_L03_02.webp',
-    'CT_L03_03.webp',
-    'CT_L03_04.webp',
-    'CT_L03_05.webp',
+    'CT_L03_01_Pitch.jpg',
+    'CT_L03_02_Slice_Thickness.jpg',
+    'CT_L03_03_Matrix_FOV_Pixel_Size.jpg',
+    'CT_L03_04_Digital_Image_Formation.jpg',
+    'CT_L03_05_Rotation_Time.jpg',
   ],
-
   'ct-image-quality': [
-    'CT_L04_01.webp',
-    'CT_L04_02.webp',
-    'CT_L04_03.webp',
-    'CT_L04_04.webp',
-    'CT_L04_05.webp',
+    'CT_L04_01_Spatial_Resolution.jpg',
+    'CT_L04_02_MPR.jpg',
+    'CT_L04_03_Image_Reconstruction.jpg',
+    'CT_L04_04_Image_Quality.jpg',
+    'CT_L04_05_Dose_Optimization.jpg',
   ],
-
   'contrast-media': [
-    'CT_L05_01.webp',
-    'CT_L05_02.webp',
-    'CT_L05_03.webp',
-    'CT_L05_04.webp',
-    'CT_L05_05.webp',
+    'CT_L05_01_Contrast_Media_Types.jpg',
+    'CT_L05_02_IV_Contrast_Injection.jpg',
+    'CT_L05_03_Contrast_Timing_Bolus_Tracking.jpg',
+    'CT_L05_04_CTA_Contrast_Enhancement.jpg',
+    'CT_L05_05_Contrast_Safety_Patient_Preparation.jpg',
   ],
-
   'ct-artifacts': [
-    'CT_L06_01.webp',
-    'CT_L06_02.webp',
-    'CT_L06_03.webp',
-    'CT_L06_04.webp',
-    'CT_L06_05.webp',
+    'CT_L06_01_CT_Artifacts.jpg',
   ],
 }
 
@@ -501,7 +596,6 @@ const qualitySafetyImagesAr: Record<string, string[]> = {
     'RB_QS_L01_04_Patient_Safety_Service_Quality.webp.jpg',
     'RB_QS_L01_05_Continuous_Quality_Improvement.webp.webp',
   ],
-
   'radiation-safety': [
     'RB_L02_01_Radiation_Safety_Fundamentals.jpg',
     'RB_L02_02_Radiation_Exposure_Principles.jpg',
@@ -509,7 +603,6 @@ const qualitySafetyImagesAr: Record<string, string[]> = {
     'RB_L02_04_Personal_Protection.jpg',
     'RB_L02_05_Radiation_Safety_Workflow.jpg',
   ],
-
   compliance: [
     'RB_QS_L03_01_Compliance_Fundamentals.jpg',
     'RB_QS_L03_02_Regulatory_Standards.jpg',
@@ -517,7 +610,6 @@ const qualitySafetyImagesAr: Record<string, string[]> = {
     'RB_QS_L03_04_Compliance_Monitoring.jpg',
     'RB_QS_L03_05_Continuous_Compliance_Improvement.jpg',
   ],
-
   'quality-training': [
     'RB_QS_L04_01_Quality_Safety_Training.jpg',
     'RB_QS_L04_02_Staff_Competency_Assessment.jpg',
@@ -528,10 +620,34 @@ const qualitySafetyImagesAr: Record<string, string[]> = {
 }
 
 const qualitySafetyImagesEn: Record<string, string[]> = {
-  'quality-standards': [],
-  'radiation-safety': [],
-  compliance: [],
-  'quality-training': [],
+  'quality-standards': [
+    'RB_QS_L01_01_Radiology_Quality_Fundamentals.jpg',
+    'RB_QS_L01_02_Quality_Indicators.jpg',
+    'RB_QS_L01_03_Image_Quality_Standards.jpg',
+    'RB_QS_L01_04_Patient_Safety_Service_Quality.jpg',
+    'RB_QS_L01_05_Continuous_Quality_Improvement.jpg',
+  ],
+  'radiation-safety': [
+    'RB_QS_L02_01_Radiation_Safety_Fundamentals.jpg',
+    'RB_QS_L02_02_Radiation_Exposure_Principles.jpg',
+    'RB_QS_L02_03_ALARA_Principle.jpg',
+    'RB_QS_L02_04_Personal_Protection.jpg',
+    'RB_QS_L02_05_Radiation_Safety_Workflow.jpg',
+  ],
+  compliance: [
+    'RB_QS_L03_01_Compliance_Fundamentals.jpg',
+    'RB_QS_L03_02_Regulatory_Standards.jpg',
+    'RB_QS_L03_03_Documentation_Audit.jpg',
+    'RB_QS_L03_04_Compliance_Monitoring.jpg',
+    'RB_QS_L03_05_Continuous_Compliance_Improvement.jpg',
+  ],
+  'quality-training': [
+    'RB_QS_L04_01_Quality_Safety_Training.jpg',
+    'RB_QS_L04_02_Staff_Competency_Assessment.jpg',
+    'RB_QS_L04_03_Safety_Protocols_Training.jpg',
+    'RB_QS_L04_04_Quality_Control_Workflow.jpg',
+    'RB_QS_L04_05_Training_Quality_Improvement.jpg',
+  ],
 }
 
 const cArmImagesAr: Record<string, string[]> = {
@@ -540,31 +656,26 @@ const cArmImagesAr: Record<string, string[]> = {
     'RB_CA_L01_02_C_Arm_Basic_Components_AR.jpg',
     'RB_CA_L01_03_C_Arm_Operating_Room_AR.jpg',
   ],
-
   'c-arm-components': [
     'RB_CA_L02_01_C_Arm_Components_AR.jpg',
     'RB_CA_L02_02_Xray_Tube_Detector_AR.jpg',
     'RB_CA_L02_03_C_Arm_Movements_Controls_AR.jpg',
   ],
-
   'c-arm-fluoroscopy-principles': [
     'RB_CA_L03_01_Fluoroscopy_Principle_AR.jpg',
     'RB_CA_L03_02_Real_Time_Imaging_AR.jpg',
     'RB_CA_L03_03_Fluoroscopy_Image_Chain_AR.jpg',
   ],
-
   'c-arm-positioning-surgical-applications': [
     'RB_CA_L04_01_Surgical_Positioning_AR.jpg',
     'RB_CA_L04_02_Orthopedic_Surgical_Applications_AR.jpg',
     'RB_CA_L04_03_Surgical_Imaging_Views_AR.jpg',
   ],
-
   'c-arm-radiation-safety': [
     'RB_CA_L05_01_Radiation_Safety_Fundamentals_AR.jpg',
     'RB_CA_L05_02_Exposure_Reduction_AR.jpg',
     'RB_CA_L05_03_Protective_Equipment_Positioning_AR.jpg',
   ],
-
   'c-arm-clinical-applications-troubleshooting': [
     'RB_CA_L06_01_Clinical_Applications_AR.jpg',
     'RB_CA_L06_02_Common_Troubleshooting_AR.jpg',
@@ -573,12 +684,36 @@ const cArmImagesAr: Record<string, string[]> = {
 }
 
 const cArmImagesEn: Record<string, string[]> = {
-  'c-arm-introduction': [],
-  'c-arm-components': [],
-  'fluoroscopy-principles': [],
-  'c-arm-positioning-surgical-applications': [],
-  'c-arm-radiation-safety': [],
-  'c-arm-image-quality-troubleshooting': [],
+  'c-arm-introduction': [
+    'RB_CA_L01_01_C_Arm_Introduction.jpg',
+    'RB_CA_L01_02_C_Arm_Basic_Components.jpg',
+    'RB_CA_L01_03_C_Arm_Operating_Room.jpg',
+  ],
+  'c-arm-components': [
+    'RB_CA_L02_01_C_Arm_Components.jpg',
+    'RB_CA_L02_02_Xray_Tube_Detector.jpg',
+    'RB_CA_L02_03_C_Arm_Movements_Controls.jpg',
+  ],
+  'fluoroscopy-principles': [
+    'RB_CA_L03_01_Fluoroscopy_Principle.jpg',
+    'RB_CA_L03_02_Real_Time_Imaging.jpg',
+    'RB_CA_L03_03_Fluoroscopy_Image_Chain.jpg',
+  ],
+  'c-arm-positioning-surgical-applications': [
+    'RB_CA_L04_01_Surgical_Positioning.jpg',
+    'RB_CA_L04_02_Orthopedic_Surgical_Applications.jpg',
+    'RB_CA_L04_03_Surgical_Imaging_Views.jpg',
+  ],
+  'c-arm-radiation-safety': [
+    'RB_CA_L05_01_Radiation_Safety_Fundamentals.jpg',
+    'RB_CA_L05_02_Exposure_Reduction.jpg',
+    'RB_CA_L05_03_Protective_Equipment_Positioning.jpg',
+  ],
+  'c-arm-image-quality-troubleshooting': [
+    'RB_CA_L06_01_Clinical_Applications.jpg',
+    'RB_CA_L06_02_Common_Troubleshooting.jpg',
+    'RB_CA_L06_03_Image_Quality_Troubleshooting.jpg',
+  ],
 }
 
 const mammographyImagesAr: Record<string, string[]> = {
@@ -587,31 +722,26 @@ const mammographyImagesAr: Record<string, string[]> = {
     'RB_MAM_L01_02_Why_Mammography_Is_Specialized_AR.jpg',
     'RB_MAM_L01_03_Mammography_Examination_Workflow_AR.jpg',
   ],
-
   'mammography-equipment': [
     'RB_MAM_L02_01_Mammography_Equipment_AR.jpg',
     'RB_MAM_L02_02_Compression_System_AR.jpg',
     'RB_MAM_L02_03_Image_Receptor_Digital_Imaging_AR.jpg',
   ],
-
   'mammography-positioning-views': [
     'RB_MAM_L03_01_CC_MLO_Views_AR.jpg',
     'RB_MAM_L03_02_Correct_Breast_Positioning_AR.jpg',
     'RB_MAM_L03_03_Common_Positioning__AR.jpg',
   ],
-
   'mammography-image-quality-compression': [
     'RB_MAM_L04_01_Mammography_Image_Quality_AR.jpg',
     'RB_MAM_L04_02_Compression_Image_Quality_AR.jpg',
     'RB_MAM_L04_03_Common_Mammography_Artifacts_AR.jpg',
   ],
-
   'mammography-radiation-safety': [
     'RB_MAM_L05_01_Mammography_Radiation_Safety_AR.jpg',
     'RB_MAM_L05_02_Patient_Radiation_Protection_AR.jpg',
     'RB_MAM_L05_03_Radiation_Safety_Workflow_AR.jpg',
   ],
-
   'mammography-image-review': [
     'RB_MAM_L06_01_Mammography_Image_Review_AR.jpg',
     'RB_MAM_L06_02_Common_Mammographic_Findings_AR.jpg',
@@ -620,22 +750,43 @@ const mammographyImagesAr: Record<string, string[]> = {
 }
 
 const mammographyImagesEn: Record<string, string[]> = {
-  'mammography-introduction': [],
-  'mammography-equipment': [],
-  'mammography-positioning-views': [],
-  'mammography-image-quality-compression': [],
-  'mammography-radiation-safety': [],
-  'mammography-basic-findings': [],
+  'mammography-introduction': [
+    'RB_MAM_L01_01_Mammography_Introduction.jpg',
+    'RB_MAM_L01_02_Why_Mammography_Is_Specialized.jpg',
+    'RB_MAM_L01_03_Mammography_Examination_Workflow.jpg',
+  ],
+  'mammography-equipment': [
+    'RB_MAM_L02_01_Mammography_Equipment.jpg',
+    'RB_MAM_L02_02_Compression_System.jpg',
+    'RB_MAM_L02_03_Image_Receptor_Digital_Imaging.jpg',
+  ],
+  'mammography-positioning-views': [
+    'RB_MAM_L03_01_CC_MLO_Views.jpg',
+    'RB_MAM_L03_02_Correct_Breast_Positioning.jpg',
+    'RB_MAM_L03_03_Common_Positioning_Errors.jpg',
+  ],
+  'mammography-image-quality-compression': [
+    'RB_MAM_L04_01_Mammography_Image_Quality.jpg',
+    'RB_MAM_L04_02_Compression_Image_Quality.jpg',
+    'RB_MAM_L04_03_Common_Mammography_Artifacts.jpg',
+  ],
+  'mammography-radiation-safety': [
+    'RB_MAM_L05_01_Mammography_Radiation_Safety.jpg',
+    'RB_MAM_L05_02_Patientn_Radiation_Protectio.jpg',
+    'RB_MAM_L05_03_Radiation_Safety_Workflow.jpg',
+  ],
+  'mammography-basic-findings': [
+    'RB_MAM_L06_01_Mammography_Image_Review.jpg',
+    'RB_MAM_L06_02_Common_Mammographic_Findings.jpg',
+    'RB_MAM_L06_03_Mammography_Comparison_Follow_Up.jpg',
+  ],
 }
 
 /* =========================================================
    LESSON FOLDERS
 ========================================================= */
 
-const lessonFolders: Record<
-  string,
-  Record<string, string>
-> = {
+const lessonFolders: Record<string, Record<string, string>> = {
   'radiology-basics': {
     intro: 'lesson-01',
     'xray-physics': 'lesson-02',
@@ -644,7 +795,6 @@ const lessonFolders: Record<
     'radiation-safety': 'lesson-05',
     'patient-positioning': 'lesson-06',
   },
-
   'ct-mastery': {
     'ct-basics': 'lesson-01',
     'ct-protocols': 'lesson-02',
@@ -653,22 +803,26 @@ const lessonFolders: Record<
     'contrast-media': 'lesson-05',
     'ct-artifacts': 'lesson-06',
   },
-
+  'mri-basics': {
+    'mri-introduction': 'lesson-01',
+    'mri-safety': 'lesson-02',
+    'mri-sequences': 'lesson-03',
+    'mri-image-quality': 'lesson-04',
+  },
   'chest-xray': {
     'chest-anatomy': 'lesson-01',
-    'pa-ap-view': 'lesson-02',
+    'pa-ap': 'lesson-02',
     'chest-image-quality': 'lesson-03',
-    'systematic-approach': 'lesson-04',
-    'common-findings': 'lesson-05',
+    'systematic-review': 'lesson-04',
+    'common-signs': 'lesson-05',
+    'clinical-application': 'lesson-06',
   },
-
   'quality-safety': {
     'quality-standards': 'lesson-01',
     'radiation-safety': 'lesson-02',
     compliance: 'lesson-03',
     'quality-training': 'lesson-04',
   },
-
   'c-arm': {
     'c-arm-introduction': 'lesson-01',
     'c-arm-components': 'lesson-02',
@@ -677,7 +831,6 @@ const lessonFolders: Record<
     'c-arm-radiation-safety': 'lesson-05',
     'c-arm-clinical-applications-troubleshooting': 'lesson-06',
   },
-
   'c-arm-imaging': {
     'c-arm-introduction': 'lesson-01',
     'c-arm-components': 'lesson-02',
@@ -686,7 +839,6 @@ const lessonFolders: Record<
     'c-arm-radiation-safety': 'lesson-05',
     'c-arm-image-quality-troubleshooting': 'lesson-06',
   },
-
   mammography: {
     'mammography-introduction': 'lesson-01',
     'mammography-equipment': 'lesson-02',
@@ -714,6 +866,10 @@ function getLessonData(
 
     if (slug === 'ct-mastery') {
       return ctLessonsAr[lesson] ?? null
+    }
+
+    if (slug === 'mri-basics') {
+      return mriLessonsAr[lesson] ?? null
     }
 
     if (slug === 'chest-xray') {
@@ -779,49 +935,56 @@ function getLessonImages(
     if (slug === 'radiology-basics') {
       return {
         images: radiologyBasicsImagesAr[lesson] ?? [],
-        basePath:
-          '/images/ar/courses/radiology-basics',
+        basePath: '/images/ar/courses/radiology-basics',
+        useFolder: true,
       }
     }
 
     if (slug === 'ct-mastery') {
       return {
         images: ctImagesAr[lesson] ?? [],
-        basePath:
-          '/images/ar/courses/ct-mastery',
+        basePath: '/images/ar/courses/ct-mastery',
+        useFolder: true,
+      }
+    }
+
+    if (slug === 'mri-basics') {
+      return {
+        images: mriImagesAr[lesson] ?? [],
+        basePath: '/images/ar/courses/mri-basics',
+        useFolder: true,
       }
     }
 
     if (slug === 'chest-xray') {
       return {
         images: chestImagesAr[lesson] ?? [],
-        basePath:
-          '/images/ar/courses/chest-xray',
+        basePath: '/images/ar/courses/chest-xray',
+        useFolder: true,
       }
     }
 
     if (slug === 'quality-safety') {
       return {
         images: qualitySafetyImagesAr[lesson] ?? [],
-        basePath:
-          '/images/ar/courses/quality-safety',
+        basePath: '/images/ar/courses/quality-safety',
+        useFolder: true,
       }
     }
 
     if (slug === 'c-arm') {
       return {
         images: cArmImagesAr[lesson] ?? [],
-        basePath:
-          '/images/ar/courses/C_Arm',
+        basePath: '/images/ar/courses/C_Arm',
+        useFolder: true,
       }
     }
 
     if (slug === 'mammography') {
       return {
-        images:
-          mammographyImagesAr[lesson] ?? [],
-        basePath:
-          '/images/ar/courses/Mammography',
+        images: mammographyImagesAr[lesson] ?? [],
+        basePath: '/images/ar/courses/Mammography',
+        useFolder: true,
       }
     }
   }
@@ -830,49 +993,56 @@ function getLessonImages(
     if (slug === 'radiology-basics') {
       return {
         images: radiologyBasicsImagesEn[lesson] ?? [],
-        basePath:
-          '/images/en/courses/radiology-basics',
+        basePath: '/images/en/courses/radiology-basics',
+        useFolder: true,
       }
     }
 
     if (slug === 'ct-mastery') {
       return {
         images: ctImagesEn[lesson] ?? [],
-        basePath:
-          '/images/en/courses/ct-mastery',
+        basePath: '/images/en/courses/ct-mastery',
+        useFolder: true,
+      }
+    }
+
+    if (slug === 'mri-basics') {
+      return {
+        images: mriImagesEn[lesson] ?? [],
+        basePath: '/images/en/courses/mri-basics',
+        useFolder: true,
       }
     }
 
     if (slug === 'chest-xray') {
       return {
         images: chestImagesEn[lesson] ?? [],
-        basePath:
-          '/images/en/courses/chest-xray',
+        basePath: '/images/en/courses/chest-xray',
+        useFolder: true,
       }
     }
 
     if (slug === 'quality-safety') {
       return {
         images: qualitySafetyImagesEn[lesson] ?? [],
-        basePath:
-          '/images/en/courses/quality-safety',
+        basePath: '/images/en/courses/quality-safety',
+        useFolder: true,
       }
     }
 
     if (slug === 'c-arm-imaging') {
       return {
         images: cArmImagesEn[lesson] ?? [],
-        basePath:
-          '/images/en/courses/C_Arm',
+        basePath: '/images/en/courses/C_Arm',
+        useFolder: true,
       }
     }
 
     if (slug === 'mammography') {
       return {
-        images:
-          mammographyImagesEn[lesson] ?? [],
-        basePath:
-          '/images/en/courses/Mammography',
+        images: mammographyImagesEn[lesson] ?? [],
+        basePath: '/images/en/courses/Mammography',
+        useFolder: true,
       }
     }
   }
@@ -880,23 +1050,16 @@ function getLessonImages(
   return {
     images: [],
     basePath: '',
+    useFolder: false,
   }
 }
 
-/* =========================================================
-   LIST RENDERER
-========================================================= */
-
-function renderList(
-  value: string | string[]
-) {
+function renderList(value: string | string[]) {
   if (Array.isArray(value)) {
     return (
       <div className="space-y-2">
         {value.map((item, index) => (
-          <p key={index}>
-            • {item}
-          </p>
+          <p key={index}>• {item}</p>
         ))}
       </div>
     )
@@ -904,10 +1067,6 @@ function renderList(
 
   return <p>{value}</p>
 }
-
-/* =========================================================
-   STATIC PARAMS
-========================================================= */
 
 export function generateStaticParams() {
   const params: Array<{
@@ -939,10 +1098,6 @@ export function generateStaticParams() {
   return params
 }
 
-/* =========================================================
-   METADATA
-========================================================= */
-
 export async function generateMetadata({
   params,
 }: {
@@ -952,45 +1107,29 @@ export async function generateMetadata({
     lesson: string
   }
 }) {
-  const {
-    locale,
-    slug,
-    lesson,
-  } = params
+  const { locale, slug, lesson } = params
 
-  const courses =
-    locale === 'ar'
-      ? arCourses
-      : enCourses
+  const courses = locale === 'ar' ? arCourses : enCourses
 
-  const course = courses.find(
-    item => item.slug === slug
-  )
+  const course = courses.find(item => item.slug === slug)
 
   if (!course) {
     return {}
   }
 
-  const lessonInfo =
-    course.lessons.find(
-      item => item.slug === lesson
-    )
+  const lessonInfo = course.lessons.find(
+    item => item.slug === lesson
+  )
 
   if (!lessonInfo) {
     return {}
   }
 
   return {
-    title:
-      `${lessonInfo.title} | Hidden Radiology`,
-    description:
-      lessonInfo.title,
+    title: `${lessonInfo.title} | Hidden Radiology`,
+    description: lessonInfo.title,
   }
 }
-
-/* =========================================================
-   LESSON PAGE
-========================================================= */
 
 export default async function LessonPage({
   params,
@@ -1007,10 +1146,6 @@ export default async function LessonPage({
     lesson,
   } = params
 
-  /* -------------------------------------------------------
-     VALIDATE LOCALE
-  ------------------------------------------------------- */
-
   if (
     localeParam !== 'ar' &&
     localeParam !== 'en'
@@ -1018,82 +1153,45 @@ export default async function LessonPage({
     notFound()
   }
 
-  const locale =
-    localeParam as Locale
+  const locale = localeParam as Locale
+  const isAr = locale === 'ar'
 
-  const isAr =
-    locale === 'ar'
+  const courses = isAr ? arCourses : enCourses
 
-  /* -------------------------------------------------------
-     SELECT COURSES
-  ------------------------------------------------------- */
-
-  const courses =
-    isAr
-      ? arCourses
-      : enCourses
-
-  /* -------------------------------------------------------
-     FIND COURSE
-  ------------------------------------------------------- */
-
-  const course =
-    courses.find(
-      item => item.slug === slug
-    )
+  const course = courses.find(
+    item => item.slug === slug
+  )
 
   if (!course) {
     notFound()
   }
 
-  /* -------------------------------------------------------
-     FIND LESSON
-  ------------------------------------------------------- */
-
-  const lessonInfo =
-    course.lessons.find(
-      item => item.slug === lesson
-    )
+  const lessonInfo = course.lessons.find(
+    item => item.slug === lesson
+  )
 
   if (!lessonInfo) {
     notFound()
   }
 
-  /* -------------------------------------------------------
-     LESSON CONTENT
-  ------------------------------------------------------- */
-
-  const lessonData =
-    getLessonData(
-      locale,
-      slug,
-      lesson
-    )
-
-  /* -------------------------------------------------------
-     IMAGES
-  ------------------------------------------------------- */
+  const lessonData = getLessonData(
+    locale,
+    slug,
+    lesson
+  )
 
   const {
     images,
     basePath,
-  } =
-    getLessonImages(
-      locale,
-      slug,
-      lesson
-    )
-
-  /* -------------------------------------------------------
-     FOLDER
-  ------------------------------------------------------- */
+    useFolder,
+  } = getLessonImages(
+    locale,
+    slug,
+    lesson
+  )
 
   const folder =
     lessonFolders[slug]?.[lesson] ?? ''
-
-  /* =======================================================
-     RENDER
-  ======================================================= */
 
   return (
     <main
@@ -1102,68 +1200,41 @@ export default async function LessonPage({
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* BACK */}
-
         <Link
           href={`/${locale}/courses/${course.slug}`}
           className="inline-flex items-center gap-2 text-slate-400 hover:text-brand-cyan mb-8 transition-colors"
         >
-          <span>
-            {isAr ? '←' : '←'}
-          </span>
+          <span>←</span>
 
           {isAr
             ? 'العودة إلى الدورة'
             : 'Back to Course'}
         </Link>
 
-        {/* CARD */}
-
         <article className="bg-brand-card border border-brand-border rounded-2xl p-8">
-
-          {/* LABEL */}
 
           <div className="mb-6">
             <span className="inline-block px-3 py-1 rounded-lg text-xs font-medium bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">
-              {isAr
-                ? 'الدرس'
-                : 'Lesson'}
+              {isAr ? 'الدرس' : 'Lesson'}
             </span>
           </div>
 
-          {/* TITLE */}
-
           <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            {lessonData?.title ??
-              lessonInfo.title}
+            {lessonData?.title ?? lessonInfo.title}
           </h1>
 
-          {/* DURATION */}
-
           <p className="text-slate-400 mb-10">
-            {isAr
-              ? 'مدة الدرس: '
-              : 'Duration: '}
-
-            {lessonData?.duration ??
-              lessonInfo.duration}
+            {isAr ? 'مدة الدرس: ' : 'Duration: '}
+            {lessonData?.duration ?? lessonInfo.duration}
           </p>
-
-          {/* =================================================
-             CONTENT
-          ================================================= */}
 
           {lessonData ? (
             <div className="space-y-10">
 
-              {/* INTRODUCTION */}
-
               {lessonData.introduction && (
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">
-                    {isAr
-                      ? 'مقدمة'
-                      : 'Introduction'}
+                    {isAr ? 'مقدمة' : 'Introduction'}
                   </h2>
 
                   <p className="text-slate-300 leading-8">
@@ -1171,8 +1242,6 @@ export default async function LessonPage({
                   </p>
                 </section>
               )}
-
-              {/* OBJECTIVES */}
 
               {lessonData.objectives && (
                 <section>
@@ -1183,14 +1252,10 @@ export default async function LessonPage({
                   </h2>
 
                   <div className="text-slate-300 leading-8">
-                    {renderList(
-                      lessonData.objectives
-                    )}
+                    {renderList(lessonData.objectives)}
                   </div>
                 </section>
               )}
-
-              {/* SECTIONS */}
 
               {lessonData.sections &&
                 lessonData.sections.length > 0 && (
@@ -1202,12 +1267,8 @@ export default async function LessonPage({
                     </h2>
 
                     <div className="space-y-8">
-
                       {lessonData.sections.map(
-                        (
-                          section,
-                          index
-                        ) => (
+                        (section, index) => (
                           <div
                             key={index}
                             className={
@@ -1226,12 +1287,9 @@ export default async function LessonPage({
                           </div>
                         )
                       )}
-
                     </div>
                   </section>
                 )}
-
-              {/* PRACTICAL EXAMPLE */}
 
               {lessonData.practicalExample && (
                 <section>
@@ -1243,30 +1301,17 @@ export default async function LessonPage({
 
                   <div className="bg-slate-900/40 border border-brand-border rounded-xl p-5">
                     <h3 className="text-lg font-bold text-white mb-2">
-                      {
-                        lessonData
-                          .practicalExample
-                          .title
-                      }
+                      {lessonData.practicalExample.title}
                     </h3>
 
                     <p className="text-slate-300 leading-8">
-                      {
-                        lessonData
-                          .practicalExample
-                          .content
-                      }
+                      {lessonData.practicalExample.content}
                     </p>
                   </div>
                 </section>
               )}
 
-              {/* =================================================
-                 EDUCATIONAL IMAGES
-              ================================================= */}
-
               {images.length > 0 &&
-                folder &&
                 basePath && (
                   <section>
                     <h2 className="text-2xl font-bold text-white mb-6">
@@ -1276,31 +1321,31 @@ export default async function LessonPage({
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
                       {images.map(
-                        (
-                          image,
-                          index
-                        ) => (
-                          <div
-                            key={`${image}-${index}`}
-                            className="overflow-hidden rounded-xl border border-brand-border bg-slate-900"
-                          >
-                            <img
-                              src={`${basePath}/${folder}/${encodeURIComponent(image)}`}
-                              alt={`${lessonInfo.title} - ${index + 1}`}
-                              className="w-full h-auto object-contain"
-                              loading="lazy"
-                            />
-                          </div>
-                        )
-                      )}
+                        (image, index) => {
+                          const imagePath =
+                            useFolder && folder
+                              ? `${basePath}/${folder}/${encodeURIComponent(image)}`
+                              : `${basePath}/${encodeURIComponent(image)}`
 
+                          return (
+                            <div
+                              key={`${image}-${index}`}
+                              className="overflow-hidden rounded-xl border border-brand-border bg-slate-900"
+                            >
+                              <img
+                                src={imagePath}
+                                alt={`${lessonInfo.title} - ${index + 1}`}
+                                className="w-full h-auto object-contain"
+                                loading="lazy"
+                              />
+                            </div>
+                          )
+                        }
+                      )}
                     </div>
                   </section>
                 )}
-
-              {/* COMMON MISTAKES */}
 
               {lessonData.commonMistakes && (
                 <section>
@@ -1318,8 +1363,6 @@ export default async function LessonPage({
                 </section>
               )}
 
-              {/* KEY POINTS */}
-
               {lessonData.keyPoints && (
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">
@@ -1336,8 +1379,6 @@ export default async function LessonPage({
                 </section>
               )}
 
-              {/* TAKEAWAY */}
-
               {lessonData.takeaway && (
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">
@@ -1353,8 +1394,6 @@ export default async function LessonPage({
                   </div>
                 </section>
               )}
-
-              {/* DISCLAIMER */}
 
               {lessonData.disclaimer && (
                 <section>
@@ -1378,3 +1417,13 @@ export default async function LessonPage({
     </main>
   )
 }
+
+
+
+
+
+
+
+
+
+
