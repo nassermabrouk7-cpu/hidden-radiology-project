@@ -1,0 +1,144 @@
+﻿import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { Locale } from '@/lib/types'
+import { arCourses } from '@/content/ar/courses'
+import { enCourses } from '@/content/en/courses'
+import { generateMetadata as genMeta } from '@/lib/seo'
+import { ArrowLeft } from 'lucide-react'
+
+export function generateStaticParams({
+  params,
+}: {
+  params: { locale: string }
+}) {
+  const courses = params.locale === 'ar' ? arCourses : enCourses
+
+  return courses.map((c) => ({
+    slug: c.slug,
+  }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params
+  const courses = locale === 'ar' ? arCourses : enCourses
+  const course = courses.find((c) => c.slug === slug)
+
+  if (!course) return {}
+
+  return genMeta(course.seo, locale)
+}
+
+export default async function CoursePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale: localeParam, slug } = await params
+  const locale = localeParam as Locale
+  const isAr = locale === 'ar'
+
+  const courses = locale === 'ar' ? arCourses : enCourses
+
+  const course = courses.find(
+    (c) => c.slug === slug
+  )
+
+  if (!course) {
+    notFound()
+  }
+
+  const levelLabels: Record<string, string> = {
+    BEGINNER: isAr ? 'Ù…Ø¨ØªØ¯Ø¦' : 'Beginner',
+    FOUNDATION: isAr ? 'Ø£Ø³Ø§Ø³ÙŠ' : 'Foundation',
+    CLINICAL: isAr ? 'Ø³Ø±ÙŠØ±ÙŠ' : 'Clinical',
+    PROFESSIONAL: isAr ? 'Ø§Ø­ØªØ±Ø§ÙÙŠ' : 'Professional',
+  }
+
+  return (
+    <div className="min-h-screen py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Ø§Ù„Ø¹ÙˆØ¯Ø© Ù„Ù„Ø¯ÙˆØ±Ø§Øª */}
+        <Link
+          href={`/${locale}/courses`}
+          className="inline-flex items-center gap-2 text-slate-400 hover:text-brand-cyan mb-8 transition-colors"
+        >
+          <ArrowLeft
+            className={`w-4 h-4 ${
+              isAr ? '' : 'rotate-180'
+            }`}
+          />
+
+          {isAr ? 'Ø§Ù„Ø¹ÙˆØ¯Ø© Ù„Ù„Ø¯ÙˆØ±Ø§Øª' : 'Back to Courses'}
+        </Link>
+
+        {/* Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„ÙƒÙˆØ±Ø³ */}
+        <div className="bg-brand-card border border-brand-border rounded-2xl p-8 mb-8">
+
+          <span className="inline-block px-3 py-1 rounded-lg text-xs font-medium bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 mb-4">
+            {levelLabels[course.level]}
+          </span>
+
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4 font-poppins">
+            {course.title}
+          </h1>
+
+          <p className="text-slate-400 text-lg leading-relaxed">
+            {course.description}
+          </p>
+
+        </div>
+
+        {/* Ø§Ù„Ø¯Ø±ÙˆØ³ */}
+        <h2 className="text-2xl font-bold text-white mb-6">
+          {isAr ? 'Ø§Ù„Ø¯Ø±ÙˆØ³' : 'Lessons'}
+        </h2>
+
+        <div className="space-y-3">
+
+          {course.lessons.map((lesson, index) => (
+
+            <Link
+              key={lesson.id}
+              href={`/${locale}/courses/${course.slug}/${lesson.slug}`}
+              className="bg-brand-card border border-brand-border rounded-xl p-4 flex items-center justify-between hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all group"
+            >
+
+              <div className="flex items-center gap-4">
+
+                <span className="w-8 h-8 rounded-lg bg-brand-cyan/10 text-brand-cyan flex items-center justify-center font-bold text-sm shrink-0">
+                  {index + 1}
+                </span>
+
+                <span className="text-white font-medium group-hover:text-brand-cyan transition-colors">
+                  {lesson.title}
+                </span>
+
+              </div>
+
+              <span className="text-slate-500 text-sm">
+                {lesson.duration}
+              </span>
+
+            </Link>
+
+          ))}
+
+        </div>
+
+        {/* Ø­Ø§Ù„Ø© Ø§Ù„ÙƒÙˆØ±Ø³ */}
+        {course.status === 'COMING_SOON' && (
+
+          <div className="mt-8 bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-6 text-center">
+
+            <p className="text-yellow-400 font-medium text-lg">
+              {isAr
+                ? 'Ù‡Ø°Ù‡ Ø§Ù„Ø¯ÙˆØ±Ø© Ù‚Ø±ÙŠØ¨Ø§Ù‹ â€” Ø³ÙŠØªÙ… Ø§Ù„Ø¥Ø´Ø¹Ø§Ø± Ø¹Ù†Ø¯ Ø§Ù„ØªÙˆÙØ±'
+                : 'This course is coming soon â€” get notified when available'}
+            </p>
+
+          </div>
+
+        )}
+
+      </div>
+    </div>
+  )
+}
+

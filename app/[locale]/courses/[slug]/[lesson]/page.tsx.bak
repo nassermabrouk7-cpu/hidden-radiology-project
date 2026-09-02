@@ -1,0 +1,406 @@
+﻿import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { Locale } from '@/lib/types'
+import { arCourses } from '@/content/ar/courses'
+import { enCourses } from '@/content/en/courses'
+
+import { arLessonIntro } from '@/content/ar/lessons/intro'
+import { arLessonXrayPhysics } from '@/content/ar/lessons/xray-physics'
+import { arLessonImageFormation } from '@/content/ar/lessons/image-formation'
+import { arLessonImageQuality } from '@/content/ar/lessons/image-quality'
+import { arLessonRadiationSafety } from '@/content/ar/lessons/radiation-safety'
+import { arLessonPatientPositioning } from '@/content/ar/lessons/patient-positioning'
+
+import { arLessonQualityStandards } from '@/content/ar/lessons/quality-standards'
+import { arLessonRadiationSafety as arQualityRadiationSafety } from '@/content/ar/lessons/radiation-safety'
+import { arLessonCompliance } from '@/content/ar/lessons/compliance'
+import { arLessonQualityTraining } from '@/content/ar/lessons/quality-training'
+
+const radiologyBasicsLessons: Record<string, any> = {
+  intro: arLessonIntro,
+  'xray-physics': arLessonXrayPhysics,
+  'image-formation': arLessonImageFormation,
+  'image-quality': arLessonImageQuality,
+  'radiation-safety': arLessonRadiationSafety,
+  'patient-positioning': arLessonPatientPositioning,
+}
+
+const qualitySafetyLessons: Record<string, any> = {
+  'quality-standards': arLessonQualityStandards,
+  'radiation-safety': arQualityRadiationSafety,
+  compliance: arLessonCompliance,
+  'quality-training': arLessonQualityTraining,
+}
+
+const radiologyBasicsImages: Record<string, string[]> = {
+  intro: [
+    'RB_L01_01_Radiology_Overview.webp',
+    'RB_L01_02_Radiology_Modalities.webp',
+    'RB_L01_03_Radiology_Departments.webp',
+    'RB_L01_04_Radiology_Workflow.webp',
+  ],
+
+  'xray-physics': [
+    'RB_L02_01_Xray_Generation.webp',
+    'RB_L02_02_Xray_Tube.webp',
+    'RB_L02_03_Electron_Interaction.webp',
+    'RB_L02_04_Xray_Beam.webp',
+    'RB_L02_05_Attenuation.webp',
+  ],
+
+  'image-formation': [
+    'RB_L03_01_Image_Formation.webp',
+    'RB_L03_02_Attenuation_Path.webp',
+    'RB_L03_03_Digital_Detector.webp',
+  ],
+
+  'image-quality': [
+    'RB_L04_01_Image_Quality.webp',
+    'RB_L04_02_Spatial_Resolution.webp',
+    'RB_L04_03_Contrast_Resolution.webp',
+    'RB_L04_04_Image_Noise.webp',
+    'RB_L04_05_Exposure_Quality.webp',
+  ],
+
+  'radiation-safety': [
+    'RB_L05_01_Radiation_Safety.webp',
+    'RB_L05_02_Time_Distance_Shielding.webp',
+    'RB_L05_03_Personal_Protection.webp',
+    'RB_L05_04_Dosimetry.webp',
+    'RB_L05_05_Safety_Workflow.webp',
+  ],
+
+  'patient-positioning': [
+    'RB_L06_01_Patient_Positioning.webp',
+    'RB_L06_02_AP_PA_Position.webp',
+    'RB_L06_03_Lateral_Position.png',
+    'RB_L06_04_Centering.webp',
+    'RB_L06_05_Collimation.webp',
+  ],
+}
+
+const lessonFolder: Record<string, string> = {
+  intro: 'lesson-01',
+  'xray-physics': 'lesson-02',
+  'image-formation': 'lesson-03',
+  'image-quality': 'lesson-04',
+  'radiation-safety': 'lesson-05',
+  'patient-positioning': 'lesson-06',
+}
+
+export function generateStaticParams() {
+  const params: {
+    locale: string
+    slug: string
+    lesson: string
+  }[] = []
+
+  for (const course of arCourses) {
+    for (const lesson of course.lessons) {
+      params.push({
+        locale: 'ar',
+        slug: course.slug,
+        lesson: lesson.slug,
+      })
+    }
+  }
+
+  for (const course of enCourses) {
+    for (const lesson of course.lessons) {
+      params.push({
+        locale: 'en',
+        slug: course.slug,
+        lesson: lesson.slug,
+      })
+    }
+  }
+
+  return params
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{
+    locale: string
+    slug: string
+    lesson: string
+  }>
+}) {
+  const { locale, slug, lesson } = await params
+
+  const courses = locale === 'ar' ? arCourses : enCourses
+  const course = courses.find((c) => c.slug === slug)
+
+  if (!course) return {}
+
+  const lessonInfo = course.lessons.find((l) => l.slug === lesson)
+
+  if (!lessonInfo) return {}
+
+  return {
+    title: `${lessonInfo.title} | Hidden Radiology`,
+    description: lessonInfo.title,
+  }
+}
+
+export default async function LessonPage({
+  params,
+}: {
+  params: Promise<{
+    locale: string
+    slug: string
+    lesson: string
+  }>
+}) {
+  const {
+    locale: localeParam,
+    slug,
+    lesson,
+  } = await params
+
+  const locale = localeParam as Locale
+  const isAr = locale === 'ar'
+
+  const courses = isAr ? arCourses : enCourses
+
+  const course = courses.find(
+    (c) => c.slug === slug
+  )
+
+  if (!course) {
+    notFound()
+  }
+
+  const lessonInfo = course.lessons.find(
+    (l) => l.slug === lesson
+  )
+
+  if (!lessonInfo) {
+    notFound()
+  }
+
+  const lessonData =
+    isAr && slug === 'radiology-basics'
+      ? radiologyBasicsLessons[lesson]
+      : isAr && slug === 'quality-safety'
+        ? qualitySafetyLessons[lesson]
+        : null
+
+  const images =
+    isAr && slug === 'radiology-basics'
+      ? radiologyBasicsImages[lesson] || []
+      : []
+
+  const folder = lessonFolder[lesson]
+
+  return (
+    <div
+      dir={isAr ? 'rtl' : 'ltr'}
+      className="min-h-screen py-12"
+    >
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <Link
+          href={`/${locale}/courses/${course.slug}`}
+          className="inline-flex items-center gap-2 text-slate-400 hover:text-brand-cyan mb-8 transition-colors"
+        >
+          ← {isAr ? 'العودة إلى الدورة' : 'Back to Course'}
+        </Link>
+
+        <div className="bg-brand-card border border-brand-border rounded-2xl p-8">
+
+          <div className="mb-6">
+            <span className="inline-block px-3 py-1 rounded-lg text-xs font-medium bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">
+              {isAr ? 'الدرس' : 'Lesson'}
+            </span>
+          </div>
+
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            {lessonData?.title || lessonInfo.title}
+          </h1>
+
+          <p className="text-slate-400 mb-8">
+            {isAr ? 'مدة الدرس: ' : 'Duration: '}
+            {lessonData?.duration || lessonInfo.duration}
+          </p>
+
+          {lessonData ? (
+            <div className="space-y-10">
+
+              {lessonData.introduction && (
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-3">
+                    {isAr ? 'مقدمة' : 'Introduction'}
+                  </h2>
+
+                  <p className="text-slate-300 leading-8">
+                    {lessonData.introduction}
+                  </p>
+                </section>
+              )}
+
+              {lessonData.objectives && (
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-3">
+                    {isAr ? 'أهداف الدرس' : 'Lesson Objectives'}
+                  </h2>
+
+                  <div className="space-y-2 text-slate-300 leading-8">
+                    {Array.isArray(lessonData.objectives)
+                      ? lessonData.objectives.map(
+                          (item: string, index: number) => (
+                            <p key={index}>• {item}</p>
+                          )
+                        )
+                      : lessonData.objectives}
+                  </div>
+                </section>
+              )}
+
+              {lessonData.sections && (
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-5">
+                    {isAr ? 'شرح الدرس' : 'Lesson Content'}
+                  </h2>
+
+                  <div className="space-y-8">
+                    {lessonData.sections.map(
+                      (
+                        section: {
+                          title: string
+                          content: string
+                        },
+                        index: number
+                      ) => (
+                        <div
+                          key={index}
+                          className="border-r-2 border-brand-cyan/30 pr-5"
+                        >
+                          <h3 className="text-xl font-bold text-white mb-3">
+                            {section.title}
+                          </h3>
+
+                          <p className="text-slate-300 leading-8">
+                            {section.content}
+                          </p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </section>
+              )}
+
+              {lessonData.practicalExample && (
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-3">
+                    {isAr ? 'مثال عملي' : 'Practical Example'}
+                  </h2>
+
+                  <div className="bg-slate-900/40 border border-brand-border rounded-xl p-5">
+                    <h3 className="text-lg font-bold text-white mb-2">
+                      {lessonData.practicalExample.title}
+                    </h3>
+
+                    <p className="text-slate-300 leading-8">
+                      {lessonData.practicalExample.content}
+                    </p>
+                  </div>
+                </section>
+              )}
+
+              {images.length > 0 && folder && (
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-5">
+                    {isAr ? 'الصور التعليمية' : 'Educational Images'}
+                  </h2>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {images.map((image, index) => (
+                      <div
+                        key={image}
+                        className="overflow-hidden rounded-xl border border-brand-border bg-slate-900"
+                      >
+                        <img
+                          src={`/images/ar/courses/radiology-basics/${folder}/${image}`}
+                          alt={`${lessonInfo.title} - ${index + 1}`}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {lessonData.commonMistakes && (
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-3">
+                    {isAr ? 'الأخطاء الشائعة' : 'Common Mistakes'}
+                  </h2>
+
+                  <div className="space-y-2 text-slate-300 leading-8">
+                    {Array.isArray(lessonData.commonMistakes)
+                      ? lessonData.commonMistakes.map(
+                          (item: string, index: number) => (
+                            <p key={index}>• {item}</p>
+                          )
+                        )
+                      : lessonData.commonMistakes}
+                  </div>
+                </section>
+              )}
+
+              {lessonData.keyPoints && (
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-3">
+                    {isAr ? 'أهم النقاط' : 'Key Points'}
+                  </h2>
+
+                  <div className="space-y-2 text-slate-300 leading-8">
+                    {Array.isArray(lessonData.keyPoints)
+                      ? lessonData.keyPoints.map(
+                          (item: string, index: number) => (
+                            <p key={index}>• {item}</p>
+                          )
+                        )
+                      : lessonData.keyPoints}
+                  </div>
+                </section>
+              )}
+
+              {lessonData.takeaway && (
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-3">
+                    {isAr ? 'الخلاصة' : 'Takeaway'}
+                  </h2>
+
+                  <div className="bg-brand-cyan/5 border border-brand-cyan/20 rounded-xl p-5">
+                    <p className="text-slate-200 leading-8">
+                      {lessonData.takeaway}
+                    </p>
+                  </div>
+                </section>
+              )}
+
+              {lessonData.disclaimer && (
+                <section>
+                  <p className="text-sm text-slate-500 leading-7">
+                    {lessonData.disclaimer}
+                  </p>
+                </section>
+              )}
+
+            </div>
+          ) : (
+            <div className="text-slate-300 leading-8">
+              {isAr
+                ? 'محتوى هذا الدرس قيد الإعداد.'
+                : 'This lesson content is being prepared.'}
+            </div>
+          )}
+
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -1,0 +1,27 @@
+/* @tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0B0F19;
+    color: #f8fafc;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-cyan hover:bg-brand-cyan-dark text-brand-dark font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-brand-cyan/25;
+  }
+  .btn-secondary {
+    @apply bg-brand-card hover:bg-brand-border text-white font-medium px-6 py-3 rounded-xl transition-all duration-300 border border-brand-border;
+  }
+  .card {
+    @apply bg-brand-card border border-brand-border rounded-2xl p-6 hover:border-brand-cyan/30 transition-all duration-300;
+  }
+}
