@@ -1,4 +1,5 @@
-﻿import { Locale } from '@/lib/types'
+﻿
+import { Locale, Course } from '@/lib/types'
 import { arCourses } from '@/content/ar/courses'
 import { enCourses } from '@/content/en/courses'
 import CourseCard from '@/components/course/CourseCard'
@@ -6,7 +7,7 @@ import CourseCard from '@/components/course/CourseCard'
 export default function CoursesPage({ params }: { params: { locale: string } }) {
   const locale = params.locale as Locale
   const isAr = locale === 'ar'
-  const courses = isAr ? arCourses : enCourses
+  const courses: Course[] = isAr ? arCourses : enCourses
   const visible = courses.filter(
     c => c.status === 'PUBLISHED' || c.status === 'COMING_SOON'
   )
