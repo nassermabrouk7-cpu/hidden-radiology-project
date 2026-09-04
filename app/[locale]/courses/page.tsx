@@ -7,7 +7,9 @@ import CourseCard from '@/components/course/CourseCard'
 export default function CoursesPage({ params }: { params: { locale: string } }) {
   const locale = params.locale as Locale
   const isAr = locale === 'ar'
-  const courses: Course[] = isAr ? arCourses : enCourses
+
+  const courses = (isAr ? arCourses : enCourses) as Course[]
+
   const visible = courses.filter(
     c => c.status === 'PUBLISHED' || c.status === 'COMING_SOON'
   )
@@ -40,3 +42,4 @@ export default function CoursesPage({ params }: { params: { locale: string } }) 
     </main>
   )
 }
+
