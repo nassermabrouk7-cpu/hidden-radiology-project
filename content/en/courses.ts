@@ -1,4 +1,6 @@
-﻿export const enCourses = [
+import type { Course } from '@/lib/types'
+
+export const enCourses: Course[] = [
   {
     id: 'hr-course-en-001',
     sku: 'HR-COURSE-EN-001',
@@ -8,7 +10,6 @@
     description:
       'A comprehensive foundational course covering X-ray physics, image formation, image quality, radiation safety, and patient positioning. Suitable for students and new radiographers.',
     level: 'BEGINNER',
-    cover: '/images/ar/courses/basics-radiology-course-cover.png',
     cover: '/images/en/courses/EN_radiology-basics-course-cover.jpg',
     
 
@@ -70,7 +71,6 @@
     description:
       'An advanced course covering CT fundamentals, protocols, parameters, image quality, contrast media, and CT artifacts.',
     level: 'CLINICAL',
-    cover: '/images/ar/courses/ct-mastery-course-cover.png',
     cover: '/images/en/courses/EN_ct-mastery-course-cover.jpg',
     
 
@@ -132,7 +132,6 @@
     description:
       'A professional course covering quality standards, radiation safety, compliance, and quality and safety training in radiology departments.',
     level: 'PROFESSIONAL',
-    cover: '/images/covers/Quality Safety -ar.png',
     cover: '/images/en/courses/EN_quality-safety-course-cover.jpg',
     
 
@@ -182,7 +181,6 @@
     description:
       'A practical course covering chest anatomy, positioning, image quality, and systematic chest X-ray review.',
     level: 'CLINICAL',
-    cover: '/images/ar/courses/cxr-course.jpg',
     cover: '/images/en/courses/EN_chest-xray-course-cover.jpg',
     
 
@@ -244,7 +242,6 @@
     description:
       'A foundational MRI course covering how MRI works, MRI safety, sequences, and image quality.',
     level: 'BEGINNER',
-    cover: '/images/covers/ana-fahim-mri-ar.png',
     cover: '/images/en/courses/EN_mri-basics-course-cover.jpg',
     
 
@@ -294,7 +291,6 @@
     description:
       'A practical course covering C-Arm fundamentals, system components, fluoroscopy principles, positioning, surgical applications, radiation safety, image quality, and troubleshooting.',
     level: 'CLINICAL',
-    cover: '/images/ar/courses/AR_c-arm-course-cover.jpg',
     cover: '/images/en/courses/EN_c-arm-course-cover.jpg',
     
 
@@ -356,7 +352,6 @@
     description:
       'A practical course covering mammography fundamentals, equipment, breast positioning, standard views, image quality, compression, radiation safety, and basic mammographic findings.',
     level: 'CLINICAL',
-    cover: '/images/ar/courses/AR_mammography-course-cover.jpg',
     cover: '/images/en/courses/EN_mammography-course-cover.jpg',
     
 
@@ -409,6 +404,8 @@
     },
   },
 ]
+
+
 
 
 
