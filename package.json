@@ -10,10 +10,10 @@
     "validate": "node validate.js"
   },
   "dependencies": {
-    "next": "14.2.5",
+    "lucide-react": "^0.436.0",
+    "next": "^14.2.35",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "lucide-react": "^0.436.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
