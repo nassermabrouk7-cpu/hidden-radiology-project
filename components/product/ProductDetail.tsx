@@ -8,6 +8,7 @@ import { Locale } from '@/lib/types'
 import Button from '@/components/ui/Button'
 import Badge from '@/components/ui/Badge'
 import Skeleton from '@/components/ui/Skeleton'
+import FallbackImage from '@/components/ui/FallbackImage'
 import { ArrowLeft, ShoppingCart, MessageCircle, Smartphone, CreditCard, ExternalLink, CheckCircle, Shield, Download } from 'lucide-react'
 
 interface ProductDetailProps {
@@ -18,6 +19,7 @@ interface ProductDetailProps {
 export default function ProductDetail({ product, locale }: ProductDetailProps) {
   const isAr = locale === 'ar'
   const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageError, setImageError] = useState(false)
 
   const statusBadge = {
     DRAFT: { label: isAr ? 'مسودة' : 'Draft', variant: 'gray' as const },
@@ -54,18 +56,23 @@ export default function ProductDetail({ product, locale }: ProductDetailProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
         {/* Product Image with Skeleton Loading */}
         <div className="relative aspect-square bg-brand-darker rounded-2xl overflow-hidden border border-brand-border">
-          {!imageLoaded && (
+          {!imageLoaded && !imageError && (
             <Skeleton className="absolute inset-0 w-full h-full" />
           )}
-          <Image
-            src={product.cover}
-            alt={product.title}
-            fill
-            className={`object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            priority
-            onLoad={() => setImageLoaded(true)}
-          />
+          {imageError ? (
+            <FallbackImage title={product.title} category={product.category} className="rounded-2xl" />
+          ) : (
+            <Image
+              src={product.cover}
+              alt={product.title}
+              fill
+              className={`object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+              onLoad={() => setImageLoaded(true)}
+              onError={() => setImageError(true)}
+            />
+          )}
         </div>
 
         {/* Product Details */}

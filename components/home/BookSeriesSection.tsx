@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 import { Locale } from '@/lib/types'
 import { arProducts } from '@/content/ar/products'
 import { enProducts } from '@/content/en/products'
 import { BookOpen, ArrowRight, ArrowLeft, Star } from 'lucide-react'
 import Button from '@/components/ui/Button'
+import FallbackImage from '@/components/ui/FallbackImage'
 
 interface BookSeriesSectionProps {
   locale: Locale
@@ -14,10 +16,15 @@ export default function BookSeriesSection({ locale }: BookSeriesSectionProps) {
   const isAr = locale === 'ar'
   const products = isAr ? arProducts : enProducts
   const Arrow = isAr ? ArrowLeft : ArrowRight
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set())
 
   const anaFahimProducts = products.filter(p =>
     p.title.includes('أنا فاهم') || p.title.includes('Ana Fahim')
   )
+
+  const handleImageError = (productId: string) => {
+    setImageErrors(prev => new Set(prev).add(productId))
+  }
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -58,13 +65,18 @@ export default function BookSeriesSection({ locale }: BookSeriesSectionProps) {
               <div className="bg-brand-card/80 backdrop-blur-sm border border-brand-border rounded-2xl overflow-hidden hover:border-brand-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-cyan/10">
                 {/* Book Cover */}
                 <div className="relative aspect-[3/4] bg-brand-darker overflow-hidden">
-                  <Image
-                    src={product.cover}
-                    alt={product.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
+                  {imageErrors.has(product.id) ? (
+                    <FallbackImage title={product.title} category={product.category} className="group-hover:scale-105 transition-transform duration-500" />
+                  ) : (
+                    <Image
+                      src={product.cover}
+                      alt={product.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      onError={() => handleImageError(product.id)}
+                    />
+                  )}
                   
                   {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />

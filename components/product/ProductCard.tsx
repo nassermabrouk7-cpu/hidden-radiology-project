@@ -1,9 +1,13 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 import { Product } from '@/lib/types'
 import { Locale } from '@/lib/types'
 import Badge from '@/components/ui/Badge'
 import Button from '@/components/ui/Button'
+import FallbackImage from '@/components/ui/FallbackImage'
 import { ShoppingCart } from 'lucide-react'
 
 interface ProductCardProps {
@@ -13,6 +17,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, locale }: ProductCardProps) {
   const isAr = locale === 'ar'
+  const [imageError, setImageError] = useState(false)
 
   const statusBadge = {
     DRAFT: { label: isAr ? 'مسودة' : 'Draft', variant: 'gray' as const },
@@ -25,13 +30,18 @@ export default function ProductCard({ product, locale }: ProductCardProps) {
   return (
     <div className="bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-cyan/30 transition-all duration-300 flex flex-col">
       <Link href={`/${locale}/products/${product.slug}`} className="block relative aspect-video bg-brand-darker overflow-hidden">
-        <Image
-          src={product.cover}
-          alt={product.title}
-          fill
-          className="object-cover hover:scale-105 transition-transform duration-500"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        {imageError ? (
+          <FallbackImage title={product.title} category={product.category} className="hover:scale-105 transition-transform duration-500" />
+        ) : (
+          <Image
+            src={product.cover}
+            alt={product.title}
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onError={() => setImageError(true)}
+          />
+        )}
       </Link>
       <div className="p-5 flex-1 flex flex-col">
         <div className="flex items-center gap-2 mb-3">
