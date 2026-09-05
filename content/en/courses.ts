@@ -6,48 +6,48 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-001',
     language: 'en',
     slug: 'radiology-basics',
-    title: 'Radiology Basics for Beginners',
+    title: 'Radiology Fundamentals for Beginners',
     description:
-      'A comprehensive foundational course covering X-ray physics, image formation, image quality, radiation safety, and patient positioning. Suitable for students and new radiographers.',
+      'A comprehensive foundational course covering X-ray physics principles, image formation mechanisms, image quality optimization, radiation protection protocols, and patient positioning techniques. Designed for radiography students and entry-level radiologic technologists.',
     level: 'BEGINNER',
     cover: '/images/en/courses/EN_radiology-basics-course-cover.jpg',
-    
+
 
     lessons: [
       {
         id: 'l1',
         slug: 'intro',
-        title: 'Introduction to Radiology',
+        title: 'Introduction to Diagnostic Radiology',
         duration: '15 min',
       },
       {
         id: 'l2',
         slug: 'xray-physics',
-        title: 'X-Ray Physics',
+        title: 'X-Ray Physics Principles',
         duration: '20 min',
       },
       {
         id: 'l3',
         slug: 'image-formation',
-        title: 'Image Formation',
+        title: 'Radiographic Image Formation',
         duration: '20 min',
       },
       {
         id: 'l4',
         slug: 'image-quality',
-        title: 'Image Quality',
+        title: 'Image Quality Fundamentals',
         duration: '18 min',
       },
       {
         id: 'l5',
         slug: 'radiation-safety',
-        title: 'Radiation Safety',
+        title: 'Radiation Protection & Safety',
         duration: '18 min',
       },
       {
         id: 'l6',
         slug: 'patient-positioning',
-        title: 'Patient Positioning',
+        title: 'Patient Positioning Basics',
         duration: '20 min',
       },
     ],
@@ -55,9 +55,9 @@ export const enCourses: Course[] = [
     status: 'PUBLISHED',
 
     seo: {
-      title: 'Radiology Basics for Beginners | Hidden Radiology',
+      title: 'Radiology Fundamentals Course — X-Ray Physics & Patient Positioning | Hidden Radiology',
       description:
-        'A comprehensive foundational radiology course for students and new radiographers.',
+        'Comprehensive foundational radiology course covering X-ray physics, image formation, radiation safety, and patient positioning for students and new radiographers.',
       canonical: '/en/courses/radiology-basics',
     },
   },
@@ -67,48 +67,48 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-002',
     language: 'en',
     slug: 'ct-mastery',
-    title: 'CT Mastery',
+    title: 'Computed Tomography (CT) Mastery',
     description:
-      'An advanced course covering CT fundamentals, protocols, parameters, image quality, contrast media, and CT artifacts.',
+      'An advanced clinical course covering CT scanner fundamentals, imaging protocols, acquisition parameters, image quality optimization, iodinated contrast media administration, and CT artifact recognition and reduction. Designed for radiologic technologists seeking CT specialization.',
     level: 'CLINICAL',
     cover: '/images/en/courses/EN_ct-mastery-course-cover.jpg',
-    
+
 
     lessons: [
       {
         id: 'l1',
         slug: 'ct-basics',
-        title: 'CT Basics',
+        title: 'CT Scanner Fundamentals',
         duration: '20 min',
       },
       {
         id: 'l2',
         slug: 'ct-protocols',
-        title: 'CT Protocols',
+        title: 'CT Imaging Protocols',
         duration: '25 min',
       },
       {
         id: 'l3',
         slug: 'ct-parameters',
-        title: 'CT Parameters',
+        title: 'Acquisition Parameters & Techniques',
         duration: '22 min',
       },
       {
         id: 'l4',
         slug: 'ct-image-quality',
-        title: 'CT Image Quality',
+        title: 'CT Image Quality Optimization',
         duration: '20 min',
       },
       {
         id: 'l5',
         slug: 'contrast-media',
-        title: 'Contrast Media',
+        title: 'Iodinated Contrast Media',
         duration: '22 min',
       },
       {
         id: 'l6',
         slug: 'ct-artifacts',
-        title: 'CT Artifacts',
+        title: 'CT Artifacts & Reduction',
         duration: '20 min',
       },
     ],
@@ -116,9 +116,9 @@ export const enCourses: Course[] = [
     status: 'COMING_SOON',
 
     seo: {
-      title: 'CT Mastery | Hidden Radiology',
+      title: 'CT Mastery Course — Computed Tomography Protocols & Techniques | Hidden Radiology',
       description:
-        'Advanced CT course covering protocols, techniques, image quality, contrast media, and artifacts.',
+        'Advanced CT course covering imaging protocols, acquisition parameters, contrast media, image quality, and artifact reduction for radiologic technologists.',
       canonical: '/en/courses/ct-mastery',
     },
   },
@@ -128,36 +128,36 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-003',
     language: 'en',
     slug: 'quality-safety',
-    title: 'Quality & Safety in Radiology',
+    title: 'Quality Assurance & Radiation Safety in Radiology',
     description:
-      'A professional course covering quality standards, radiation safety, compliance, and quality and safety training in radiology departments.',
+      'A professional development course covering quality management systems, radiation protection programs, regulatory compliance, and continuous quality improvement in diagnostic imaging departments. Essential for QA managers, lead technologists, and radiology administrators.',
     level: 'PROFESSIONAL',
     cover: '/images/en/courses/EN_quality-safety-course-cover.jpg',
-    
+
 
     lessons: [
       {
         id: 'l1',
         slug: 'quality-standards',
-        title: 'Quality Standards',
+        title: 'Quality Management Standards',
         duration: '20 min',
       },
       {
         id: 'l2',
         slug: 'radiation-safety',
-        title: 'Radiation Safety',
+        title: 'Radiation Protection Programs',
         duration: '20 min',
       },
       {
         id: 'l3',
         slug: 'compliance',
-        title: 'Compliance',
+        title: 'Regulatory Compliance & Documentation',
         duration: '22 min',
       },
       {
         id: 'l4',
         slug: 'quality-training',
-        title: 'Quality & Safety Training',
+        title: 'Quality & Safety Training Implementation',
         duration: '20 min',
       },
     ],
@@ -165,9 +165,9 @@ export const enCourses: Course[] = [
     status: 'PUBLISHED',
 
     seo: {
-      title: 'Quality & Safety in Radiology | Hidden Radiology',
+      title: 'Quality Assurance & Radiation Safety Course — Radiology Department Management | Hidden Radiology',
       description:
-        'A professional guide to quality standards, radiation safety, compliance, and training in radiology departments.',
+        'Professional course covering quality management systems, radiation protection programs, regulatory compliance, and QA training for radiology departments.',
       canonical: '/en/courses/quality-safety',
     },
   },
@@ -177,48 +177,48 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-004',
     language: 'en',
     slug: 'chest-xray',
-    title: 'Chest X-Ray Mastery',
+    title: 'Chest Radiography Mastery',
     description:
-      'A practical course covering chest anatomy, positioning, image quality, and systematic chest X-ray review.',
+      'A comprehensive clinical course covering thoracic anatomy radiographic appearance, PA vs AP projection techniques, chest radiograph quality assessment, systematic image interpretation, common pathological findings, and clinical correlation. Designed for radiographers seeking chest X-ray specialization.',
     level: 'CLINICAL',
     cover: '/images/en/courses/EN_chest-xray-course-cover.jpg',
-    
+
 
     lessons: [
       {
         id: 'l1',
         slug: 'chest-anatomy',
-        title: 'Chest Anatomy',
+        title: 'Thoracic Anatomy on Chest Radiography',
         duration: '20 min',
       },
       {
         id: 'l2',
         slug: 'pa-ap',
-        title: 'PA vs AP Chest X-Ray',
+        title: 'PA vs AP Projection Techniques',
         duration: '18 min',
       },
       {
         id: 'l3',
         slug: 'chest-image-quality',
-        title: 'Chest Image Quality',
+        title: 'Chest Radiograph Quality Assessment',
         duration: '22 min',
       },
       {
         id: 'l4',
         slug: 'systematic-review',
-        title: 'Systematic Chest X-Ray Review',
+        title: 'Systematic Chest X-Ray Interpretation',
         duration: '25 min',
       },
       {
         id: 'l5',
         slug: 'common-signs',
-        title: 'Common Chest X-Ray Signs',
+        title: 'Common Radiographic Signs & Pathology',
         duration: '22 min',
       },
       {
         id: 'l6',
         slug: 'clinical-application',
-        title: 'Clinical Application',
+        title: 'Clinical Correlation & Case Studies',
         duration: '20 min',
       },
     ],
@@ -226,9 +226,9 @@ export const enCourses: Course[] = [
     status: 'COMING_SOON',
 
     seo: {
-      title: 'Chest X-Ray Mastery | Hidden Radiology',
+      title: 'Chest Radiography Mastery Course — Thoracic Anatomy & Systematic Interpretation | Hidden Radiology',
       description:
-        'A practical chest X-ray course covering anatomy, positioning, image quality, systematic review, and common radiographic signs.',
+        'Comprehensive chest X-ray course covering thoracic anatomy, projection techniques, quality assessment, systematic interpretation, and common pathological findings.',
       canonical: '/en/courses/chest-xray',
     },
   },
@@ -238,36 +238,36 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-005',
     language: 'en',
     slug: 'mri-basics',
-    title: 'MRI Basics',
+    title: 'Magnetic Resonance Imaging (MRI) Fundamentals',
     description:
-      'A foundational MRI course covering how MRI works, MRI safety, sequences, and image quality.',
+      'A foundational course covering MRI physics principles, magnet safety protocols, pulse sequence fundamentals, and MRI image quality optimization. Designed for radiography students and technologists new to MRI imaging.',
     level: 'BEGINNER',
     cover: '/images/en/courses/EN_mri-basics-course-cover.jpg',
-    
+
 
     lessons: [
       {
         id: 'l1',
         slug: 'mri-introduction',
-        title: 'Introduction to MRI',
+        title: 'Introduction to Magnetic Resonance Imaging',
         duration: '18 min',
       },
       {
         id: 'l2',
         slug: 'mri-safety',
-        title: 'MRI Safety',
+        title: 'MRI Safety & Screening Protocols',
         duration: '25 min',
       },
       {
         id: 'l3',
         slug: 'mri-sequences',
-        title: 'MRI Sequences',
+        title: 'MRI Pulse Sequence Fundamentals',
         duration: '25 min',
       },
       {
         id: 'l4',
         slug: 'mri-image-quality',
-        title: 'MRI Image Quality',
+        title: 'MRI Image Quality Parameters',
         duration: '20 min',
       },
     ],
@@ -275,9 +275,9 @@ export const enCourses: Course[] = [
     status: 'COMING_SOON',
 
     seo: {
-      title: 'MRI Basics | Hidden Radiology',
+      title: 'MRI Fundamentals Course — Magnetic Resonance Physics & Safety | Hidden Radiology',
       description:
-        'A foundational course covering MRI principles, safety, sequences, and image quality.',
+        'Foundational MRI course covering physics principles, safety protocols, pulse sequences, and image quality for radiography students and new technologists.',
       canonical: '/en/courses/mri-basics',
     },
   },
@@ -287,48 +287,48 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-006',
     language: 'en',
     slug: 'c-arm-imaging',
-    title: 'C-Arm Imaging',
+    title: 'Mobile C-Arm Fluoroscopy Imaging',
     description:
-      'A practical course covering C-Arm fundamentals, system components, fluoroscopy principles, positioning, surgical applications, radiation safety, image quality, and troubleshooting.',
+      'A practical clinical course covering mobile C-arm system fundamentals, fluoroscopic imaging principles, surgical positioning techniques, intraoperative applications, radiation dose management, image quality optimization, and common troubleshooting scenarios. Essential for interventional radiology and operating room technologists.',
     level: 'CLINICAL',
     cover: '/images/en/courses/EN_c-arm-course-cover.jpg',
-    
+
 
     lessons: [
       {
         id: 'l1',
         slug: 'c-arm-introduction',
-        title: 'Introduction to C-Arm',
+        title: 'Mobile C-Arm System Introduction',
         duration: '18 min',
       },
       {
         id: 'l2',
         slug: 'c-arm-components',
-        title: 'C-Arm Components',
+        title: 'C-Arm System Components & Operation',
         duration: '20 min',
       },
       {
         id: 'l3',
         slug: 'fluoroscopy-principles',
-        title: 'Fluoroscopy Principles',
+        title: 'Fluoroscopic Imaging Principles',
         duration: '22 min',
       },
       {
         id: 'l4',
         slug: 'c-arm-positioning-surgical-applications',
-        title: 'Positioning & Surgical Applications',
+        title: 'Surgical Positioning & Intraoperative Applications',
         duration: '25 min',
       },
       {
         id: 'l5',
         slug: 'c-arm-radiation-safety',
-        title: 'Radiation Safety in C-Arm',
+        title: 'Radiation Dose Management in Fluoroscopy',
         duration: '20 min',
       },
       {
         id: 'l6',
         slug: 'c-arm-image-quality-troubleshooting',
-        title: 'Image Quality & Troubleshooting',
+        title: 'Image Quality Optimization & Troubleshooting',
         duration: '22 min',
       },
     ],
@@ -336,9 +336,9 @@ export const enCourses: Course[] = [
     status: 'COMING_SOON',
 
     seo: {
-      title: 'C-Arm Imaging | Hidden Radiology',
+      title: 'Mobile C-Arm Fluoroscopy Course — Surgical Imaging & Radiation Safety | Hidden Radiology',
       description:
-        'A practical C-Arm imaging course covering fluoroscopy, positioning, surgical applications, radiation safety, image quality, and troubleshooting.',
+        'Practical C-arm fluoroscopy course covering system operation, surgical positioning, intraoperative applications, radiation safety, and troubleshooting for interventional technologists.',
       canonical: '/en/courses/c-arm-imaging',
     },
   },
@@ -348,48 +348,48 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-007',
     language: 'en',
     slug: 'mammography',
-    title: 'Mammography',
+    title: 'Diagnostic Mammography Fundamentals',
     description:
-      'A practical course covering mammography fundamentals, equipment, breast positioning, standard views, image quality, compression, radiation safety, and basic mammographic findings.',
+      'A comprehensive clinical course covering mammographic imaging principles, digital mammography equipment, breast positioning techniques, standard screening projections, image quality assessment, compression protocols, radiation dose optimization, and basic mammographic pathology recognition. Designed for mammography technologists and breast imaging specialists.',
     level: 'CLINICAL',
     cover: '/images/en/courses/EN_mammography-course-cover.jpg',
-    
+
 
     lessons: [
       {
         id: 'l1',
         slug: 'mammography-introduction',
-        title: 'Introduction to Mammography',
+        title: 'Introduction to Diagnostic Mammography',
         duration: '18 min',
       },
       {
         id: 'l2',
         slug: 'mammography-equipment',
-        title: 'Mammography Equipment',
+        title: 'Digital Mammography Equipment & Technology',
         duration: '20 min',
       },
       {
         id: 'l3',
         slug: 'mammography-positioning-views',
-        title: 'Breast Positioning & Views',
+        title: 'Breast Positioning & Standard Projections',
         duration: '25 min',
       },
       {
         id: 'l4',
         slug: 'mammography-image-quality-compression',
-        title: 'Image Quality & Compression',
+        title: 'Image Quality & Compression Protocols',
         duration: '22 min',
       },
       {
         id: 'l5',
         slug: 'mammography-radiation-safety',
-        title: 'Radiation Safety',
+        title: 'Radiation Dose Optimization in Mammography',
         duration: '20 min',
       },
       {
         id: 'l6',
         slug: 'mammography-basic-findings',
-        title: 'Basic Mammographic Findings',
+        title: 'Basic Mammographic Pathology Recognition',
         duration: '25 min',
       },
     ],
@@ -397,9 +397,9 @@ export const enCourses: Course[] = [
     status: 'COMING_SOON',
 
     seo: {
-      title: 'Mammography | Hidden Radiology',
+      title: 'Diagnostic Mammography Course — Breast Imaging & Positioning Techniques | Hidden Radiology',
       description:
-        'A practical mammography course covering equipment, positioning, image quality, compression, radiation safety, and basic mammographic findings.',
+        'Comprehensive mammography course covering digital equipment, breast positioning, standard projections, image quality, compression protocols, and basic pathology recognition.',
       canonical: '/en/courses/mammography',
     },
   },

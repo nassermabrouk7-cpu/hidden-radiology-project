@@ -6,6 +6,7 @@ import { enProducts } from '@/content/en/products'
 import { Award, BookOpen, Heart, ArrowRight, ArrowLeft } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
+import BookSeriesSection from '@/components/home/BookSeriesSection'
 
 export default function HomePage({ params }: { params: { locale: string } }) {
   const locale = params.locale as Locale
@@ -74,6 +75,9 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           </div>
         </div>
       </section>
+
+      {/* Book Series Section */}
+      <BookSeriesSection locale={locale} />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

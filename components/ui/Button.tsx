@@ -19,7 +19,7 @@ export default function Button({
   disabled = false,
   type = 'button',
 }: ButtonProps) {
-  const base = 'inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 text-sm md:text-base'
+  const base = 'inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base'
 
   const variants = {
     primary: 'bg-brand-cyan hover:bg-brand-cyan-dark text-brand-dark shadow-lg shadow-brand-cyan/25 disabled:opacity-50',

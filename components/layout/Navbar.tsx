@@ -24,13 +24,13 @@ export default function Navbar({ locale }: NavbarProps) {
     <nav className="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href={`/${locale}`} className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyan-dark flex items-center justify-center shadow-lg shadow-brand-cyan/20">
+          <Link href={`/${locale}`} className="flex items-center gap-2 sm:gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyan-dark flex items-center justify-center shadow-lg shadow-brand-cyan/20 flex-shrink-0">
               <span className="text-brand-dark font-extrabold text-lg font-poppins">HR</span>
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-white font-bold text-base leading-tight font-poppins">{BRAND.name}</h1>
-              <p className="text-brand-cyan text-[10px] leading-tight">{isAr ? BRAND.nameAr : BRAND.name}</p>
+            <div className="hidden sm:block min-w-0">
+              <h1 className="text-white font-bold text-sm sm:text-base leading-tight font-poppins truncate">{BRAND.name}</h1>
+              <p className="text-brand-cyan text-[10px] leading-tight truncate">{isAr ? BRAND.nameAr : BRAND.name}</p>
             </div>
           </Link>
 
