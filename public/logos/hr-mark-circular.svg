@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Cyan Glow -->
+  <circle cx="256" cy="256" r="240" fill="#0a0e1a" stroke="#06b6d4" stroke-width="8"/>
+  
+  <!-- Glow Effect -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#06b6d4" stroke-width="4" opacity="0.5"/>
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.3"/>
+  
+  <!-- HR Text -->
+  <text x="256" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#06b6d4">
+    HR
+  </text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="256" cy="160" r="20" fill="#06b6d4" opacity="0.3"/>
+  <circle cx="352" cy="256" r="15" fill="#06b6d4" opacity="0.2"/>
+  <circle cx="256" cy="352" r="18" fill="#06b6d4" opacity="0.25"/>
+  <circle cx="160" cy="256" r="12" fill="#06b6d4" opacity="0.2"/>
+</svg>

@@ -3,6 +3,7 @@ import { BRAND } from '@/lib/config'
 import { Locale } from '@/lib/types'
 import { Youtube, Mail, MessageCircle } from 'lucide-react'
 import PaymentMethods from '../product/PaymentMethods'
+import BrandLogo from './BrandLogo'
 
 interface FooterProps {
   locale: Locale
@@ -26,13 +27,7 @@ export default function Footer({ locale }: FooterProps) {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyan-dark flex items-center justify-center">
-                <span className="text-brand-dark font-extrabold text-lg font-poppins">HR</span>
-              </div>
-              <div>
-                <h3 className="text-white font-bold font-poppins">{BRAND.name}</h3>
-                <p className="text-brand-cyan text-xs">{isAr ? BRAND.nameAr : BRAND.name}</p>
-              </div>
+              <BrandLogo locale={locale} showFull={true} size="md" />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               {isAr ? BRAND.sloganAr : BRAND.slogan}

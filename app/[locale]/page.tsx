@@ -11,6 +11,7 @@ import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
 import BookSeriesSection from '@/components/home/BookSeriesSection'
 import FallbackImage from '@/components/ui/FallbackImage'
+import GlowingLogo from '@/components/layout/GlowingLogo'
 
 export default function HomePage({ params }: { params: { locale: string } }) {
   const locale = params.locale as Locale
@@ -41,7 +42,12 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto relative">
+            {/* Glowing Logo as Decorative Element */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 hidden lg:block">
+              <GlowingLogo size="xl" className="opacity-30" />
+            </div>
+
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-sm font-medium mb-6 backdrop-blur-sm">
               <Award className="w-4 h-4" />
               {isAr ? '30 عاماً من الخبرة' : '30+ Years of Experience'}

@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Menu, X, Globe } from 'lucide-react'
 import { NAV_ITEMS, BRAND } from '@/lib/config'
 import { Locale } from '@/lib/types'
+import BrandLogo from './BrandLogo'
 
 interface NavbarProps {
   locale: Locale
@@ -25,13 +26,8 @@ export default function Navbar({ locale }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href={`/${locale}`} className="flex items-center gap-2 sm:gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyan-dark flex items-center justify-center shadow-lg shadow-brand-cyan/20 flex-shrink-0">
-              <span className="text-brand-dark font-extrabold text-lg font-poppins">HR</span>
-            </div>
-            <div className="hidden sm:block min-w-0">
-              <h1 className="text-white font-bold text-sm sm:text-base leading-tight font-poppins truncate">{BRAND.name}</h1>
-              <p className="text-brand-cyan text-[10px] leading-tight truncate">{isAr ? BRAND.nameAr : BRAND.name}</p>
-            </div>
+            <BrandLogo locale={locale} showFull={true} size="md" className="hidden sm:flex" />
+            <BrandLogo locale={locale} showFull={false} size="md" className="sm:hidden" />
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
