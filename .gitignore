@@ -7,3 +7,4 @@
 *.tsbuildinfo
 .vercel
 .env*
+private_books/
