@@ -1,0 +1,356 @@
+warning: in the working copy of 'app/[locale]/courses/[slug]/[lesson]/page.tsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/app/[locale]/courses/[slug]/[lesson]/page.tsx b/app/[locale]/courses/[slug]/[lesson]/page.tsx[m
+[1mindex d1c4037..843cd55 100644[m
+[1m--- a/app/[locale]/courses/[slug]/[lesson]/page.tsx[m
+[1m+++ b/app/[locale]/courses/[slug]/[lesson]/page.tsx[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-﻿import { notFound } from 'next/navigation'[m
+[32m+[m[32mimport { notFound } from 'next/navigation'[m
+ import Link from 'next/link'[m
+ import { Locale } from '@/lib/types'[m
+ [m
+[36m@@ -6,7 +6,7 @@[m [mimport { arCourses } from '@/content/ar/courses'[m
+ import { enCourses } from '@/content/en/courses'[m
+ [m
+ /* =========================================================[m
+[31m-   ENGLISH — RADIOLOGY BASICS[m
+[32m+[m[32m   ENGLISH � RADIOLOGY BASICS[m
+ ========================================================= */[m
+ [m
+ import { enLessonIntro } from '@/content/en/lessons/intro'[m
+[36m@@ -17,7 +17,7 @@[m [mimport { enLessonRadiationSafety } from '@/content/en/lessons/radiation-safety'[m
+ import { enLessonPatientPositioning } from '@/content/en/lessons/patient-positioning'[m
+ [m
+ /* =========================================================[m
+[31m-   ENGLISH — CT MASTERY[m
+[32m+[m[32m   ENGLISH � CT MASTERY[m
+ ========================================================= */[m
+ [m
+ import { enLessonCTBasics } from '@/content/en/lessons/ct-basics'[m
+[36m@@ -28,7 +28,7 @@[m [mimport { enLessonContrastMedia } from '@/content/en/lessons/contrast-media'[m
+ import { enLessonCTArtifacts } from '@/content/en/lessons/ct-artifacts'[m
+ [m
+ /* =========================================================[m
+[31m-   ENGLISH — MRI BASICS[m
+[32m+[m[32m   ENGLISH � MRI BASICS[m
+ ========================================================= */[m
+ [m
+ import { enLessonMRIIntroduction } from '@/content/en/lessons/mri-introduction'[m
+[36m@@ -37,7 +37,7 @@[m [mimport { enLessonMRISequences } from '@/content/en/lessons/mri-sequences'[m
+ import { enLessonMRIImageQuality } from '@/content/en/lessons/mri-image-quality'[m
+ [m
+ /* =========================================================[m
+[31m-   ENGLISH — CHEST X-RAY[m
+[32m+[m[32m   ENGLISH � CHEST X-RAY[m
+ ========================================================= */[m
+ [m
+ import { enLessonChestAnatomy } from '@/content/en/lessons/chest-anatomy'[m
+[36m@@ -48,7 +48,7 @@[m [mimport { enLessonCommonSigns } from '@/content/en/lessons/common-signs'[m
+ import { enLessonClinicalApplication } from '@/content/en/lessons/clinical-application'[m
+ [m
+ /* =========================================================[m
+[31m-   ENGLISH — QUALITY & SAFETY[m
+[32m+[m[32m   ENGLISH � QUALITY & SAFETY[m
+ ========================================================= */[m
+ [m
+ import { enLessonQualityStandards } from '@/content/en/lessons/quality-standards'[m
+[36m@@ -57,7 +57,7 @@[m [mimport { enLessonCompliance } from '@/content/en/lessons/compliance'[m
+ import { enLessonQualityTraining } from '@/content/en/lessons/quality-training'[m
+ [m
+ /* =========================================================[m
+[31m-   ENGLISH — C-ARM[m
+[32m+[m[32m   ENGLISH � C-ARM[m
+ ========================================================= */[m
+ [m
+ import { enLessonCArmIntroduction } from '@/content/en/lessons/c-arm-introduction'[m
+[36m@@ -68,7 +68,7 @@[m [mimport { enLessonCArmRadiationSafety } from '@/content/en/lessons/c-arm-radiatio[m
+ import { enLessonCArmImageQualityTroubleshooting } from '@/content/en/lessons/c-arm-image-quality-troubleshooting'[m
+ [m
+ /* =========================================================[m
+[31m-   ENGLISH — MAMMOGRAPHY[m
+[32m+[m[32m   ENGLISH � MAMMOGRAPHY[m
+ ========================================================= */[m
+ [m
+ import { enLessonMammographyIntroduction } from '@/content/en/lessons/mammography-introduction'[m
+[36m@@ -79,7 +79,7 @@[m [mimport { enLessonMammographyRadiationSafety } from '@/content/en/lessons/mammogr[m
+ import { enLessonMammographyBasicFindings } from '@/content/en/lessons/mammography-basic-findings'[m
+ [m
+ /* =========================================================[m
+[31m-   ARABIC — RADIOLOGY BASICS[m
+[32m+[m[32m   ARABIC � RADIOLOGY BASICS[m
+ ========================================================= */[m
+ [m
+ import { arLessonIntro } from '@/content/ar/lessons/intro'[m
+[36m@@ -90,7 +90,7 @@[m [mimport { arLessonRadiationSafety } from '@/content/ar/lessons/radiation-safety'[m
+ import { arLessonPatientPositioning } from '@/content/ar/lessons/patient-positioning'[m
+ [m
+ /* =========================================================[m
+[31m-   ARABIC — CT MASTERY[m
+[32m+[m[32m   ARABIC � CT MASTERY[m
+ ========================================================= */[m
+ [m
+ import { arLessonCTBasics } from '@/content/ar/lessons/ct-basics'[m
+[36m@@ -101,7 +101,16 @@[m [mimport { arLessonContrastMedia } from '@/content/ar/lessons/contrast-media'[m
+ import { arLessonCTArtifacts } from '@/content/ar/lessons/ct-artifacts'[m
+ [m
+ /* =========================================================[m
+[31m-   ARABIC — CHEST X-RAY[m
+[32m+[m[32m   ARABIC � MRI BASICS[m
+[32m+[m[32m========================================================= */[m
+[32m+[m
+[32m+[m[32mimport { arLessonMRIIntroduction } from '@/content/ar/lessons/mri-introduction'[m
+[32m+[m[32mimport { arLessonMRISafety } from '@/content/ar/lessons/mri-safety'[m
+[32m+[m[32mimport { arLessonMRISequences } from '@/content/ar/lessons/mri-sequences'[m
+[32m+[m[32mimport { arLessonMRIImageQuality } from '@/content/ar/lessons/mri-image-quality'[m
+[32m+[m
+[32m+[m[32m/* =========================================================[m
+[32m+[m[32m   ARABIC � CHEST X-RAY[m
+ ========================================================= */[m
+ [m
+ import { arLessonChestAnatomy } from '@/content/ar/lessons/chest-anatomy'[m
+[36m@@ -111,7 +120,7 @@[m [mimport { arLessonSystematicApproach } from '@/content/ar/lessons/systematic-appr[m
+ import { arLessonCommonFindings } from '@/content/ar/lessons/common-findings'[m
+ [m
+ /* =========================================================[m
+[31m-   ARABIC — QUALITY & SAFETY[m
+[32m+[m[32m   ARABIC � QUALITY & SAFETY[m
+ ========================================================= */[m
+ [m
+ import { arLessonQualityStandards } from '@/content/ar/lessons/quality-standards'[m
+[36m@@ -120,7 +129,7 @@[m [mimport { arLessonCompliance } from '@/content/ar/lessons/compliance'[m
+ import { arLessonQualityTraining } from '@/content/ar/lessons/quality-training'[m
+ [m
+ /* =========================================================[m
+[31m-   ARABIC — C-ARM[m
+[32m+[m[32m   ARABIC � C-ARM[m
+ ========================================================= */[m
+ [m
+ import { arLessonCArmIntroduction } from '@/content/ar/lessons/c-arm-introduction'[m
+[36m@@ -131,7 +140,7 @@[m [mimport { arLessonCArmRadiationSafety } from '@/content/ar/lessons/c-arm-radiatio[m
+ import { arLessonCArmClinicalApplicationsTroubleshooting } from '@/content/ar/lessons/c-arm-clinical-applications-troubleshooting'[m
+ [m
+ /* =========================================================[m
+[31m-   ARABIC — MAMMOGRAPHY[m
+[32m+[m[32m   ARABIC � MAMMOGRAPHY[m
+ ========================================================= */[m
+ [m
+ import { arLessonMammographyIntroduction } from '@/content/ar/lessons/mammography-introduction'[m
+[36m@@ -212,6 +221,13 @@[m [mconst ctLessonsEn: Record<string, LessonData> = {[m
+   'ct-artifacts': enLessonCTArtifacts,[m
+ }[m
+ [m
+[32m+[m[32mconst mriLessonsAr: Record<string, LessonData> = {[m
+[32m+[m[32m  'mri-introduction': arLessonMRIIntroduction,[m
+[32m+[m[32m  'mri-safety': arLessonMRISafety,[m
+[32m+[m[32m  'mri-sequences': arLessonMRISequences,[m
+[32m+[m[32m  'mri-image-quality': arLessonMRIImageQuality,[m
+[32m+[m[32m}[m
+[32m+[m
+ const mriLessonsEn: Record<string, LessonData> = {[m
+   'mri-introduction': enLessonMRIIntroduction,[m
+   'mri-safety': enLessonMRISafety,[m
+[36m@@ -534,6 +550,36 @@[m [mconst qualitySafetyImagesEn: Record<string, string[]> = {[m
+   'quality-training': [],[m
+ }[m
+ [m
+[32m+[m[32mconst mriImagesAr: Record<string, string[]> = {[m
+[32m+[m[32m  'mri-introduction': [[m
+[32m+[m[32m    'RB_MRI_L01_01_How_MRI_Works.webp',[m
+[32m+[m[32m    'RB_MRI_L01_02_MRI_System_Components.webp',[m
+[32m+[m[32m    'RB_MRI_L01_03_Signal_to_Image.webp',[m
+[32m+[m[32m    'RB_MRI_L01_04_MRI_Planes_Orientation.webp',[m
+[32m+[m[32m    'RB_MRI_L01_05_MRI_Signal_Basics.webp',[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  'mri-safety': [[m
+[32m+[m[32m    'RB_MRI_L02_01_MRI_Safety_Fundamentals.webp',[m
+[32m+[m[32m    'RB_MRI_L02_02_MRI_Safety_Zones.webp',[m
+[32m+[m[32m    'RB_MRI_L02_03_Ferromagnetic_Hazards.webp',[m
+[32m+[m[32m    'RB_MRI_L02_04_Implants_Medical_Devices.webp',[m
+[32m+[m[32m    'RB_MRI_L02_05_Patient_Screening.webp',[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  'mri-sequences': [[m
+[32m+[m[32m    'RB_MRI_L03_01_T1_Weighted_Imaging.webp',[m
+[32m+[m[32m    'RB_MRI_L03_02_T2_Weighted_Imaging.webp',[m
+[32m+[m[32m    'RB_MRI_L03_03_FLAIR.webp',[m
+[32m+[m[32m    'RB_MRI_L03_04_DWI.webp',[m
+[32m+[m[32m    'RB_MRI_L03_05_MRI_Sequences_Comparison.webp',[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  'mri-image-quality': [[m
+[32m+[m[32m    'RB_MRI_L04_01_MRI_Image_Quality.webp',[m
+[32m+[m[32m    'RB_MRI_L04_02_SNR.webp',[m
+[32m+[m[32m    'RB_MRI_L04_03_Spatial_Resolution.webp',[m
+[32m+[m[32m    'RB_MRI_L04_04_Motion_Artifacts.webp',[m
+[32m+[m[32m    'RB_MRI_L04_05_MRI_Image_Quality_Checklist.webp',[m
+[32m+[m[32m  ],[m
+[32m+[m[32m}[m
+ const cArmImagesAr: Record<string, string[]> = {[m
+   'c-arm-introduction': [[m
+     'RB_CA_L01_01_C_Arm_Introduction_AR.jpg',[m
+[36m@@ -650,7 +696,14 @@[m [mconst lessonFolders: Record<[m
+     'ct-protocols': 'lesson-02',[m
+     'ct-parameters': 'lesson-03',[m
+     'ct-image-quality': 'lesson-04',[m
+[31m-    'contrast-media': 'lesson-05',[m
+[32m+[m[32m    'mri-basics': {[m
+[32m+[m[32m    'mri-introduction': 'lesson-01',[m
+[32m+[m[32m    'mri-safety': 'lesson-02',[m
+[32m+[m[32m    'mri-sequences': 'lesson-03',[m
+[32m+[m[32m    'mri-image-quality': 'lesson-04',[m
+[32m+[m[32m  },[m
+[32m+[m
+[32m+[m[32m  'contrast-media': 'lesson-05',[m
+     'ct-artifacts': 'lesson-06',[m
+   },[m
+ [m
+[36m@@ -716,6 +769,17 @@[m [mfunction getLessonData([m
+       return ctLessonsAr[lesson] ?? null[m
+     }[m
+ [m
+[32m+[m[32m    if (slug === 'mri-basics') {[m
+[32m+[m[32m      return mriLessonsAr[lesson] ?? null[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    if (slug === 'mri-basics') {[m
+[32m+[m[32m      return {[m
+[32m+[m[32m        images: mriImagesAr[lesson] ?? [],[m
+[32m+[m[32m        basePath: '/images/ar/courses/mri-basics',[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }[m
+[32m+[m
+     if (slug === 'chest-xray') {[m
+       return chestLessonsAr[lesson] ?? null[m
+     }[m
+[36m@@ -895,7 +959,7 @@[m [mfunction renderList([m
+       <div className="space-y-2">[m
+         {value.map((item, index) => ([m
+           <p key={index}>[m
+[31m-            • {item}[m
+[32m+[m[32m            � {item}[m
+           </p>[m
+         ))}[m
+       </div>[m
+[36m@@ -1109,11 +1173,11 @@[m [mexport default async function LessonPage({[m
+           className="inline-flex items-center gap-2 text-slate-400 hover:text-brand-cyan mb-8 transition-colors"[m
+         >[m
+           <span>[m
+[31m-            {isAr ? '←' : '←'}[m
+[32m+[m[32m            {isAr ? '?' : '?'}[m
+           </span>[m
+ [m
+           {isAr[m
+[31m-            ? 'العودة إلى الدورة'[m
+[32m+[m[32m            ? '?????? ??? ??????'[m
+             : 'Back to Course'}[m
+         </Link>[m
+ [m
+[36m@@ -1126,7 +1190,7 @@[m [mexport default async function LessonPage({[m
+           <div className="mb-6">[m
+             <span className="inline-block px-3 py-1 rounded-lg text-xs font-medium bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">[m
+               {isAr[m
+[31m-                ? 'الدرس'[m
+[32m+[m[32m                ? '?????'[m
+                 : 'Lesson'}[m
+             </span>[m
+           </div>[m
+[36m@@ -1142,7 +1206,7 @@[m [mexport default async function LessonPage({[m
+ [m
+           <p className="text-slate-400 mb-10">[m
+             {isAr[m
+[31m-              ? 'مدة الدرس: '[m
+[32m+[m[32m              ? '??? ?????: '[m
+               : 'Duration: '}[m
+ [m
+             {lessonData?.duration ??[m
+[36m@@ -1162,7 +1226,7 @@[m [mexport default async function LessonPage({[m
+                 <section>[m
+                   <h2 className="text-2xl font-bold text-white mb-4">[m
+                     {isAr[m
+[31m-                      ? 'مقدمة'[m
+[32m+[m[32m                      ? '?????'[m
+                       : 'Introduction'}[m
+                   </h2>[m
+ [m
+[36m@@ -1178,7 +1242,7 @@[m [mexport default async function LessonPage({[m
+                 <section>[m
+                   <h2 className="text-2xl font-bold text-white mb-4">[m
+                     {isAr[m
+[31m-                      ? 'أهداف الدرس'[m
+[32m+[m[32m                      ? '????? ?????'[m
+                       : 'Lesson Objectives'}[m
+                   </h2>[m
+ [m
+[36m@@ -1197,7 +1261,7 @@[m [mexport default async function LessonPage({[m
+                   <section>[m
+                     <h2 className="text-2xl font-bold text-white mb-6">[m
+                       {isAr[m
+[31m-                        ? 'شرح الدرس'[m
+[32m+[m[32m                        ? '??? ?????'[m
+                         : 'Lesson Content'}[m
+                     </h2>[m
+ [m
+[36m@@ -1237,7 +1301,7 @@[m [mexport default async function LessonPage({[m
+                 <section>[m
+                   <h2 className="text-2xl font-bold text-white mb-4">[m
+                     {isAr[m
+[31m-                      ? 'مثال عملي'[m
+[32m+[m[32m                      ? '???? ????'[m
+                       : 'Practical Example'}[m
+                   </h2>[m
+ [m
+[36m@@ -1271,7 +1335,7 @@[m [mexport default async function LessonPage({[m
+                   <section>[m
+                     <h2 className="text-2xl font-bold text-white mb-6">[m
+                       {isAr[m
+[31m-                        ? 'الصور التعليمية'[m
+[32m+[m[32m                        ? '????? ?????????'[m
+                         : 'Educational Images'}[m
+                     </h2>[m
+ [m
+[36m@@ -1306,7 +1370,7 @@[m [mexport default async function LessonPage({[m
+                 <section>[m
+                   <h2 className="text-2xl font-bold text-white mb-4">[m
+                     {isAr[m
+[31m-                      ? 'الأخطاء الشائعة'[m
+[32m+[m[32m                      ? '??????? ???????'[m
+                       : 'Common Mistakes'}[m
+                   </h2>[m
+ [m
+[36m@@ -1324,7 +1388,7 @@[m [mexport default async function LessonPage({[m
+                 <section>[m
+                   <h2 className="text-2xl font-bold text-white mb-4">[m
+                     {isAr[m
+[31m-                      ? 'أهم النقاط'[m
+[32m+[m[32m                      ? '??? ??????'[m
+                       : 'Key Points'}[m
+                   </h2>[m
+ [m
+[36m@@ -1342,7 +1406,7 @@[m [mexport default async function LessonPage({[m
+                 <section>[m
+                   <h2 className="text-2xl font-bold text-white mb-4">[m
+                     {isAr[m
+[31m-                      ? 'الخلاصة'[m
+[32m+[m[32m                      ? '???????'[m
+                       : 'Takeaway'}[m
+                   </h2>[m
+ [m
+[36m@@ -1368,7 +1432,7 @@[m [mexport default async function LessonPage({[m
+           ) : ([m
+             <div className="text-slate-300 leading-8">[m
+               {isAr[m
+[31m-                ? 'محتوى هذا الدرس قيد الإعداد.'[m
+[32m+[m[32m                ? '????? ??? ????? ??? ???????.'[m
+                 : 'This lesson content is being prepared.'}[m
+             </div>[m
+           )}[m
+[36m@@ -1377,4 +1441,9 @@[m [mexport default async function LessonPage({[m
+       </div>[m
+     </main>[m
+   )[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[41m+[m
+[41m+[m
+[41m+[m
+[41m+[m
+[41m+[m

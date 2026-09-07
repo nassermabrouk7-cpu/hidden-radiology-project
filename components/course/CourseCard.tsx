@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import Image from 'next/image'
 import { Course } from '@/lib/types'
 import { Locale } from '@/lib/types'
@@ -13,16 +13,16 @@ export default function CourseCard({ course, locale }: CourseCardProps) {
   const isAr = locale === 'ar'
 
   const levelLabels: Record<string, string> = {
-    BEGINNER: isAr ? 'مبتدئ' : 'Beginner',
-    FOUNDATION: isAr ? 'أساسي' : 'Foundation',
-    CLINICAL: isAr ? 'سريري' : 'Clinical',
-    PROFESSIONAL: isAr ? 'احترافي' : 'Professional',
+    BEGINNER: isAr ? 'Ù…Ø¨ØªØ¯Ø¦' : 'Beginner',
+    FOUNDATION: isAr ? 'Ø£Ø³Ø§Ø³ÙŠ' : 'Foundation',
+    CLINICAL: isAr ? 'Ø³Ø±ÙŠØ±ÙŠ' : 'Clinical',
+    PROFESSIONAL: isAr ? 'Ø§Ø­ØªØ±Ø§ÙÙŠ' : 'Professional',
   }
 
   const statusBadge = {
-    DRAFT: { label: isAr ? 'مسودة' : 'Draft', variant: 'gray' as const },
-    COMING_SOON: { label: isAr ? 'قريباً' : 'Coming Soon', variant: 'yellow' as const },
-    PUBLISHED: { label: isAr ? 'متاح' : 'Available', variant: 'green' as const },
+    DRAFT: { label: isAr ? 'Ù…Ø³ÙˆØ¯Ø©' : 'Draft', variant: 'gray' as const },
+    COMING_SOON: { label: isAr ? 'Ù‚Ø±ÙŠØ¨Ø§Ù‹' : 'Coming Soon', variant: 'yellow' as const },
+    PUBLISHED: { label: isAr ? 'Ù…ØªØ§Ø­' : 'Available', variant: 'green' as const },
   }
 
   return (
@@ -38,19 +38,17 @@ export default function CourseCard({ course, locale }: CourseCardProps) {
           />
         </div>
         <div className="p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <Badge variant={statusBadge[course.status].variant}>{statusBadge[course.status].label}</Badge>
-            <Badge variant="cyan">{levelLabels[course.level]}</Badge>
-          </div>
+          <div className="flex items-center gap-2 mb-3">`r`n  <Badge variant="cyan">{levelLabels[course.level]}</Badge>`r`n</div>
           <h3 className="text-white font-bold text-lg mb-2 hover:text-brand-cyan transition-colors">
             {course.title}
           </h3>
           <p className="text-slate-400 text-sm line-clamp-2">{course.description}</p>
           <div className="mt-4 text-slate-500 text-xs">
-            {course.lessons.length} {isAr ? 'درس' : 'lessons'}
+            {course.lessons.length} {isAr ? 'Ø¯Ø±Ø³' : 'lessons'}
           </div>
         </div>
       </div>
     </Link>
   )
 }
+
