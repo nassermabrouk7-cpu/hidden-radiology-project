@@ -10,7 +10,7 @@ export const enCourses: Course[] = [
     description:
       'A comprehensive foundational course covering X-ray physics principles, image formation mechanisms, image quality optimization, radiation protection protocols, and patient positioning techniques. Designed for radiography students and entry-level radiologic technologists.',
     level: 'BEGINNER',
-    cover: '/images/en/courses/EN_radiology-basics-course-cover.jpg',
+    cover: '/assets/images/en/courses/EN_radiology-basics-course-cover.jpg',
 
 
     lessons: [
@@ -71,7 +71,7 @@ export const enCourses: Course[] = [
     description:
       'An advanced clinical course covering CT scanner fundamentals, imaging protocols, acquisition parameters, image quality optimization, iodinated contrast media administration, and CT artifact recognition and reduction. Designed for radiologic technologists seeking CT specialization.',
     level: 'CLINICAL',
-    cover: '/images/en/courses/EN_ct-mastery-course-cover.jpg',
+    cover: '/assets/images/en/courses/ct-mastery-course-cover.jpg',
 
 
     lessons: [
@@ -132,7 +132,7 @@ export const enCourses: Course[] = [
     description:
       'A professional development course covering quality management systems, radiation protection programs, regulatory compliance, and continuous quality improvement in diagnostic imaging departments. Essential for QA managers, lead technologists, and radiology administrators.',
     level: 'PROFESSIONAL',
-    cover: '/images/en/courses/EN_quality-safety-course-cover.jpg',
+    cover: '/assets/images/en/courses/quality-safety-course-cover.jpg',
 
 
     lessons: [
@@ -181,7 +181,7 @@ export const enCourses: Course[] = [
     description:
       'A comprehensive clinical course covering thoracic anatomy radiographic appearance, PA vs AP projection techniques, chest radiograph quality assessment, systematic image interpretation, common pathological findings, and clinical correlation. Designed for radiographers seeking chest X-ray specialization.',
     level: 'CLINICAL',
-    cover: '/images/en/courses/EN_chest-xray-course-cover.jpg',
+    cover: '/assets/images/en/courses/chest-xray-course-cover.jpg',
 
 
     lessons: [
@@ -242,7 +242,7 @@ export const enCourses: Course[] = [
     description:
       'A foundational course covering MRI physics principles, magnet safety protocols, pulse sequence fundamentals, and MRI image quality optimization. Designed for radiography students and technologists new to MRI imaging.',
     level: 'BEGINNER',
-    cover: '/images/en/courses/EN_mri-basics-course-cover.jpg',
+    cover: '/assets/images/en/courses/mri-basics-course-cover.jpg',
 
 
     lessons: [
@@ -291,7 +291,7 @@ export const enCourses: Course[] = [
     description:
       'A practical clinical course covering mobile C-arm system fundamentals, fluoroscopic imaging principles, surgical positioning techniques, intraoperative applications, radiation dose management, image quality optimization, and common troubleshooting scenarios. Essential for interventional radiology and operating room technologists.',
     level: 'CLINICAL',
-    cover: '/images/en/courses/EN_c-arm-course-cover.jpg',
+    cover: '/assets/images/en/courses/EN_c-arm-course-cover.jpg',
 
 
     lessons: [
@@ -352,7 +352,7 @@ export const enCourses: Course[] = [
     description:
       'A comprehensive clinical course covering mammographic imaging principles, digital mammography equipment, breast positioning techniques, standard screening projections, image quality assessment, compression protocols, radiation dose optimization, and basic mammographic pathology recognition. Designed for mammography technologists and breast imaging specialists.',
     level: 'CLINICAL',
-    cover: '/images/en/courses/EN_mammography-course-cover.jpg',
+    cover: '/assets/images/en/courses/mammography-course-cover.jpg',
 
 
     lessons: [
@@ -404,3 +404,4 @@ export const enCourses: Course[] = [
     },
   },
 ]
+

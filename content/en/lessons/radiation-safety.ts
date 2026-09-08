@@ -16,37 +16,37 @@
 
   sections: [
     {
-      image: '/images/en/courses/radiology-basics/lesson-05/RB_L05_01_Radiation_Protection_en.jpg',
+      image: '/assets/images/en/courses/radiology-basics/lesson-05/RB_L05_01_Radiation_Protection_en.jpg',
       title: 'Why Radiation Safety Matters',
       content:
         'X-rays are ionizing radiation and can produce biological effects when sufficient energy is absorbed by tissues. Radiation protection aims to prevent unnecessary exposure while ensuring that clinically justified examinations provide the required diagnostic information.',
     },
     {
-      image: '/images/en/courses/radiology-basics/lesson-05/RB_L05_02_Time_Distance_Shielding_en.jpg',
+      image: '/assets/images/en/courses/radiology-basics/lesson-05/RB_L05_02_Time_Distance_Shielding_en.jpg',
       title: 'The Principle of Justification',
       content:
         'A radiographic examination should be performed when the expected clinical benefit outweighs the potential risk from radiation exposure. Radiographers should follow appropriate referral, examination, and institutional procedures.',
     },
     {
-      image: '/images/en/courses/radiology-basics/lesson-05/RB_L05_03_Personal_Protective_Equipment_en.jpg',
+      image: '/assets/images/en/courses/radiology-basics/lesson-05/RB_L05_03_Personal_Protective_Equipment_en.jpg',
       title: 'Time',
       content:
         'Reducing the time spent near a radiation source reduces occupational exposure. Radiographers should remain in a protected area whenever practical and avoid unnecessary time near the patient during an exposure.',
     },
     {
-      image: '/images/en/courses/radiology-basics/lesson-05/RB_L05_04_Dosimetry_en.jpg',
+      image: '/assets/images/en/courses/radiology-basics/lesson-05/RB_L05_04_Dosimetry_en.jpg',
       title: 'Distance',
       content:
         'Increasing the distance from the radiation source is an effective way to reduce exposure. The inverse square relationship means that radiation intensity decreases rapidly as distance from the source increases.',
     },
     {
-      image: '/images/en/courses/radiology-basics/lesson-05/RB_L05_03_Personal_Protective_Equipment_en.jpg',
+      image: '/assets/images/en/courses/radiology-basics/lesson-05/RB_L05_03_Personal_Protective_Equipment_en.jpg',
       title: 'Shielding',
       content:
         'Appropriate structural and personal protective measures can reduce radiation exposure. Protective barriers and other shielding methods should be used according to local regulations, equipment design, and institutional radiation-safety procedures.',
     },
     {
-      image: '/images/en/courses/radiology-basics/lesson-05/RB_L05_05_Safety_Workflow_en.jpg',
+      image: '/assets/images/en/courses/radiology-basics/lesson-05/RB_L05_05_Safety_Workflow_en.jpg',
       title: 'Optimization',
       content:
         'Radiation protection includes optimizing examination techniques so that the required diagnostic information is obtained with the minimum radiation exposure reasonably achievable. Appropriate positioning, collimation, exposure selection, and equipment use are important parts of optimization.',

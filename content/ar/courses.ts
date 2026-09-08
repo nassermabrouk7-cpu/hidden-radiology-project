@@ -9,7 +9,7 @@ export const arCourses: Course[] = [
     title: 'أساسيات الأشعة للمبتدئين',
     description: 'دورة تأسيسية مبسطة لفهم علم الأشعة، تكوين الصورة، مبادئ الأشعة السينية، والسلامة الإشعاعية. مناسبة لطلاب وفنيي الأشعة في بداية الطريق.',
     level: 'BEGINNER',
-    cover: '/images/ar/courses/basics-radiology-course-cover.png',
+    cover: '/assets/images/ar/courses/basics-radiology-course-cover.png',
     lessons: [
       { id: 'l1', slug: 'intro', title: 'مقدمة في علم الأشعة', duration: '15 دقيقة' },
       { id: 'l2', slug: 'xray-physics', title: 'فيزياء الأشعة السينية', duration: '20 دقيقة' },
@@ -34,7 +34,7 @@ export const arCourses: Course[] = [
     title: 'إتقان CT',
     description: 'دورة متقدمة لفنيي الأشعة والطلاب المهتمين بالتصوير المقطعي، تبدأ من فهم الجهاز والبروتوكولات وحتى جودة الصورة ومبادئ التعامل مع مواد التباين.',
     level: 'CLINICAL',
-    cover: '/images/ar/courses/ct-mastery-course-cover.png',
+    cover: '/assets/images/ar/courses/ct-mastery-course-cover.png',
     lessons: [
       { id: 'l1', slug: 'ct-basics', title: 'أساسيات التصوير المقطعي CT', duration: '20 دقيقة' },
       { id: 'l2', slug: 'ct-protocols', title: 'بروتوكولات CT', duration: '25 دقيقة' },
@@ -59,7 +59,7 @@ export const arCourses: Course[] = [
     title: 'إتقان أشعة الصدر Chest X-Ray',
     description: 'دورة عملية لفهم أساسيات تصوير الصدر، وضعيات التصوير، جودة الصورة، والتعرف على أهم العلامات التي يجب ملاحظتها عند مراجعة صورة الصدر.',
     level: 'CLINICAL',
-    cover: '/images/ar/courses/cxr-course.jpg',
+    cover: '/assets/images/ar/courses/cxr-course.jpg',
     lessons: [
       { id: 'l1', slug: 'chest-anatomy', title: 'تشريح الصدر في صورة الأشعة', duration: '20 دقيقة' },
       { id: 'l2', slug: 'pa-ap-view', title: 'PA و AP: ما الفرق؟', duration: '18 دقيقة' },
@@ -83,7 +83,7 @@ export const arCourses: Course[] = [
     title: 'أساسيات MRI',
     description: 'مقدمة منظمة إلى الرنين المغناطيسي MRI، تشمل المبادئ الأساسية، السلامة، التسلسلات، وجودة الصورة.',
     level: 'BEGINNER',
-    cover: '/images/covers/ana-fahim-mri-ar.png',
+    cover: '/assets/images/ar/covers/ana-fahim-mri-ar.png',
     lessons: [
       { id: 'l1', slug: 'mri-introduction', title: 'مقدمة في MRI', duration: '18 دقيقة' },
       { id: 'l2', slug: 'mri-safety', title: 'السلامة في MRI', duration: '25 دقيقة' },
@@ -106,7 +106,7 @@ export const arCourses: Course[] = [
     title: 'الجودة والسلامة في قسم الأشعة',
     description: 'دورة متخصصة لفهم معايير الجودة والسلامة في أقسام الأشعة، وضمان سلامة المرضى والعاملين وتحسين جودة الصورة.',
     level: 'PROFESSIONAL',
-    cover: '/images/covers/Quality Safety -ar.png',
+    cover: '/assets/images/ar/covers/Quality Safety -ar.png',
     lessons: [
       { id: 'l1', slug: 'quality-standards', title: 'معايير الجودة في قسم الأشعة', duration: '20 دقيقة' },
       { id: 'l2', slug: 'radiation-safety', title: 'السلامة الإشعاعية', duration: '20 دقيقة' },
@@ -129,7 +129,7 @@ export const arCourses: Course[] = [
     title: 'التصوير باستخدام C-Arm',
     description: 'دورة عملية لفهم جهاز C-Arm، مكوناته، مبادئ التصوير الفلوري، الوضعيات والتطبيقات الجراحية، السلامة الإشعاعية، واستكشاف الأخطاء الشائعة.',
     level: 'CLINICAL',
-    cover: '/images/ar/courses/AR_c-arm-course-cover.jpg',
+    cover: '/assets/images/ar/courses/AR_c-arm-course-cover.jpg',
 
     lessons: [
       { id: 'l1', slug: 'c-arm-introduction', title: 'مقدمة في جهاز C-Arm', duration: '18 دقيقة' },
@@ -157,7 +157,7 @@ export const arCourses: Course[] = [
     title: 'أساسيات الماموجرافي',
     description: 'دورة تعليمية منظمة لفهم أساسيات تصوير الثدي بالماموجرافي، مكونات الجهاز، الوضعيات والإسقاطات، جودة الصورة، السلامة الإشعاعية، ومراجعة الصور.',
     level: 'CLINICAL',
-    cover: '/images/ar/courses/AR_mammography-course-cover.jpg',
+    cover: '/assets/images/ar/courses/AR_mammography-course-cover.jpg',
 
     lessons: [
       { id: 'l1', slug: 'mammography-introduction', title: 'مقدمة في تصوير الثدي', duration: '18 دقيقة' },
