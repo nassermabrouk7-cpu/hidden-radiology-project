@@ -14,6 +14,9 @@ const VALID_PRODUCTS: Record<string, string> = {
   'ana-fahim-radiation-safety-en': 'rs-vol5',
 }
 
+// Sales milestones for automated promotion
+const SALES_MILESTONES = [10, 25, 50, 100, 250, 500, 1000]
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -56,11 +59,48 @@ export async function POST(request: NextRequest) {
       product_name: body.product_name,
     })
 
+    // Check for sales milestones and trigger social automation
+    // In production, you would track actual sales count in a database
+    // For now, this is a placeholder for the milestone checking logic
+    const salesCount = body.sale_count || 1 // This would come from your database
+    const milestone = SALES_MILESTONES.find(m => salesCount === m)
+    
+    if (milestone && process.env.ENABLE_SOCIAL_AUTOMATION === 'true') {
+      // Trigger social automation for milestone
+      try {
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+        const automationResponse = await fetch(`${baseUrl}/api/social-automation`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-webhook-signature': process.env.WEBHOOK_SECRET || '',
+          },
+          body: JSON.stringify({
+            trigger: {
+              type: 'sales_milestone',
+              productId: validProductId,
+              productName: body.product_name,
+              milestone: milestone,
+              locale: productIdentifier.includes('-ar') ? 'ar' : 'en',
+            },
+            platforms: ['twitter', 'facebook', 'linkedin', 'telegram'],
+          }),
+        })
+        
+        if (automationResponse.ok) {
+          console.log(`Social automation triggered for ${milestone} sales milestone`)
+        }
+      } catch (error) {
+        console.error('Failed to trigger social automation:', error)
+      }
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Webhook processed successfully',
       download_token: downloadToken,
       product_id: validProductId,
+      milestone_triggered: milestone || null,
     })
   } catch (error) {
     console.error('Gumroad webhook error:', error)

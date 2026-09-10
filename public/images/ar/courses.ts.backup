@@ -1,0 +1,272 @@
+import { Course } from '../../lib/types'
+
+export const arCourses: Course[] = [
+  {
+    id: 'hr-course-ar-001',
+    sku: 'HR-COURSE-AR-001',
+    language: 'ar',
+    slug: 'radiology-basics',
+    title: 'أساسيات الأشعة للمبتدئين',
+    description:
+      'دورة تأسيسية مبسطة لفهم علم الأشعة، تكوين الصورة، مبادئ الأشعة السينية، والسلامة الإشعاعية. مناسبة لطلاب وفنيي الأشعة في بداية الطريق.',
+    level: 'BEGINNER',
+    cover: '/images/ar/courses/course-bg.jpg',
+
+    lessons: [
+      {
+        id: 'l1',
+        slug: 'intro',
+        title: 'مقدمة في علم الأشعة',
+        duration: '15 دقيقة',
+      },
+      {
+        id: 'l2',
+        slug: 'xray-physics',
+        title: 'فيزياء الأشعة السينية',
+        duration: '20 دقيقة',
+      },
+      {
+        id: 'l3',
+        slug: 'image-formation',
+        title: 'كيف تتكون صورة الأشعة؟',
+        duration: '20 دقيقة',
+      },
+      {
+        id: 'l4',
+        slug: 'image-quality',
+        title: 'أساسيات جودة الصورة',
+        duration: '18 دقيقة',
+      },
+      {
+        id: 'l5',
+        slug: 'radiation-safety',
+        title: 'السلامة الإشعاعية',
+        duration: '18 دقيقة',
+      },
+      {
+        id: 'l6',
+        slug: 'patient-positioning',
+        title: 'أساسيات وضع المريض',
+        duration: '20 دقيقة',
+      },
+    ],
+
+    status: 'PUBLISHED',
+
+    seo: {
+      title: 'أساسيات الأشعة للمبتدئين | Hidden Radiology',
+      description:
+        'دورة تأسيسية لتعلم أساسيات الأشعة للطلاب وفنيي الأشعة المبتدئين.',
+      canonical: '/ar/courses/radiology-basics',
+    },
+  },
+
+  {
+    id: 'hr-course-ar-002',
+    sku: 'HR-COURSE-AR-002',
+    language: 'ar',
+    slug: 'ct-mastery',
+    title: 'إتقان CT',
+    description:
+      'دورة متقدمة لفنيي الأشعة والطلاب المهتمين بالتصوير المقطعي، تبدأ من فهم الجهاز والبروتوكولات وحتى جودة الصورة ومبادئ التعامل مع مواد التباين.',
+    level: 'CLINICAL',
+    cover: '/images/ar/products/ct-cover.jpg',
+
+    lessons: [
+      {
+        id: 'l1',
+        slug: 'ct-basics',
+        title: 'أساسيات التصوير المقطعي CT',
+        duration: '20 دقيقة',
+      },
+      {
+        id: 'l2',
+        slug: 'ct-protocols',
+        title: 'بروتوكولات CT',
+        duration: '25 دقيقة',
+      },
+      {
+        id: 'l3',
+        slug: 'ct-parameters',
+        title: 'عوامل وتقنيات التصوير',
+        duration: '22 دقيقة',
+      },
+      {
+        id: 'l4',
+        slug: 'ct-image-quality',
+        title: 'جودة صورة CT',
+        duration: '20 دقيقة',
+      },
+      {
+        id: 'l5',
+        slug: 'contrast-media',
+        title: 'مواد التباين في CT',
+        duration: '22 دقيقة',
+      },
+      {
+        id: 'l6',
+        slug: 'ct-artifacts',
+        title: 'الـ Artifacts في CT',
+        duration: '20 دقيقة',
+      },
+    ],
+
+    status: 'PUBLISHED',
+
+    seo: {
+      title: 'إتقان CT | Hidden Radiology',
+      description:
+        'دورة متقدمة في التصوير المقطعي CT تشمل البروتوكولات والتقنيات وجودة الصورة.',
+      canonical: '/ar/courses/ct-mastery',
+    },
+  },
+
+  {
+    id: 'hr-course-ar-003',
+    sku: 'HR-COURSE-AR-003',
+    language: 'ar',
+    slug: 'chest-xray',
+    title: 'إتقان أشعة الصدر Chest X-Ray',
+    description:
+      'دورة عملية لفهم أساسيات تصوير الصدر، وضعيات التصوير، جودة الصورة، والتعرف على أهم العلامات التي يجب ملاحظتها عند مراجعة صورة الصدر.',
+    level: 'CLINICAL',
+    cover: '/images/ar/courses/course-bg.jpg',
+
+    lessons: [
+      {
+        id: 'l1',
+        slug: 'chest-anatomy',
+        title: 'تشريح الصدر في صورة الأشعة',
+        duration: '20 دقيقة',
+      },
+      {
+        id: 'l2',
+        slug: 'pa-ap-view',
+        title: 'PA و AP: ما الفرق؟',
+        duration: '18 دقيقة',
+      },
+      {
+        id: 'l3',
+        slug: 'chest-image-quality',
+        title: 'تقييم جودة صورة الصدر',
+        duration: '22 دقيقة',
+      },
+      {
+        id: 'l4',
+        slug: 'systematic-approach',
+        title: 'طريقة منظمة لمراجعة صورة الصدر',
+        duration: '25 دقيقة',
+      },
+      {
+        id: 'l5',
+        slug: 'common-findings',
+        title: 'علامات شائعة يجب الانتباه إليها',
+        duration: '25 دقيقة',
+      },
+    ],
+
+    status: 'PUBLISHED',
+
+    seo: {
+      title: 'إتقان أشعة الصدر | Hidden Radiology',
+      description:
+        'دورة تعليمية عملية في أساسيات وتصوير ومراجعة أشعة الصدر.',
+      canonical: '/ar/courses/chest-xray',
+    },
+  },
+
+  {
+    id: 'hr-course-ar-004',
+    sku: 'HR-COURSE-AR-004',
+    language: 'ar',
+    slug: 'mri-basics',
+    title: 'أساسيات MRI',
+    description:
+      'مقدمة منظمة إلى الرنين المغناطيسي MRI، تشمل المبادئ الأساسية، السلامة، التسلسلات، وجودة الصورة.',
+    level: 'BEGINNER',
+    cover: '/images/ar/courses/course-bg.jpg',
+
+    lessons: [
+      {
+        id: 'l1',
+        slug: 'mri-introduction',
+        title: 'مقدمة في MRI',
+        duration: '18 دقيقة',
+      },
+      {
+        id: 'l2',
+        slug: 'mri-safety',
+        title: 'السلامة في MRI',
+        duration: '25 دقيقة',
+      },
+      {
+        id: 'l3',
+        slug: 'mri-sequences',
+        title: 'فهم أهم تسلسلات MRI',
+        duration: '25 دقيقة',
+      },
+      {
+        id: 'l4',
+        slug: 'mri-image-quality',
+        title: 'جودة الصورة في MRI',
+        duration: '20 دقيقة',
+      },
+    ],
+
+     status: 'PUBLISHED',
+
+    seo: {
+      title: 'أساسيات MRI | Hidden Radiology',
+      description:
+        'دورة تأسيسية لفهم مبادئ الرنين المغناطيسي MRI والسلامة وجودة الصورة.',
+      canonical: '/ar/courses/mri-basics',
+    },
+  },
+
+  {
+    id: 'hr-course-ar-005',
+    sku: 'HR-COURSE-AR-005',
+    language: 'ar',
+    slug: 'quality-safety',
+    title: '?????? ???????? ?? ????? ??????',
+    description:
+      '???? ????? ???? ?????? ?????? ???????? ?? ????? ??????? ???????? ?????????? ????????? ????????? ???????? ??? ??????? ?? ???? ?????.',
+    level: 'PROFESSIONAL',
+    cover: '/images/ar/courses/course-bg.jpg',
+
+    lessons: [
+      {
+        id: 'l1',
+        slug: 'quality-standards',
+        title: '?????? ?????? ?? ????? ??????',
+        duration: '20 ?????',
+      },
+      {
+        id: 'l2',
+        slug: 'radiation-safety',
+        title: '??????? ?????????',
+        duration: '20 ?????',
+      },
+      {
+        id: 'l3',
+        slug: 'compliance',
+        title: '???????? ????????',
+        duration: '22 ?????',
+      },
+      {
+        id: 'l4',
+        slug: 'quality-training',
+        title: '??????? ?? ?????? ????????',
+        duration: '20 ?????',
+      },
+    ],
+
+    status: 'PUBLISHED',
+
+    seo: {
+      title: '?????? ???????? ?? ????? ?????? | Hidden Radiology',
+      description:
+        '???? ????? ?? ?????? ?????? ????????? ???????? ?????????? ????????? ???????? ?? ????? ??????.',
+      canonical: '/ar/courses/quality-safety',
+    },
+  },]

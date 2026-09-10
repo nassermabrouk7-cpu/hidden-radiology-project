@@ -1,0 +1,165 @@
+# Hidden Radiology - GitLab CI/CD Pipeline
+# This pipeline handles building, testing, and deployment for Next.js application
+
+stages:
+  - validate
+  - build
+  - deploy
+
+variables:
+  NODE_VERSION: "18"
+  CACHE_KEY: "$CI_COMMIT_REF_SLUG"
+
+# Cache node_modules for faster builds
+cache:
+  key: ${CACHE_KEY}
+  paths:
+    - node_modules/
+    - .next/cache/
+
+# ============================================
+# VALIDATION STAGE
+# ============================================
+
+validate:typescript:
+  stage: validate
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm run lint
+    - npx tsc --noEmit
+  only:
+    - main
+    - develop
+    - merge_requests
+
+validate:dependencies:
+  stage: validate
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm audit --audit-level=moderate
+  allow_failure: true
+  only:
+    - main
+    - develop
+    - merge_requests
+
+# ============================================
+# BUILD STAGE
+# ============================================
+
+build:production:
+  stage: build
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - .next/
+      - out/
+    expire_in: 1 week
+  only:
+    - main
+  environment:
+    name: production
+    url: https://hiddenradiology.com
+
+build:preview:
+  stage: build
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - .next/
+      - out/
+    expire_in: 3 days
+  only:
+    - develop
+  environment:
+    name: preview
+    url: https://preview.hiddenradiology.com
+
+# ============================================
+# DEPLOY STAGE
+# ============================================
+
+deploy:vercel:
+  stage: deploy
+  image: node:${NODE_VERSION}
+  script:
+    - npm install -g vercel
+    - vercel --prod --token=$VERCEL_TOKEN
+  dependencies:
+    - build:production
+  only:
+    - main
+  when: manual
+  environment:
+    name: production
+    url: https://hiddenradiology.com
+
+deploy:vercel-preview:
+  stage: deploy
+  image: node:${NODE_VERSION}
+  script:
+    - npm install -g vercel
+    - vercel --token=$VERCEL_TOKEN
+  dependencies:
+    - build:preview
+  only:
+    - develop
+  environment:
+    name: preview
+    url: https://preview.hiddenradiology.com
+
+# ============================================
+# INTEGRATION TESTS
+# ============================================
+
+test:integration:
+  stage: validate
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm run validate
+  services:
+    - name: node:${NODE_VERSION}
+      alias: test-server
+  only:
+    - main
+    - develop
+    - merge_requests
+
+# ============================================
+# SECURITY SCANNING
+# ============================================
+
+security:sast:
+  stage: validate
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm audit --audit-level=high
+  only:
+    - main
+    - develop
+  allow_failure: true
+
+# ============================================
+# PERFORMANCE MONITORING
+# ============================================
+
+performance:build_check:
+  stage: validate
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm run build
+    - echo "Build completed successfully"
+  only:
+    - main
+    - develop

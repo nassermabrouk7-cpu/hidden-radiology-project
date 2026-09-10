@@ -10,7 +10,7 @@ export const enCourses: Course[] = [
     description:
       'A comprehensive foundational course covering X-ray physics principles, image formation mechanisms, image quality optimization, radiation protection protocols, and patient positioning techniques. Designed for radiography students and entry-level radiologic technologists.',
     level: 'BEGINNER',
-    cover: '/assets/images/en/courses/EN_radiology-basics-course-cover.jpg',
+    cover: '/assets/images/en/courses/radiology-basics-course-cover.jpg',
 
 
     lessons: [
@@ -291,7 +291,7 @@ export const enCourses: Course[] = [
     description:
       'A practical clinical course covering mobile C-arm system fundamentals, fluoroscopic imaging principles, surgical positioning techniques, intraoperative applications, radiation dose management, image quality optimization, and common troubleshooting scenarios. Essential for interventional radiology and operating room technologists.',
     level: 'CLINICAL',
-    cover: '/assets/images/en/courses/EN_c-arm-course-cover.jpg',
+    cover: '/assets/images/en/courses/c-arm-course-cover.jpg',
 
 
     lessons: [
@@ -404,4 +404,5 @@ export const enCourses: Course[] = [
     },
   },
 ]
+
 

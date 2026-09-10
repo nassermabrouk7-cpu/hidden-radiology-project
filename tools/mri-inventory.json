@@ -1,0 +1,410 @@
+﻿[
+    {
+        "file":  "machine-learning (4)_1_1_1.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases",
+        "url":  "/assets/images/ar/cases/machine-learning (4)_1_1_1.jpg",
+        "kb":  71.1,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\machine-learning (4)_1_1_1.jpg"
+    },
+    {
+        "file":  "mrKzsGuMxKqEAMZ_rau8XFAevclo6IhwqROhW9UZI4H6saYnxlGBSTjA1IcWbPCbBswFHtnGLtfU-ynnmkgBnKX_UNYqTQHb-SOm-PHz8WsEx764DUU8f9md_tjgxUKZ6-yYpUHEafNVcGgBVr5lVavOIXmTKEkoiAyLe0ZEYZU_1_1.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases",
+        "url":  "/assets/images/ar/cases/mrKzsGuMxKqEAMZ_rau8XFAevclo6IhwqROhW9UZI4H6saYnxlGBSTjA1IcWbPCbBswFHtnGLtfU-ynnmkgBnKX_UNYqTQHb-SOm-PHz8WsEx764DUU8f9md_tjgxUKZ6-yYpUHEafNVcGgBVr5lVavOIXmTKEkoiAyLe0ZEYZU_1_1.jpg",
+        "kb":  73.2,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mrKzsGuMxKqEAMZ_rau8XFAevclo6IhwqROhW9UZI4H6saYnxlGBSTjA1IcWbPCbBswFHtnGLtfU-ynnmkgBnKX_UNYqTQHb-SOm-PHz8WsEx764DUU8f9md_tjgxUKZ6-yYpUHEafNVcGgBVr5lVavOIXmTKEkoiAyLe0ZEYZU_1_1.jpg"
+    },
+    {
+        "file":  "SOCIAL-MEDIA (4)_3_1_1.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases",
+        "url":  "/assets/images/ar/cases/SOCIAL-MEDIA (4)_3_1_1.jpg",
+        "kb":  108.5,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\SOCIAL-MEDIA (4)_3_1_1.jpg"
+    },
+    {
+        "file":  "3D-chest.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/3D-chest.png",
+        "kb":  2127.9,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\3D-chest.png"
+    },
+    {
+        "file":  "3D-ckul.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/3D-ckul.png",
+        "kb":  2084.6,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\3D-ckul.png"
+    },
+    {
+        "file":  "3D-CT-MRI Reconstruction-of -Shoulderjoint.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/3D-CT-MRI Reconstruction-of -Shoulderjoint.jpg",
+        "kb":  2028.7,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\3D-CT-MRI Reconstruction-of -Shoulderjoint.jpg"
+    },
+    {
+        "file":  "3D-Full-Skeleton.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/3D-Full-Skeleton.jpg",
+        "kb":  1935.7,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\3D-Full-Skeleton.jpg"
+    },
+    {
+        "file":  "3D-lumber-spine.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/3D-lumber-spine.png",
+        "kb":  2067.6,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\3D-lumber-spine.png"
+    },
+    {
+        "file":  "3D-Urinary-System-Medical-Illustration.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/3D-Urinary-System-Medical-Illustration.png",
+        "kb":  2168.9,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\3D-Urinary-System-Medical-Illustration.png"
+    },
+    {
+        "file":  "brain-hemorrhage_1_1.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/brain-hemorrhage_1_1.jpg",
+        "kb":  27.6,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\brain-hemorrhage_1_1.jpg"
+    },
+    {
+        "file":  "Coronary- Angiogram.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/Coronary- Angiogram.jpg",
+        "kb":  518.2,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\Coronary- Angiogram.jpg"
+    },
+    {
+        "file":  "CT Pulmonary-Angiogram -CTPA.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/CT Pulmonary-Angiogram -CTPA.jpg",
+        "kb":  2004.6,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\CT Pulmonary-Angiogram -CTPA.jpg"
+    },
+    {
+        "file":  "ct-abdomen-axial-coronal-sagittal.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct-abdomen-axial-coronal-sagittal.jpg",
+        "kb":  2115.1,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct-abdomen-axial-coronal-sagittal.jpg"
+    },
+    {
+        "file":  "ct-Abdominal-Angiogram -Angiography.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct-Abdominal-Angiogram -Angiography.jpg",
+        "kb":  2022.5,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct-Abdominal-Angiogram -Angiography.jpg"
+    },
+    {
+        "file":  "CT-Chest - Coronal-Reconstruction -Coronal-View.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/CT-Chest - Coronal-Reconstruction -Coronal-View.png",
+        "kb":  2127.1,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\CT-Chest - Coronal-Reconstruction -Coronal-View.png"
+    },
+    {
+        "file":  "CT-Chest-Lung Window-Axial- Cut.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/CT-Chest-Lung Window-Axial- Cut.jpg",
+        "kb":  2085.6,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\CT-Chest-Lung Window-Axial- Cut.jpg"
+    },
+    {
+        "file":  "ct-Contrast-Enhanced-Abdominal- Axial-View)..jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct-Contrast-Enhanced-Abdominal- Axial-View)..jpg",
+        "kb":  2101.2,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct-Contrast-Enhanced-Abdominal- Axial-View)..jpg"
+    },
+    {
+        "file":  "ct-embolism..jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct-embolism..jpg",
+        "kb":  16.4,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct-embolism..jpg"
+    },
+    {
+        "file":  "ct-OIP.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct-OIP.jpg",
+        "kb":  17.5,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct-OIP.jpg"
+    },
+    {
+        "file":  "ct-Pelvic Angiography-Angiogram.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct-Pelvic Angiography-Angiogram.jpg",
+        "kb":  2072.5,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct-Pelvic Angiography-Angiogram.jpg"
+    },
+    {
+        "file":  "ct-Pulmonary -Angiogram  -Chest-Angiography.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct-Pulmonary -Angiogram  -Chest-Angiography.jpg",
+        "kb":  430.3,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct-Pulmonary -Angiogram  -Chest-Angiography.jpg"
+    },
+    {
+        "file":  "ct-stroke.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct-stroke.jpg",
+        "kb":  27.6,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct-stroke.jpg"
+    },
+    {
+        "file":  "CT-Urogram -Renal-CT-Axial-Cut.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/CT-Urogram -Renal-CT-Axial-Cut.jpg",
+        "kb":  2093,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\CT-Urogram -Renal-CT-Axial-Cut.jpg"
+    },
+    {
+        "file":  "ct.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\ct",
+        "url":  "/assets/images/ar/cases/ct/ct.jpg",
+        "kb":  499.8,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\ct\\ct.jpg"
+    },
+    {
+        "file":  "Bilateral-Mammography - APCC View.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mammogram",
+        "url":  "/assets/images/ar/cases/mammogram/Bilateral-Mammography - APCC View.jpg",
+        "kb":  505.4,
+        "modality":  "MAMMO",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mammogram\\Bilateral-Mammography - APCC View.jpg"
+    },
+    {
+        "file":  "(MRI Brain - Sagittal View)..jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/(MRI Brain - Sagittal View)..jpg",
+        "kb":  67.7,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\(MRI Brain - Sagittal View)..jpg"
+    },
+    {
+        "file":  "CT Abdomen with Contrast - Axial View.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/CT Abdomen with Contrast - Axial View.jpg",
+        "kb":  353.7,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\CT Abdomen with Contrast - Axial View.jpg"
+    },
+    {
+        "file":  "MRI \u0026 CT Thoracic Spine.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/MRI \u0026 CT Thoracic Spine.jpg",
+        "kb":  115.4,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\MRI \u0026 CT Thoracic Spine.jpg"
+    },
+    {
+        "file":  "MRI Brain - Sagittal-T2FLAIR.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/MRI Brain - Sagittal-T2FLAIR.jpg",
+        "kb":  2155.9,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\MRI Brain - Sagittal-T2FLAIR.jpg"
+    },
+    {
+        "file":  "MRI Brain-T2-Weighted - Axial Views.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/MRI Brain-T2-Weighted - Axial Views.jpg",
+        "kb":  132.6,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\MRI Brain-T2-Weighted - Axial Views.jpg"
+    },
+    {
+        "file":  "MRI CervicalThoracic Spine - T2 \u0026 T1 Post-Contrast..png",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/MRI CervicalThoracic Spine - T2 \u0026 T1 Post-Contrast..png",
+        "kb":  56.7,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\MRI CervicalThoracic Spine - T2 \u0026 T1 Post-Contrast..png"
+    },
+    {
+        "file":  "MRI Knee-Joint - Axial, Coronal, and Sagittal Views.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/MRI Knee-Joint - Axial, Coronal, and Sagittal Views.jpg",
+        "kb":  23.2,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\MRI Knee-Joint - Axial, Coronal, and Sagittal Views.jpg"
+    },
+    {
+        "file":  "MRI Shoulder Joint - Axial \u0026 Coronal Views).jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/MRI Shoulder Joint - Axial \u0026 Coronal Views).jpg",
+        "kb":  27,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\MRI Shoulder Joint - Axial \u0026 Coronal Views).jpg"
+    },
+    {
+        "file":  "MRI-Thoracic Spine - Sagittal T2.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/MRI-Thoracic Spine - Sagittal T2.jpg",
+        "kb":  94,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\MRI-Thoracic Spine - Sagittal T2.jpg"
+    },
+    {
+        "file":  "T1 و T2 (T1 vs T2 Weighted MRI Brain Analysil.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\mri",
+        "url":  "/assets/images/ar/cases/mri/T1 و T2 (T1 vs T2 Weighted MRI Brain Analysil.jpg",
+        "kb":  53.6,
+        "modality":  "MRI",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\mri\\T1 و T2 (T1 vs T2 Weighted MRI Brain Analysil.jpg"
+    },
+    {
+        "file":  "Abdominal Ultrasound.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\us",
+        "url":  "/assets/images/ar/cases/us/Abdominal Ultrasound.jpg",
+        "kb":  2029.9,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\us\\Abdominal Ultrasound.jpg"
+    },
+    {
+        "file":  "Echocardiogram  Cardiac Ultrasound.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\us",
+        "url":  "/assets/images/ar/cases/us/Echocardiogram  Cardiac Ultrasound.jpg",
+        "kb":  1918.6,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\us\\Echocardiogram  Cardiac Ultrasound.jpg"
+    },
+    {
+        "file":  "Thyroid Ultrasound.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\us",
+        "url":  "/assets/images/ar/cases/us/Thyroid Ultrasound.jpg",
+        "kb":  2094,
+        "modality":  "UNKNOWN",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\us\\Thyroid Ultrasound.jpg"
+    },
+    {
+        "file":  "Cervical Spine_1_1_1.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/Cervical Spine_1_1_1.png",
+        "kb":  1951.6,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\Cervical Spine_1_1_1.png"
+    },
+    {
+        "file":  "Chest X-ray AP Erect Mobile -ICUResus.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/Chest X-ray AP Erect Mobile -ICUResus.jpg",
+        "kb":  109.4,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\Chest X-ray AP Erect Mobile -ICUResus.jpg"
+    },
+    {
+        "file":  "Chest X-ray AP Supine.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/Chest X-ray AP Supine.jpg",
+        "kb":  3349,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\Chest X-ray AP Supine.jpg"
+    },
+    {
+        "file":  "chest-pneumonia.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/chest-pneumonia.jpg",
+        "kb":  13.3,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\chest-pneumonia.jpg"
+    },
+    {
+        "file":  "Hand P.A_1_1_1.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/Hand P.A_1_1_1.png",
+        "kb":  1826.5,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\Hand P.A_1_1_1.png"
+    },
+    {
+        "file":  "Hand_1_1_1.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/Hand_1_1_1.png",
+        "kb":  569.1,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\Hand_1_1_1.png"
+    },
+    {
+        "file":  "Lobaerpneumonie.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/Lobaerpneumonie.jpg",
+        "kb":  10.1,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\Lobaerpneumonie.jpg"
+    },
+    {
+        "file":  "Lungs_with_CAP_Pretreatment.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/Lungs_with_CAP_Pretreatment.jpg",
+        "kb":  10.4,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\Lungs_with_CAP_Pretreatment.jpg"
+    },
+    {
+        "file":  "Skulle lateral_1_1_1.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/Skulle lateral_1_1_1.jpg",
+        "kb":  1887.9,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\Skulle lateral_1_1_1.jpg"
+    },
+    {
+        "file":  "UzYM_IlFZodR9rvuLEUCz784BtxCpTBELtGOqly4bm4p8Qn2_P4YLMBJZP182fEAtFdZOEqqx3FTcNXnJP6fGDTy0Fk2NgFp7DVaKYR5Fe6UGEaRDPn_L0JiZyGJm3ZC8Rmieew8Jms5HOokII9e0HOpY_McyAA-VDw5wZ1-SaM_1.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/UzYM_IlFZodR9rvuLEUCz784BtxCpTBELtGOqly4bm4p8Qn2_P4YLMBJZP182fEAtFdZOEqqx3FTcNXnJP6fGDTy0Fk2NgFp7DVaKYR5Fe6UGEaRDPn_L0JiZyGJm3ZC8Rmieew8Jms5HOokII9e0HOpY_McyAA-VDw5wZ1-SaM_1.jpg",
+        "kb":  23.4,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\UzYM_IlFZodR9rvuLEUCz784BtxCpTBELtGOqly4bm4p8Qn2_P4YLMBJZP182fEAtFdZOEqqx3FTcNXnJP6fGDTy0Fk2NgFp7DVaKYR5Fe6UGEaRDPn_L0JiZyGJm3ZC8Rmieew8Jms5HOokII9e0HOpY_McyAA-VDw5wZ1-SaM_1.jpg"
+    },
+    {
+        "file":  "x-ray-elbow.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/x-ray-elbow.jpg",
+        "kb":  3367.7,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\x-ray-elbow.jpg"
+    },
+    {
+        "file":  "x-ray-Lumber Spine.png",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/x-ray-Lumber Spine.png",
+        "kb":  1973.8,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\x-ray-Lumber Spine.png"
+    },
+    {
+        "file":  "x-ray-Pelvis_AP_View.jpg",
+        "folder":  "public\\assets\\images\\ar\\cases\\xray",
+        "url":  "/assets/images/ar/cases/xray/x-ray-Pelvis_AP_View.jpg",
+        "kb":  2030.2,
+        "modality":  "XRAY",
+        "fullPath":  "E:\\hidden-radiology-v2\\public\\assets\\images\\ar\\cases\\xray\\x-ray-Pelvis_AP_View.jpg"
+    }
+]

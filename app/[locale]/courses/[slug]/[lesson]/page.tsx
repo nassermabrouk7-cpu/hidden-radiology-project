@@ -1,4 +1,4 @@
-﻿import { notFound } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Locale } from '@/lib/types'
 
@@ -6,7 +6,7 @@ import { arCourses } from '@/content/ar/courses'
 import { enCourses } from '@/content/en/courses'
 
 /* =========================================================
-   ENGLISH — RADIOLOGY BASICS
+   ENGLISH â€” RADIOLOGY BASICS
 ========================================================= */
 
 import { enLessonIntro } from '@/content/en/lessons/intro'
@@ -17,7 +17,7 @@ import { enLessonRadiationSafety } from '@/content/en/lessons/radiation-safety'
 import { enLessonPatientPositioning } from '@/content/en/lessons/patient-positioning'
 
 /* =========================================================
-   ENGLISH — CT MASTERY
+   ENGLISH â€” CT MASTERY
 ========================================================= */
 
 import { enLessonCTBasics } from '@/content/en/lessons/ct-basics'
@@ -28,7 +28,7 @@ import { enLessonContrastMedia } from '@/content/en/lessons/contrast-media'
 import { enLessonCTArtifacts } from '@/content/en/lessons/ct-artifacts'
 
 /* =========================================================
-   ENGLISH — MRI BASICS
+   ENGLISH â€” MRI BASICS
 ========================================================= */
 
 import { enLessonMRIIntroduction } from '@/content/en/lessons/mri-introduction'
@@ -37,7 +37,7 @@ import { enLessonMRISequences } from '@/content/en/lessons/mri-sequences'
 import { enLessonMRIImageQuality } from '@/content/en/lessons/mri-image-quality'
 
 /* =========================================================
-   ENGLISH — CHEST X-RAY
+   ENGLISH â€” CHEST X-RAY
 ========================================================= */
 
 import { enLessonChestAnatomy } from '@/content/en/lessons/chest-anatomy'
@@ -48,7 +48,7 @@ import { enLessonCommonSigns } from '@/content/en/lessons/common-signs'
 import { enLessonClinicalApplication } from '@/content/en/lessons/clinical-application'
 
 /* =========================================================
-   ENGLISH — QUALITY & SAFETY
+   ENGLISH â€” QUALITY & SAFETY
 ========================================================= */
 
 import { enLessonQualityStandards } from '@/content/en/lessons/quality-standards'
@@ -57,7 +57,7 @@ import { enLessonCompliance } from '@/content/en/lessons/compliance'
 import { enLessonQualityTraining } from '@/content/en/lessons/quality-training'
 
 /* =========================================================
-   ENGLISH — C-ARM
+   ENGLISH â€” C-ARM
 ========================================================= */
 
 import { enLessonCArmIntroduction } from '@/content/en/lessons/c-arm-introduction'
@@ -68,7 +68,7 @@ import { enLessonCArmRadiationSafety } from '@/content/en/lessons/c-arm-radiatio
 import { enLessonCArmImageQualityTroubleshooting } from '@/content/en/lessons/c-arm-image-quality-troubleshooting'
 
 /* =========================================================
-   ENGLISH — MAMMOGRAPHY
+   ENGLISH â€” MAMMOGRAPHY
 ========================================================= */
 
 import { enLessonMammographyIntroduction } from '@/content/en/lessons/mammography-introduction'
@@ -79,7 +79,7 @@ import { enLessonMammographyRadiationSafety } from '@/content/en/lessons/mammogr
 import { enLessonMammographyBasicFindings } from '@/content/en/lessons/mammography-basic-findings'
 
 /* =========================================================
-   ARABIC — RADIOLOGY BASICS
+   ARABIC â€” RADIOLOGY BASICS
 ========================================================= */
 
 import { arLessonIntro } from '@/content/ar/lessons/intro'
@@ -90,7 +90,7 @@ import { arLessonRadiationSafety } from '@/content/ar/lessons/radiation-safety'
 import { arLessonPatientPositioning } from '@/content/ar/lessons/patient-positioning'
 
 /* =========================================================
-   ARABIC — CT MASTERY
+   ARABIC â€” CT MASTERY
 ========================================================= */
 
 import { arLessonCTBasics } from '@/content/ar/lessons/ct-basics'
@@ -101,7 +101,7 @@ import { arLessonContrastMedia } from '@/content/ar/lessons/contrast-media'
 import { arLessonCTArtifacts } from '@/content/ar/lessons/ct-artifacts'
 
 /* =========================================================
-   ARABIC — MRI BASICS
+   ARABIC â€” MRI BASICS
 ========================================================= */
 
 import { arLessonMRIIntroduction } from '@/content/ar/lessons/mri-introduction'
@@ -110,7 +110,7 @@ import { arLessonMRISequences } from '@/content/ar/lessons/mri-sequences'
 import { arLessonMRIImageQuality } from '@/content/ar/lessons/mri-image-quality'
 
 /* =========================================================
-   ARABIC — CHEST X-RAY
+   ARABIC â€” CHEST X-RAY
 ========================================================= */
 
 import { arLessonChestAnatomy } from '@/content/ar/lessons/chest-anatomy'
@@ -120,7 +120,7 @@ import { arLessonSystematicApproach } from '@/content/ar/lessons/systematic-appr
 import { arLessonCommonFindings } from '@/content/ar/lessons/common-findings'
 
 /* =========================================================
-   ARABIC — QUALITY & SAFETY
+   ARABIC â€” QUALITY & SAFETY
 ========================================================= */
 
 import { arLessonQualityStandards } from '@/content/ar/lessons/quality-standards'
@@ -129,7 +129,7 @@ import { arLessonCompliance } from '@/content/ar/lessons/compliance'
 import { arLessonQualityTraining } from '@/content/ar/lessons/quality-training'
 
 /* =========================================================
-   ARABIC — C-ARM
+   ARABIC â€” C-ARM
 ========================================================= */
 
 import { arLessonCArmIntroduction } from '@/content/ar/lessons/c-arm-introduction'
@@ -140,7 +140,7 @@ import { arLessonCArmRadiationSafety } from '@/content/ar/lessons/c-arm-radiatio
 import { arLessonCArmClinicalApplicationsTroubleshooting } from '@/content/ar/lessons/c-arm-clinical-applications-troubleshooting'
 
 /* =========================================================
-   ARABIC — MAMMOGRAPHY
+   ARABIC â€” MAMMOGRAPHY
 ========================================================= */
 
 import { arLessonMammographyIntroduction } from '@/content/ar/lessons/mammography-introduction'
@@ -377,7 +377,7 @@ const radiologyBasicsImagesEn: Record<string, string[]> = {
     'RB_L04_02_Spatial_Resolution.jpg',
     'RB_L04_03_Contrast_Resolution.jpg',
     'RB_L04_04_Image_Noise.jpg',
-    'RB_L04_05_Exposure_Quality.jpg.jpg',
+    'RB_L04_05_Exposure_Quality.jpg',
   ],
   'radiation-safety': [
     'RB_L05_01_Radiation_Protection_en.jpg',
@@ -395,7 +395,7 @@ const radiologyBasicsImagesEn: Record<string, string[]> = {
   ],
 }
 /* =========================================================
-   MRI IMAGES — VERIFIED FILE EXTENSIONS
+   MRI IMAGES â€” VERIFIED FILE EXTENSIONS
 ========================================================= */
 
 const mriImagesAr: Record<string, string[]> = {
@@ -595,11 +595,11 @@ const ctImagesEn: Record<string, string[]> = {
 
 const qualitySafetyImagesAr: Record<string, string[]> = {
   'quality-standards': [
-    'RB_QS_L01_01_Radiology_Quality_Fundamentals.jpg.jpg',
+    'RB_QS_L01_01_Radiology_Quality_Fundamentals.jpg',
     'RB_QS_L01_02_Quality_Indicators.jpg',
     'RB_QS_L01_03_Image_Quality_Standards.jpg',
-    'RB_QS_L01_04_Patient_Safety_Service_Quality.jpg.jpg',
-    'RB_QS_L01_05_Continuous_Quality_Improvement.jpg.jpg',
+    'RB_QS_L01_04_Patient_Safety_Service_Quality.jpg',
+    'RB_QS_L01_05_Continuous_Quality_Improvement.jpg',
   ],
   'radiation-safety': [
     'RB_L02_01_Radiation_Safety_Fundamentals.jpg',
@@ -940,7 +940,7 @@ function getLessonImages(
     if (slug === 'radiology-basics') {
       return {
         images: radiologyBasicsImagesAr[lesson] ?? [],
-        basePath: '/images/ar/courses/radiology-basics',
+        basePath: '/assets/images/ar/courses/radiology-basics',
         useFolder: true,
       }
     }
@@ -948,7 +948,7 @@ function getLessonImages(
     if (slug === 'ct-mastery') {
       return {
         images: ctImagesAr[lesson] ?? [],
-        basePath: '/images/ar/courses/ct-mastery',
+        basePath: '/assets/images/ar/courses/ct-mastery',
         useFolder: true,
       }
     }
@@ -956,7 +956,7 @@ function getLessonImages(
     if (slug === 'mri-basics') {
       return {
         images: mriImagesAr[lesson] ?? [],
-        basePath: '/images/ar/courses/mri-basics',
+        basePath: '/assets/images/ar/courses/mri-basics',
         useFolder: true,
       }
     }
@@ -964,7 +964,7 @@ function getLessonImages(
     if (slug === 'chest-xray') {
       return {
         images: chestImagesAr[lesson] ?? [],
-        basePath: '/images/ar/courses/chest-xray',
+        basePath: '/assets/images/ar/courses/chest-xray',
         useFolder: true,
       }
     }
@@ -972,7 +972,7 @@ function getLessonImages(
     if (slug === 'quality-safety') {
       return {
         images: qualitySafetyImagesAr[lesson] ?? [],
-        basePath: '/images/ar/courses/quality-safety',
+        basePath: '/assets/images/ar/courses/quality-safety',
         useFolder: true,
       }
     }
@@ -980,7 +980,7 @@ function getLessonImages(
     if (slug === 'c-arm') {
       return {
         images: cArmImagesAr[lesson] ?? [],
-        basePath: '/images/ar/courses/C_Arm',
+        basePath: '/assets/images/ar/courses/C_Arm',
         useFolder: true,
       }
     }
@@ -988,7 +988,7 @@ function getLessonImages(
     if (slug === 'mammography') {
       return {
         images: mammographyImagesAr[lesson] ?? [],
-        basePath: '/images/ar/courses/Mammography',
+        basePath: '/assets/images/ar/courses/Mammography',
         useFolder: true,
       }
     }
@@ -998,7 +998,7 @@ function getLessonImages(
     if (slug === 'radiology-basics') {
       return {
         images: radiologyBasicsImagesEn[lesson] ?? [],
-        basePath: '/images/en/courses/radiology-basics',
+        basePath: '/assets/images/en/courses/radiology-basics',
         useFolder: true,
       }
     }
@@ -1006,7 +1006,7 @@ function getLessonImages(
     if (slug === 'ct-mastery') {
       return {
         images: ctImagesEn[lesson] ?? [],
-        basePath: '/images/en/courses/ct-mastery',
+        basePath: '/assets/images/en/courses/ct-mastery',
         useFolder: true,
       }
     }
@@ -1014,7 +1014,7 @@ function getLessonImages(
     if (slug === 'mri-basics') {
       return {
         images: mriImagesEn[lesson] ?? [],
-        basePath: '/images/en/courses/mri-basics',
+        basePath: '/assets/images/en/courses/mri-basics',
         useFolder: true,
       }
     }
@@ -1022,7 +1022,7 @@ function getLessonImages(
     if (slug === 'chest-xray') {
       return {
         images: chestImagesEn[lesson] ?? [],
-        basePath: '/images/en/courses/chest-xray',
+        basePath: '/assets/images/en/courses/chest-xray',
         useFolder: true,
       }
     }
@@ -1030,7 +1030,7 @@ function getLessonImages(
     if (slug === 'quality-safety') {
       return {
         images: qualitySafetyImagesEn[lesson] ?? [],
-        basePath: '/images/en/courses/quality-safety',
+        basePath: '/assets/images/en/courses/quality-safety',
         useFolder: true,
       }
     }
@@ -1038,7 +1038,7 @@ function getLessonImages(
     if (slug === 'c-arm-imaging') {
       return {
         images: cArmImagesEn[lesson] ?? [],
-        basePath: '/images/en/courses/C_Arm',
+        basePath: '/assets/images/en/courses/C_Arm',
         useFolder: true,
       }
     }
@@ -1046,7 +1046,7 @@ function getLessonImages(
     if (slug === 'mammography') {
       return {
         images: mammographyImagesEn[lesson] ?? [],
-        basePath: '/images/en/courses/Mammography',
+        basePath: '/assets/images/en/courses/Mammography',
         useFolder: true,
       }
     }
@@ -1064,7 +1064,7 @@ function renderList(value: string | string[]) {
     return (
       <div className="space-y-2">
         {value.map((item, index) => (
-          <p key={index}>• {item}</p>
+          <p key={index}>â€¢ {item}</p>
         ))}
       </div>
     )
@@ -1209,10 +1209,10 @@ export default async function LessonPage({
           href={`/${locale}/courses/${course.slug}`}
           className="inline-flex items-center gap-2 text-slate-400 hover:text-brand-cyan mb-8 transition-colors"
         >
-          <span>←</span>
+          <span>?</span>
 
           {isAr
-            ? 'العودة إلى الدورة'
+            ? 'العودة إلى الكورس'
             : 'Back to Course'}
         </Link>
 
@@ -1239,7 +1239,7 @@ export default async function LessonPage({
               {lessonData.introduction && (
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">
-                    {isAr ? 'مقدمة' : 'Introduction'}
+                    {isAr ? 'الدرس' : 'Introduction'}
                   </h2>
 
                   <p className="text-slate-300 leading-8">
@@ -1267,7 +1267,7 @@ export default async function LessonPage({
                   <section>
                     <h2 className="text-2xl font-bold text-white mb-6">
                       {isAr
-                        ? 'شرح الدرس'
+                        ? 'محتوى الدرس'
                         : 'Lesson Content'}
                     </h2>
 
@@ -1300,7 +1300,7 @@ export default async function LessonPage({
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">
                     {isAr
-                      ? 'مثال عملي'
+                      ? 'النقاط الرئيسية'
                       : 'Practical Example'}
                   </h2>
 
@@ -1321,7 +1321,7 @@ export default async function LessonPage({
                   <section>
                     <h2 className="text-2xl font-bold text-white mb-6">
                       {isAr
-                        ? 'الصور التعليمية'
+                        ? 'المراجع والمصادر'
                         : 'Educational Images'}
                     </h2>
 
@@ -1356,7 +1356,7 @@ export default async function LessonPage({
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">
                     {isAr
-                      ? 'الأخطاء الشائعة'
+                      ? 'معلومات مهمة'
                       : 'Common Mistakes'}
                   </h2>
 
@@ -1372,7 +1372,7 @@ export default async function LessonPage({
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">
                     {isAr
-                      ? 'أهم النقاط'
+                      ? 'الخلاصة'
                       : 'Key Points'}
                   </h2>
 
@@ -1388,7 +1388,7 @@ export default async function LessonPage({
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">
                     {isAr
-                      ? 'الخلاصة'
+                      ? 'الصور'
                       : 'Takeaway'}
                   </h2>
 
@@ -1412,7 +1412,7 @@ export default async function LessonPage({
           ) : (
             <div className="text-slate-300 leading-8">
               {isAr
-                ? 'محتوى هذا الدرس قيد الإعداد.'
+                ? 'انتهى هذا الدرس بنجاح.'
                 : 'This lesson content is being prepared.'}
             </div>
           )}
@@ -1422,6 +1422,11 @@ export default async function LessonPage({
     </main>
   )
 }
+
+
+
+
+
 
 
 

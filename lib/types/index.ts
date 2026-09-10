@@ -1,4 +1,4 @@
-export type Locale = 'ar' | 'en'
+﻿export type Locale = 'ar' | 'en'
 
 export type ProductStatus = 'DRAFT' | 'COMING_SOON' | 'PUBLISHED'
 
@@ -57,10 +57,17 @@ export interface ClinicalCase {
   modality: string
   region: string
   clinicalContext: string
+  indication: string
+  technique: string
   image: string
+  imageDescription: string
+  keyFindings: string
+  interpretation: string
+  differentialDiagnosis: string
   whatToLookFor: string
   commonMistake: string
   safetyQualityNote: string
+  finalImpression: string
   takeaway: string
   status: ProductStatus
   seo: SEOData
@@ -95,3 +102,4 @@ export interface PaymentMethod {
   color: string
   href: string
 }
+

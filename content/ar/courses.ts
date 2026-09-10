@@ -1,4 +1,4 @@
-﻿import { Course } from '../../lib/types'
+import { Course } from '../../lib/types'
 
 export const arCourses: Course[] = [
   {
@@ -9,7 +9,7 @@ export const arCourses: Course[] = [
     title: 'أساسيات الأشعة للمبتدئين',
     description: 'دورة تأسيسية مبسطة لفهم علم الأشعة، تكوين الصورة، مبادئ الأشعة السينية، والسلامة الإشعاعية. مناسبة لطلاب وفنيي الأشعة في بداية الطريق.',
     level: 'BEGINNER',
-    cover: '/assets/images/ar/courses/basics-radiology-course-cover.png',
+    cover: '/assets/images/ar/courses/basics-radiology-course-cover.jpg',
     lessons: [
       { id: 'l1', slug: 'intro', title: 'مقدمة في علم الأشعة', duration: '15 دقيقة' },
       { id: 'l2', slug: 'xray-physics', title: 'فيزياء الأشعة السينية', duration: '20 دقيقة' },
@@ -34,7 +34,7 @@ export const arCourses: Course[] = [
     title: 'إتقان CT',
     description: 'دورة متقدمة لفنيي الأشعة والطلاب المهتمين بالتصوير المقطعي، تبدأ من فهم الجهاز والبروتوكولات وحتى جودة الصورة ومبادئ التعامل مع مواد التباين.',
     level: 'CLINICAL',
-    cover: '/assets/images/ar/courses/ct-mastery-course-cover.png',
+    cover: '/assets/images/ar/courses/ct-course-cover.jpg',
     lessons: [
       { id: 'l1', slug: 'ct-basics', title: 'أساسيات التصوير المقطعي CT', duration: '20 دقيقة' },
       { id: 'l2', slug: 'ct-protocols', title: 'بروتوكولات CT', duration: '25 دقيقة' },
@@ -106,7 +106,7 @@ export const arCourses: Course[] = [
     title: 'الجودة والسلامة في قسم الأشعة',
     description: 'دورة متخصصة لفهم معايير الجودة والسلامة في أقسام الأشعة، وضمان سلامة المرضى والعاملين وتحسين جودة الصورة.',
     level: 'PROFESSIONAL',
-    cover: '/assets/images/ar/covers/Quality Safety -ar.png',
+    cover: '/assets/images/ar/courses/quality-safety-course-cover.jpg',
     lessons: [
       { id: 'l1', slug: 'quality-standards', title: 'معايير الجودة في قسم الأشعة', duration: '20 دقيقة' },
       { id: 'l2', slug: 'radiation-safety', title: 'السلامة الإشعاعية', duration: '20 دقيقة' },
@@ -177,4 +177,5 @@ export const arCourses: Course[] = [
     },
   },
 ]
+
 
