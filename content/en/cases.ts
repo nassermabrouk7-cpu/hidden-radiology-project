@@ -65,7 +65,7 @@ export const enCases: ClinicalCase[] = [
     clinicalContext: '34-year-old female with dizziness and intermittent numbness. MRI brain to exclude demyelination. Educational case of subtle brainstem lesion.',
     indication: 'Evaluation of suspected brainstem lesion.',
     technique: 'MRI Brain T2 Axial with magnification.',
-    image: '/assets/images/ar/cases/mri/MRI Brain-T2-Weighted - Axial Views.jpg',
+    image: '/assets/images/ar/cases/mri/mri-brain-t2-axial.jpg',
     imageDescription: 'Small hyperintense focus in dorsal pons.',
     keyFindings: 'Small hyperintense focus in dorsal pons on T2, highlighted by arrow on magnified views. No significant mass effect or surrounding edema. Location in brainstem makes it easy to miss without magnification and systematic review.',
     interpretation: 'Small intra-axial lesion in brainstem. In educational context, favors small inflammatory / demyelinating focus, correlation with clinical context needed.',
@@ -88,7 +88,7 @@ export const enCases: ClinicalCase[] = [
     clinicalContext: '28-year-old male with progressive lower limb weakness, cervicothoracic spine MRI. Educational case on importance of contrast.',
     indication: 'Evaluation of suspected cord lesion.',
     technique: 'MRI Cervicothoracic Spine T2 & T1 Post-Contrast.',
-    image: '/assets/images/ar/cases/mri/MRI CervicalThoracic Spine - T2 & T1 Post-Contrast.png',
+    image: '/assets/images/ar/cases/mri/mri-cervicothoracic.png',
     imageDescription: 'Intramedullary focus with enhancement.',
     keyFindings: 'T2: hyperintense intramedullary focus in cervicothoracic cord. T1 post-contrast: faint focal enhancement at same site. Enhancement changes differential.',
     interpretation: 'Enhancing intramedullary cord lesion - favors myelitis or demyelination, needs follow-up.',
@@ -111,7 +111,7 @@ export const enCases: ClinicalCase[] = [
     clinicalContext: 'Spinal mass compressing cord.',
     indication: 'Evaluation of spinal canal mass.',
     technique: 'MRI Thoracic Spine.',
-    image: '/assets/images/ar/cases/mri/MRI & CT Thoracic Spine.jpg',
+    image: '/assets/images/ar/cases/mri/mri-ct-thoracic-spine.jpg',
     imageDescription: 'Rounded mass posterior to thoracic cord.',
     keyFindings: 'Rounded mass posterior to cord pushing cord anteriorly. CSF cleft around mass.',
     interpretation: 'Intradural extramedullary mass - compatible with meningioma.',
@@ -125,3 +125,7 @@ export const enCases: ClinicalCase[] = [
     seo: { title: 'Extramedullary Mass', description: 'MRI case', canonical: '/en/cases/thoracic-intradural-extramedullary-mass' }
   }
 ]
+
+
+
+

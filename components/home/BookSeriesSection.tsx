@@ -1,3 +1,4 @@
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -66,21 +67,25 @@ export default function BookSeriesSection({ locale }: BookSeriesSectionProps) {
                 {/* Book Cover */}
                 <div className="relative aspect-[3/4] bg-brand-darker overflow-hidden">
                   {imageErrors.has(product.id) ? (
-                    <FallbackImage title={product.title} category={product.category} className="group-hover:scale-105 transition-transform duration-500" />
+                    <FallbackImage
+                      title={product.title}
+                      category={product.category}
+                      className="group-hover:scale-105 transition-transform duration-500"
+                    />
                   ) : (
                     <Image
                       src={product.cover}
                       alt={product.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       onError={() => handleImageError(product.id)}
                     />
                   )}
-                  
+
                   {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
-                  
+
                   {/* Category badge */}
                   <div className="absolute top-4 right-4">
                     <span className="px-3 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan text-xs font-medium border border-brand-cyan/30">
@@ -104,22 +109,25 @@ export default function BookSeriesSection({ locale }: BookSeriesSectionProps) {
                   <h3 className="text-white font-bold text-xl mb-2 group-hover:text-brand-cyan transition-colors line-clamp-2">
                     {product.title}
                   </h3>
-                  
+
                   {product.subtitle && (
                     <p className="text-brand-cyan/80 text-sm font-medium mb-3">
                       {product.subtitle}
                     </p>
                   )}
-                  
+
                   <p className="text-slate-400 text-sm line-clamp-3 mb-4 leading-relaxed">
                     {product.description}
                   </p>
 
                   <div className="flex items-center justify-between pt-4 border-t border-brand-border">
                     <div>
-                      <span className="text-brand-cyan font-bold text-2xl">${product.price}</span>
+                      <span className="text-brand-cyan font-bold text-2xl">
+                        ${product.price}
+                      </span>
                       <span className="text-slate-500 text-sm ml-1">USD</span>
                     </div>
+
                     <div className="flex items-center gap-2 text-brand-cyan group-hover:gap-3 transition-all">
                       <span className="text-sm font-medium">
                         {isAr ? 'عرض التفاصيل' : 'View Details'}
@@ -138,12 +146,15 @@ export default function BookSeriesSection({ locale }: BookSeriesSectionProps) {
           <Link href={`/${locale}/store`}>
             <Button className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
               <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+
               <span className="hidden sm:inline">
                 {isAr ? 'تصفح جميع الكتب في المتجر' : 'Browse All Books in Store'}
               </span>
+
               <span className="sm:hidden">
                 {isAr ? 'تصفح الكتب' : 'Browse Books'}
               </span>
+
               <Arrow className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
             </Button>
           </Link>
