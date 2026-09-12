@@ -8,3 +8,6 @@
 .vercel
 .env*
 private_books/
+
+.vercel
+.env*
