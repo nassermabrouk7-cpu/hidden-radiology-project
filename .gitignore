@@ -11,3 +11,7 @@ private_books/
 
 .vercel
 .env*
+node_modules
+.next
+.env.local
+.vercel
