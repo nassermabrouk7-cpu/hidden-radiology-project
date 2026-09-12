@@ -1,4 +1,4 @@
-import { Product } from '../../lib/types'
+﻿import { Product } from '@/lib/types'
 
 export const enProducts: Product[] = [
   {
@@ -122,3 +122,4 @@ export const enProducts: Product[] = [
     disclaimer: 'This is a digital product. Instant download. No physical shipping.',
   },
 ]
+

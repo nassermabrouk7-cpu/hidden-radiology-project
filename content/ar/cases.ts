@@ -1,4 +1,4 @@
-﻿import { ClinicalCase } from '../../lib/types'
+﻿import { ClinicalCase } from '@/lib/types'
 
 export const arCases: ClinicalCase[] = [
   {
@@ -125,3 +125,4 @@ export const arCases: ClinicalCase[] = [
     seo: { title: 'كتلة خارج الحبل داخل الأم الجافية - ضغط الحبل الصدري', description: 'حالة MRI تعليمية لكتلة intradural extramedullary ضاغطة على الحبل الصدري مع علامة CSF cleft', canonical: '/ar/cases/thoracic-intradural-extramedullary-mass' }
   }
 ]
+

@@ -1,4 +1,4 @@
-﻿import { ClinicalCase } from '../../lib/types'
+﻿import { ClinicalCase } from '@/lib/types'
 
 export const enCases: ClinicalCase[] = [
   {
@@ -125,6 +125,7 @@ export const enCases: ClinicalCase[] = [
     seo: { title: 'Extramedullary Mass', description: 'MRI case', canonical: '/en/cases/thoracic-intradural-extramedullary-mass' }
   }
 ]
+
 
 
 
