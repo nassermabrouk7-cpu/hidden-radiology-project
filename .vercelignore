@@ -1,8 +1,3 @@
 ﻿node_modules
 .next
-.git
-content/ar/cases.ts.OK-200
-content/ar/cases.ts.backup
-*.backup
-ArCases-Excellent.ts
-fix-names.js
+.env.local
