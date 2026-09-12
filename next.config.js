@@ -7,6 +7,15 @@ const nextConfig = {
       { protocol: 'https', hostname: 'placehold.co' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/ar',
+        permanent: false,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
