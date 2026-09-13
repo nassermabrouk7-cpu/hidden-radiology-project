@@ -4,3 +4,8 @@ out
 .vercel
 .env.local
 *.backup
+
+# Local Netlify folder
+.netlify
+
+.vercel
