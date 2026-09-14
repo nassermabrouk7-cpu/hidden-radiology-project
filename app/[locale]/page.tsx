@@ -22,8 +22,8 @@ export default async function HomePage({ params }: { params: any }) {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative">
-          <div className="text-center max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
+          <div className="text-center max-w-3xl mx-auto -translate-y-20">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-sm font-medium mb-6 -translate-y-2">
               <Award className="w-4 h-4" />
               {isAr ? 'أكثر من 30 عامًا من الخبرة' : '30+ Years of Experience'}
@@ -109,3 +109,10 @@ export default async function HomePage({ params }: { params: any }) {
     </div>
   )
 }
+
+
+
+
+
+
+
