@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation'
+﻿import { notFound } from 'next/navigation'
 import { Locale } from '@/lib/types'
 import { arCases } from '@/content/ar/cases'
 import { enCases } from '@/content/en/cases'

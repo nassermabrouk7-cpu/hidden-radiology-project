@@ -10,13 +10,15 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          dark: '#0B0F19',
-          darker: '#070A10',
-          card: '#111827',
-          border: '#1F2937',
-          cyan: '#06B6D4',
-          'cyan-light': '#22D3EE',
-          'cyan-dark': '#0891B2',
+          dark: '#0B1B2B',
+          darker: '#081522',
+          surface: '#10263A',
+          card: '#163149',
+          border: '#2A455A',
+          cyan: '#00D9F5',
+          'cyan-light': '#67E8F9',
+          'cyan-dark': '#00AFC7',
+          gold: '#F5C542',
         },
       },
       fontFamily: {

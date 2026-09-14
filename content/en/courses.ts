@@ -6,6 +6,7 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-001',
     language: 'en',
     slug: 'radiology-basics',
+  companionProductSlug: "ana-fahim-radiation-safety-en",
     title: 'Radiology Fundamentals for Beginners',
     description:
       'A comprehensive foundational course covering X-ray physics principles, image formation mechanisms, image quality optimization, radiation protection protocols, and patient positioning techniques. Designed for radiography students and entry-level radiologic technologists.',
@@ -67,6 +68,7 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-002',
     language: 'en',
     slug: 'ct-mastery',
+  companionProductSlug: "ana-fahim-ct-en",
     title: 'Computed Tomography (CT) Mastery',
     description:
       'An advanced clinical course covering CT scanner fundamentals, imaging protocols, acquisition parameters, image quality optimization, iodinated contrast media administration, and CT artifact recognition and reduction. Designed for radiologic technologists seeking CT specialization.',
@@ -128,6 +130,7 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-003',
     language: 'en',
     slug: 'quality-safety',
+  companionProductSlug: "radiology-quality-safety-en",
     title: 'Quality Assurance & Radiation Safety in Radiology',
     description:
       'A professional development course covering quality management systems, radiation protection programs, regulatory compliance, and continuous quality improvement in diagnostic imaging departments. Essential for QA managers, lead technologists, and radiology administrators.',
@@ -177,6 +180,7 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-004',
     language: 'en',
     slug: 'chest-xray',
+  companionProductSlug: "ana-fahim-cxr-en",
     title: 'Chest Radiography Mastery',
     description:
       'A comprehensive clinical course covering thoracic anatomy radiographic appearance, PA vs AP projection techniques, chest radiograph quality assessment, systematic image interpretation, common pathological findings, and clinical correlation. Designed for radiographers seeking chest X-ray specialization.',
@@ -238,6 +242,7 @@ export const enCourses: Course[] = [
     sku: 'HR-COURSE-EN-005',
     language: 'en',
     slug: 'mri-basics',
+  companionProductSlug: "ana-fahim-mri-en",
     title: 'Magnetic Resonance Imaging (MRI) Fundamentals',
     description:
       'A foundational course covering MRI physics principles, magnet safety protocols, pulse sequence fundamentals, and MRI image quality optimization. Designed for radiography students and technologists new to MRI imaging.',
@@ -404,5 +409,6 @@ export const enCourses: Course[] = [
     },
   },
 ]
+
 
 

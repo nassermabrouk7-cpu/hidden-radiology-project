@@ -1,4 +1,4 @@
-import { Course } from '@/lib/types'
+﻿import { Course } from '@/lib/types'
 
 export const arCourses: Course[] = [
   {
@@ -6,6 +6,7 @@ export const arCourses: Course[] = [
     sku: 'HR-COURSE-AR-001',
     language: 'ar',
     slug: 'radiology-basics',
+  companionProductSlug: "ana-fahim-radiation-safety",
     title: 'أساسيات الأشعة للمبتدئين',
     description: 'دورة تأسيسية مبسطة لفهم علم الأشعة، تكوين الصورة، مبادئ الأشعة السينية، والسلامة الإشعاعية. مناسبة لطلاب وفنيي الأشعة في بداية الطريق.',
     level: 'BEGINNER',
@@ -31,6 +32,7 @@ export const arCourses: Course[] = [
     sku: 'HR-COURSE-AR-002',
     language: 'ar',
     slug: 'ct-mastery',
+  companionProductSlug: "ana-fahim-ct",
     title: 'إتقان CT',
     description: 'دورة متقدمة لفنيي الأشعة والطلاب المهتمين بالتصوير المقطعي، تبدأ من فهم الجهاز والبروتوكولات وحتى جودة الصورة ومبادئ التعامل مع مواد التباين.',
     level: 'CLINICAL',
@@ -56,6 +58,7 @@ export const arCourses: Course[] = [
     sku: 'HR-COURSE-AR-003',
     language: 'ar',
     slug: 'chest-xray',
+  companionProductSlug: "ana-fahim-cxr",
     title: 'إتقان أشعة الصدر Chest X-Ray',
     description: 'دورة عملية لفهم أساسيات تصوير الصدر، وضعيات التصوير، جودة الصورة، والتعرف على أهم العلامات التي يجب ملاحظتها عند مراجعة صورة الصدر.',
     level: 'CLINICAL',
@@ -80,6 +83,7 @@ export const arCourses: Course[] = [
     sku: 'HR-COURSE-AR-004',
     language: 'ar',
     slug: 'mri-basics',
+  companionProductSlug: "ana-fahim-mri",
     title: 'أساسيات MRI',
     description: 'مقدمة منظمة إلى الرنين المغناطيسي MRI، تشمل المبادئ الأساسية، السلامة، التسلسلات، وجودة الصورة.',
     level: 'BEGINNER',
@@ -103,6 +107,7 @@ export const arCourses: Course[] = [
     sku: 'HR-COURSE-AR-005',
     language: 'ar',
     slug: 'quality-safety',
+  companionProductSlug: "radiology-quality-safety",
     title: 'الجودة والسلامة في قسم الأشعة',
     description: 'دورة متخصصة لفهم معايير الجودة والسلامة في أقسام الأشعة، وضمان سلامة المرضى والعاملين وتحسين جودة الصورة.',
     level: 'PROFESSIONAL',
@@ -177,6 +182,7 @@ export const arCourses: Course[] = [
     },
   },
 ]
+
 
 
 

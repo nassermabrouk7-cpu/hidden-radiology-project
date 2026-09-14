@@ -4,6 +4,8 @@ import Link from 'next/link'
 
 import { arCourses } from '@/content/ar/courses'
 import { enCourses } from '@/content/en/courses'
+import { arProducts } from '@/content/ar/products'
+import { enProducts } from '@/content/en/products'
 
 /* =========================================================
    ROUTE CONFIG
@@ -211,6 +213,17 @@ export default async function CoursePage({
       course.lessons
     )
 
+  const products =
+    isAr ? arProducts : enProducts
+
+  const companionBook =
+    course.companionProductSlug
+      ? products.find(
+          product =>
+            product.slug === course.companionProductSlug
+        )
+      : undefined
+
   /* =======================================================
      RENDER
   ======================================================= */
@@ -346,6 +359,85 @@ export default async function CoursePage({
 
         </section>
 
+        {/* =================================================
+           COMPANION BOOK
+        ================================================= */}
+
+        {companionBook && (
+          <section className="mt-10 bg-brand-card border border-brand-border rounded-2xl overflow-hidden">
+
+            <div className="grid grid-cols-1 md:grid-cols-3">
+
+              <div className="bg-slate-950 p-6 md:p-8 flex items-center justify-center">
+                <div className="w-full max-w-[220px] aspect-[3/4]">
+                  <img
+                    src={companionBook.cover}
+                    alt={companionBook.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+
+              <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center">
+
+                <span className="inline-block w-fit px-3 py-1 rounded-lg text-xs font-semibold bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 mb-4">
+                  {isAr
+                    ? 'الكتاب المصاحب للدورة'
+                    : 'Course Companion Book'}
+                </span>
+
+                <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-4">
+                  {isAr
+                    ? 'هل تريد التعمق أكثر؟'
+                    : 'Ready to go deeper?'}
+                </h2>
+
+                <h3 className="text-lg md:text-xl font-bold text-slate-200 mb-3">
+                  {companionBook.title}
+                </h3>
+
+                <p className="text-slate-400 leading-7 mb-6">
+                  {isAr
+                    ? 'واصل ما تعلمته في الدورة من خلال الكتاب التعليمي المصاحب، واكتشف المزيد من العلامات والنقاط العملية.'
+                    : 'Continue what you learned in this course with the companion book and discover more practical hidden signs and clinical insights.'}
+                </p>
+
+                <div className="flex flex-wrap items-center gap-3">
+
+                  {companionBook.gumroadUrl && (
+                    <a
+                      href={companionBook.gumroadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-brand-cyan text-brand-dark font-bold hover:opacity-90 transition-opacity"
+                    >
+                      {isAr
+                        ? 'اشترِ الكتاب الآن'
+                        : 'Buy the Book Now'}
+                    </a>
+                  )}
+
+                  <Link
+                    href={`/${locale}/products/${companionBook.slug}`}
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-brand-border text-white font-medium hover:border-brand-cyan hover:text-brand-cyan transition-colors"
+                  >
+                    {isAr
+                      ? 'عرض تفاصيل الكتاب'
+                      : 'View Book Details'}
+                  </Link>
+
+                  <span className="text-brand-cyan font-bold">
+                    {companionBook.price} {companionBook.currency}
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+        )}
         {/* =================================================
            LESSONS
         ================================================= */}
@@ -493,4 +585,6 @@ export default async function CoursePage({
     </main>
   )
 }
+
+
 

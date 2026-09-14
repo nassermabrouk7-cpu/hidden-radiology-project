@@ -1,4 +1,5 @@
 ﻿import Image from 'next/image'
+import Link from 'next/link'
 import { ClinicalCase, Locale } from '@/lib/types'
 import Badge from '@/components/ui/Badge'
 import Card from '@/components/ui/Card'
@@ -123,6 +124,14 @@ export default function CaseDetail({ caseItem, locale }: CaseDetailProps) {
           {caseItem.takeaway}
         </p>
       </Card>
+      <div className="pt-2">
+        <Link
+          href={`/${locale}/cases`}
+          className="inline-flex items-center rounded-full border border-brand-border px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-brand-cyan hover:text-brand-cyan"
+        >
+          {isAr ? '← العودة إلى الحالات' : '← Back to Cases'}
+        </Link>
+      </div>
     </div>
   )
 }

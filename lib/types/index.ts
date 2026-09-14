@@ -32,6 +32,7 @@ export interface Course {
   description: string
   level: 'BEGINNER' | 'FOUNDATION' | 'CLINICAL' | 'PROFESSIONAL'
   cover: string
+  companionProductSlug?: string
   lessons: Lesson[]
   status: ProductStatus
   seo: SEOData
@@ -102,4 +103,5 @@ export interface PaymentMethod {
   color: string
   href: string
 }
+
 
