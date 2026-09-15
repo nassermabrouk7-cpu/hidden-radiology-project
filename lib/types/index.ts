@@ -1,4 +1,4 @@
-﻿export type Locale = 'ar' | 'en'
+export type Locale = 'ar' | 'en'
 
 export type ProductStatus = 'DRAFT' | 'COMING_SOON' | 'PUBLISHED'
 
@@ -62,6 +62,8 @@ export interface ClinicalCase {
   technique: string
   image: string
   imageDescription: string
+  supportingImage?: string
+  supportingImageDescription?: string
   keyFindings: string
   interpretation: string
   differentialDiagnosis: string
@@ -103,5 +105,8 @@ export interface PaymentMethod {
   color: string
   href: string
 }
+
+
+
 
 

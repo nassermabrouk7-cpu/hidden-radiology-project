@@ -1,17 +1,17 @@
-﻿import { ClinicalCase } from '@/lib/types'
+import { ClinicalCase } from '@/lib/types'
 
 export const enCases: ClinicalCase[] = [
   {
     id: 'hr-case-en-001',
     language: 'en',
     slug: 'chest-pneumonia',
-    title: 'Pneumonia — Clinical Case',
+    title: 'Pneumonia Ã¢â‚¬â€ Clinical Case',
     modality: 'Chest X-Ray',
     region: 'Chest',
     clinicalContext: 'A 45-year-old patient presents with cough and fever for 5 days.',
     indication: 'Evaluation of a lower respiratory tract infection with clinical suspicion of pneumonia.',
     technique: 'Chest radiography with assessment of positioning, inspiration, exposure, lung fields, and pleural spaces.',
-    image: '/assets/images/en/cases/xray/Lobaerpneumonie.jpg',
+    image: '/cases/xray/chest-pneumonia.jpg',
     imageDescription: 'Chest radiograph demonstrating a focal pulmonary air-space opacity.',
     keyFindings: 'There is a focal right lower-lung air-space opacity with air bronchograms within the area of consolidation.',
     interpretation: 'A focal air-space opacity with air bronchograms, in the appropriate clinical setting, is compatible with pneumonia.',
@@ -32,13 +32,15 @@ export const enCases: ClinicalCase[] = [
     id: 'hr-case-en-002',
     language: 'en',
     slug: 'ct-brain-stroke',
-    title: 'Acute Stroke — CT Case',
+    title: 'Acute Stroke Ã¢â‚¬â€ CT Case',
     modality: 'CT',
     region: 'Brain',
     clinicalContext: 'A 68-year-old patient presents with sudden altered consciousness and left-sided weakness.',
     indication: 'Urgent evaluation of sudden neurological symptoms with clinical suspicion of acute stroke.',
     technique: 'Non-contrast head CT as part of the initial assessment of acute stroke.',
-    image: '/assets/images/en/cases/ct/brain-hemorrhage_1_1.jpg',
+    image: '/cases/ct/brain-hemorrhage.jpg',
+  supportingImage: '/cases/illustrations/safety/ct_scan_safety_low_dose_protocol.webp',
+  supportingImageDescription: 'Educational illustration on CT dose optimization and low-dose protocols.',
     imageDescription: 'Brain CT image obtained during evaluation of an acute neurological presentation.',
     keyFindings: 'Systematically assess for intracranial hemorrhage, loss of gray-white matter differentiation, and early arterial hyperdensity.',
     interpretation: 'Early ischemic stroke findings may be subtle; therefore, the absence of hemorrhage does not mean that the CT examination is normal.',
@@ -65,7 +67,7 @@ export const enCases: ClinicalCase[] = [
     clinicalContext: '34-year-old female with dizziness and intermittent numbness. MRI brain to exclude demyelination. Educational case of subtle brainstem lesion.',
     indication: 'Evaluation of suspected brainstem lesion.',
     technique: 'MRI Brain T2 Axial with magnification.',
-    image: '/assets/images/ar/cases/mri/mri-brain-t2-axial.jpg',
+    image: '/cases/mri/brain-t2.jpg',
     imageDescription: 'Small hyperintense focus in dorsal pons.',
     keyFindings: 'Small hyperintense focus in dorsal pons on T2, highlighted by arrow on magnified views. No significant mass effect or surrounding edema. Location in brainstem makes it easy to miss without magnification and systematic review.',
     interpretation: 'Small intra-axial lesion in brainstem. In educational context, favors small inflammatory / demyelinating focus, correlation with clinical context needed.',
@@ -88,7 +90,7 @@ export const enCases: ClinicalCase[] = [
     clinicalContext: '28-year-old male with progressive lower limb weakness, cervicothoracic spine MRI. Educational case on importance of contrast.',
     indication: 'Evaluation of suspected cord lesion.',
     technique: 'MRI Cervicothoracic Spine T2 & T1 Post-Contrast.',
-    image: '/assets/images/ar/cases/mri/mri-cervicothoracic.png',
+    image: '/cases/mri/cervicothoracic-spine.png',
     imageDescription: 'Intramedullary focus with enhancement.',
     keyFindings: 'T2: hyperintense intramedullary focus in cervicothoracic cord. T1 post-contrast: faint focal enhancement at same site. Enhancement changes differential.',
     interpretation: 'Enhancing intramedullary cord lesion - favors myelitis or demyelination, needs follow-up.',
@@ -111,7 +113,7 @@ export const enCases: ClinicalCase[] = [
     clinicalContext: 'Spinal mass compressing cord.',
     indication: 'Evaluation of spinal canal mass.',
     technique: 'MRI Thoracic Spine.',
-    image: '/assets/images/ar/cases/mri/mri-ct-thoracic-spine.jpg',
+    image: '/cases/mri/thoracic-spine.jpg',
     imageDescription: 'Rounded mass posterior to thoracic cord.',
     keyFindings: 'Rounded mass posterior to cord pushing cord anteriorly. CSF cleft around mass.',
     interpretation: 'Intradural extramedullary mass - compatible with meningioma.',
@@ -125,6 +127,9 @@ export const enCases: ClinicalCase[] = [
     seo: { title: 'Extramedullary Mass', description: 'MRI case', canonical: '/en/cases/thoracic-intradural-extramedullary-mass' }
   }
 ]
+
+
+
 
 
 
