@@ -1,215 +1,99 @@
 ﻿'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import type { ClinicalCase } from '@/lib/types'
+import { useState } from 'react'
 
-interface HiddenCasesExperienceProps {
-  cases: ClinicalCase[]
-  locale: 'ar' | 'en'
-}
+const MODALITIES = [
+  { id: 'all', ar: 'الكل', en: 'All' },
+  { id: 'XRAY', ar: 'الأشعة العادية', en: 'X-Ray' },
+  { id: 'CT', ar: 'المقطعية', en: 'CT' },
+  { id: 'MRI', ar: 'الرنين', en: 'MRI' },
+  { id: 'CATH', ar: 'القسطرة', en: 'Cath Lab' },
+  { id: 'C_ARM', ar: 'السي آرم', en: 'C-Arm' },
+  { id: 'MAMMOGRAM', ar: 'الماموجرام', en: 'Mammogram' },
+  { id: 'US', ar: 'السونار', en: 'Ultrasound' },
+] as const
 
-export default function HiddenCasesExperience({
-  cases,
-  locale,
-}: HiddenCasesExperienceProps) {
+export default function HiddenCasesExperience({ cases, locale }: { cases: any[], locale: 'ar'|'en' }) {
+  const [active, setActive] = useState('all')
   const ar = locale === 'ar'
-  const featured = cases[0]
 
-  if (!featured) return null
+  const filtered = active === 'all'? cases : cases.filter(c => {
+    const m = (c.modality || '').toUpperCase().replace(/-/g,'_').replace(/\s+/g,'_')
+    if (active === 'XRAY') return m.includes('XRAY') || m.includes('XR') || m.includes('عادية') || m === 'X_RAY'
+    if (active === 'CT') return m.includes('CT') &&!m.includes('CATH')
+    if (active === 'MRI') return m.includes('MRI') || m.includes('MR')
+    if (active === 'CATH') return m.includes('CATH') &&!m.includes('C_ARM')
+    if (active === 'C_ARM') return m.includes('C_ARM') || m === 'CARM' || m.includes('FLUORO') &&!m.includes('CATH')
+    if (active === 'MAMMOGRAM') return m.includes('MAMMO')
+    if (active === 'US') return m.includes('US') || m.includes('ULTRA') || m.includes('SONAR')
+    return m.includes(active)
+  })
+
+  if (!cases || cases.length === 0) return <div className="py-20 text-center text-slate-500">لا توجد حالات</div>
 
   return (
-    <main
-      dir={ar ? 'rtl' : 'ltr'}
-      className="min-h-screen bg-[#0A192F] text-white"
-    >
-      {/* HERO */}
-      <section className="relative overflow-hidden px-6 pb-20 pt-16 md:px-10 md:pt-24">
+    <main dir={ar?'rtl':'ltr'} className="min-h-screen bg-[#0A192F] text-white">
+      {/* العنوان */}
+      <section className="px-6 pt-16 pb-6 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00E5FF]">
-            {ar ? 'الحالات الخفية' : 'HIDDEN CASES'}
-            </p>
+          <p className="text-[#00E5FF] text-xs tracking-[0.3em] mb-3 font-bold">الحالات السريرية</p>
+          <h1 className="text-4xl md:text-5xl font-black">{ar? 'حالات الأشعة الخفية' : 'Hidden Radiology Cases'}</h1>
+        </div>
+      </section>
 
-            <h1 className="text-4xl font-black tracking-tight md:text-6xl">
-              {ar ? 'انظر أبعد من الصورة' : 'See Beyond The Image'}
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-              {ar
-                ? 'صور حقيقية، تفاصيل خفية، وطريقة مختلفة للتفكير في الأشعة.'
-                : 'Real images, hidden details, and a different way to think about radiology.'}
-            </p>
+      {/* الـ 8 زراير الرئيسية - بالترتيب اللي طلبته */}
+      <section className="px-6 md:px-10 pb-6 sticky top-0 z-20 bg-[#0A192F]/95 backdrop-blur border-y border-white/10">
+        <div className="mx-auto max-w-7xl py-4">
+          <div className="flex flex-wrap gap-2.5">
+            {MODALITIES.map(mod => (
+              <button
+                key={mod.id}
+                onClick={()=>setActive(mod.id)}
+                className={`px-5 py-2.5 rounded-full text- md:text-sm font-bold border transition-all ${
+                  active===mod.id
+                   ? 'bg-[#00E5FF] text-[#0A192F] border-[#00E5FF] shadow-[0_0_20px_rgba(0,229,255,0.4)] scale-105'
+                    : 'bg-white/[0.06] text-slate-200 border-white/10 hover:bg-white/10 hover:text-white'
+                }`}
+              >
+                {ar?mod.ar:mod.en}
+              </button>
+            ))}
           </div>
-
-          <div className="mt-12 grid gap-8 lg:grid-cols-[1.4fr_0.6fr]">
-            {/* FEATURED CASE */}
-            <Link
-              href={`/${locale}/cases/${featured.slug}`}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950"
-            >
-              <div className="relative aspect-[16/9]">
-                <Image
-                  src={featured.image}
-                  alt={featured.title}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 70vw"
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-transparent to-transparent" />
-
-                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                  <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#00E5FF]">
-                    {ar ? 'حالة مميزة' : 'FEATURED INSIGHT'}
-                  </span>
-
-                  <h2 className="mt-3 text-2xl font-bold md:text-4xl">
-                    {featured.title}
-                  </h2>
-
-                  <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300 md:text-base">
-                    {featured.clinicalContext}
-                  </p>
-                </div>
-              </div>
-            </Link>
-
-            {/* PHILOSOPHY */}
-            <div className="flex flex-col justify-between rounded-3xl border border-[#00E5FF]/20 bg-slate-950/60 p-7">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#00E5FF]">
-                  THE IDEA
-                </span>
-
-                <h2 className="mt-5 text-2xl font-bold leading-tight">
-                  {ar
-                    ? 'الصورة ليست النهاية. إنها بداية القصة.'
-                    : 'The image is not the answer. It is the beginning of the story.'}
-                </h2>
-
-                <p className="mt-5 leading-7 text-slate-400">
-                  {ar
-                    ? 'كل حالة تبحث عن شيء قد يفوتك، أو سؤال يستحق التفكير، أو درس يستحق أن تتذكره.'
-                    : 'Every case looks for something easy to miss, a question worth asking, or a lesson worth remembering.'}
-                </p>
-              </div>
-
-              <div className="mt-8 grid grid-cols-2 gap-3 text-sm">
-                {[
-                  ar ? 'تفصيلة خفية' : 'Hidden Detail',
-                  ar ? 'فخ تقني' : 'Technical Trap',
-                  ar ? 'فكر مرة أخرى' : 'Think Twice',
-                  ar ? 'زاوية تعليمية' : 'Teaching Insight',
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-xl border border-white/10 px-4 py-3 text-slate-300"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="mt-3 text-xs text-slate-500">
+            {filtered.length} حالة • {MODALITIES.find(m=>m.id===active)?.ar}
           </div>
         </div>
       </section>
 
-      {/* CASE GRID */}
-      <section className="border-t border-white/10 px-6 py-16 md:px-10 md:py-24">
+      {/* Grid الحالات */}
+      <section className="px-6 py-10 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-10">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#00E5FF]">
-              {ar ? 'اكتشف' : 'DISCOVER'}
-            </span>
-
-            <h2 className="mt-3 text-3xl font-black md:text-4xl">
-              {ar ? 'حالات تستحق نظرة ثانية' : 'Cases Worth A Second Look'}
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {cases.map((item) => (
-              <Link
-                key={item.id}
-                href={`/${locale}/cases/${item.slug}`}
-                className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-950 transition duration-300 hover:-translate-y-1 hover:border-[#00E5FF]/40"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-80" />
-
-                  <span className="absolute left-4 top-4 rounded-full border border-[#00E5FF]/30 bg-[#0A192F]/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#00E5FF]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filtered.map((item:any)=>(
+              <Link key={item.id} href={`/${locale}/cases/${item.slug}`} className="group rounded-2xl overflow-hidden border border-white/10 bg-slate-950 hover:border-[#00E5FF]/50 transition duration-300 hover:-translate-y-1">
+                <div className="relative aspect-[16/10] bg-slate-900">
+                  <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition duration-700" sizes="(max-width:768px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/80 to-transparent" />
+                  <span className="absolute top-3 left-3 bg-[#0A192F]/90 backdrop-blur text-[#00E5FF] text- px-3 py-1 rounded-full border border-[#00E5FF]/30 font-bold tracking-wider">
                     {item.modality}
                   </span>
                 </div>
-
                 <div className="p-5">
-                  <h3 className="text-xl font-bold transition-colors group-hover:text-[#00E5FF]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-400">
-                    {item.clinicalContext}
-                  </p>
-
-                  <div className="mt-5 text-sm font-semibold text-[#00E5FF]">
-                    {ar ? 'انظر ما وراء الصورة ←' : 'See beyond the image →'}
-                  </div>
+                  <h3 className="font-bold text-lg leading-tight group-hover:text-[#00E5FF] transition">{item.title}</h3>
+                  <p className="text-sm text-slate-400 mt-2 line-clamp-2 leading-6">{item.clinicalContext}</p>
+                  <div className="mt-4 text-xs font-bold text-[#00E5FF]">{ar?'شوف التفاصيل →':'See details →'}</div>
                 </div>
               </Link>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* MODES */}
-      <section className="border-t border-white/10 px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#00E5FF]">
-              {ar ? 'أكثر من تشخيص' : 'MORE THAN A DIAGNOSIS'}
-            </span>
-
-            <h2 className="mt-4 text-3xl font-black md:text-4xl">
-              {ar
-                ? 'الحالة يمكن أن تُرى من أكثر من زاوية.'
-                : 'One case can be seen from more than one angle.'}
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            {(ar
-              ? [
-                  ['TECHNICAL', 'ماذا يجب أن يلاحظ فني الأشعة؟'],
-                  ['TEACHING', 'كيف يمكن استخدام الحالة في التعليم؟'],
-                  ['RESEARCH', 'ما السؤال الذي يمكن أن تفتحه؟'],
-                ]
-              : [
-                  ['TECHNICAL', 'What should the radiographer notice?'],
-                  ['TEACHING', 'How can a lecturer use it?'],
-                  ['RESEARCH', 'What question could it open?'],
-                ]
-            ).map(([title, text]) => (
-              <div
-                key={title}
-                className="rounded-2xl border border-white/10 bg-slate-950 p-6"
-              >
-                <p className="text-xs font-bold tracking-[0.2em] text-[#00E5FF]">
-                  {title}
-                </p>
-                <p className="mt-4 leading-7 text-slate-300">{text}</p>
-              </div>
-            ))}
-          </div>
+          {filtered.length===0 && (
+            <div className="text-center py-24 border border-dashed border-white/10 rounded-3xl">
+              <p className="text-slate-400">لا توجد حالات في قسم {MODALITIES.find(m=>m.id===active)?.ar} حالياً</p>
+              <p className="text-xs text-slate-600 mt-2">تأكد ان الـ modality في content/ar/cases.ts = {active}</p>
+            </div>
+          )}
         </div>
       </section>
     </main>

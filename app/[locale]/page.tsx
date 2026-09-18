@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import { arProducts } from '@/content/ar/products'
 import { enProducts } from '@/content/en/products'
 import { Award, BookOpen, Heart, ArrowRight, ArrowLeft } from 'lucide-react'
@@ -34,12 +34,12 @@ export default async function HomePage({ params }: { params: any }) {
             </h1>
 
             <p className="text-2xl md:text-3xl text-brand-cyan font-bold mb-6">
-              {isAr ? 'انظر أبعد من الصورة' : 'See Beyond The Image'}
+              {isAr ? 'انظر ما وراء الصورة' : 'See Beyond The Image'}
             </p>
 
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
               {isAr
-                ? 'محتوى تعليمي احترافي في الأشعة — مبسط للجمهور ومتخصص لفنيي الأشعة.'
+                ? 'تعليم احترافي مبسط لتقني وفني الأشعة'
                 : 'Professional educational content in radiology — simplified for public and specialized for technicians.'}
             </p>
 

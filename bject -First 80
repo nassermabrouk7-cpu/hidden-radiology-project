@@ -1,0 +1,32 @@
+* [33m179c05a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m restore correct case image set from 67711c8
+* [33m8b2ae9e[m restore original case images
+[31m|[m *[34m-[m[34m.[m   [33m944770f[m[33m ([m[1;35mrefs/stash[m[33m)[m On main: backup before restore
+[31m|[m [32m|[m[33m\[m [34m\[m  
+[31m|[m [32m|[m [33m|[m * [33ma290574[m untracked files on main: 84606ed fix: cleanup duplicates and trigger vercel deploy
+[31m|[m [32m|[m * [33ma3d0325[m index on main: 84606ed fix: cleanup duplicates and trigger vercel deploy
+[31m|[m [32m|[m[32m/[m  
+[31m|[m * [33m84606ed[m fix: cleanup duplicates and trigger vercel deploy
+[31m|[m * [33m9760f3c[m chore: remove obsolete backup files
+[31m|[m * [33m343f3f3[m fix: restore Arabic case section labels
+[31m|[m[31m/[m  
+* [33m3c49a1e[m fix: restore and stabilize clinical cases
+[34m|[m *   [33m8d454a7[m cline checkpoint session=1789446647567_bwxoc run=1
+[34m|[m[34m/[m[36m|[m[1;31m\[m  
+[34m|[m [36m|[m * [33m9c9d0b2[m untracked files on cline checkpoint
+[34m|[m * [33mfc16b51[m index on main: e4980f7 feat: finalize hidden cases experience
+[34m|[m[34m/[m  
+[34m|[m *   [33m5162ac3[m cline checkpoint session=1789410854883_7r4tv run=1
+[34m|[m[34m/[m[1;33m|[m[1;34m\[m  
+[34m|[m [1;33m|[m * [33m67711c8[m untracked files on cline checkpoint
+[34m|[m * [33m88dd89f[m index on main: e4980f7 feat: finalize hidden cases experience
+[34m|[m[34m/[m  
+* [33me4980f7[m feat: finalize hidden cases experience
+* [33m417f18c[m[33m ([m[1;31morigin/feature/hidden-cases-v2[m[33m, [m[1;32mfeature/hidden-cases-v2[m[33m)[m fix: adjust homepage hero position
+* [33md8b64af[m fix framework nextjs
+* [33m854e322[m force rebuild latest code
+* [33m9bf782d[m trigger rebuild with fixed root
+* [33m66b5a9e[m clean project size fix 404
+* [33mfc2a86c[m compress shared images for bilingual platform
+* [33ma81369a[m fix: restore Arabic course and product content
+* [33m824c43e[m chore: clean root, remove out folder and stray ar/en folders, fix vercel 404
+* [33m34492c1[m fix: fix all lib/types imports and remove backup files

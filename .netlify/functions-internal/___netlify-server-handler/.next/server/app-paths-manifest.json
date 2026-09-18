@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/download/route": "app/api/download/route.js",
+  "/api/gumroad-webhook/route": "app/api/gumroad-webhook/route.js",
+  "/api/utm-generator/route": "app/api/utm-generator/route.js",
+  "/page": "app/page.js",
+  "/api/social-automation/route": "app/api/social-automation/route.js",
+  "/icon.png/route": "app/icon.png/route.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js",
+  "/[locale]/cases/page": "app/[locale]/cases/page.js",
+  "/[locale]/courses/page": "app/[locale]/courses/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/quality-safety/page": "app/[locale]/quality-safety/page.js",
+  "/[locale]/store/page": "app/[locale]/store/page.js",
+  "/[locale]/cases/[slug]/page": "app/[locale]/cases/[slug]/page.js",
+  "/[locale]/products/[slug]/page": "app/[locale]/products/[slug]/page.js",
+  "/[locale]/courses/[slug]/page": "app/[locale]/courses/[slug]/page.js",
+  "/[locale]/courses/[slug]/[lesson]/page": "app/[locale]/courses/[slug]/[lesson]/page.js"
+}

@@ -1,3 +1,4 @@
+﻿
 import Image from 'next/image'
 import Link from 'next/link'
 import { ClinicalCase, Locale } from '@/lib/types'
@@ -14,57 +15,57 @@ export default function CaseDetail({ caseItem, locale }: CaseDetailProps) {
 
   const sections = [
     {
-      title: isAr ? '?? ?????? ?????????' : 'Clinical Presentation',
+      title: isAr ? 'ما الحالة السريرية؟' : 'Clinical Presentation',
       content: caseItem.clinicalContext,
       color: 'text-brand-cyan',
     },
     {
-      title: isAr ? '??? ?????' : 'Indication',
+      title: isAr ? 'سبب الفحص' : 'Indication',
       content: caseItem.indication,
       color: 'text-brand-cyan',
     },
     {
-      title: isAr ? '????? ?????' : 'Technique',
+      title: isAr ? 'طريقة الفحص' : 'Technique',
       content: caseItem.technique,
       color: 'text-brand-cyan',
     },
     {
-      title: isAr ? '?? ???? ???? ?? ???????' : 'Image Description',
+      title: isAr ? 'ما الذي نراه في الصورة؟' : 'Image Description',
       content: caseItem.imageDescription,
       color: 'text-brand-cyan',
     },
     {
-      title: isAr ? '???????? ????????' : 'Key Findings',
+      title: isAr ? 'العلامات الرئيسية' : 'Key Findings',
       content: caseItem.keyFindings,
       color: 'text-brand-cyan',
     },
     {
-      title: isAr ? '??????? ????????' : 'Interpretation',
+      title: isAr ? 'التحليل والتفسير' : 'Interpretation',
       content: caseItem.interpretation,
       color: 'text-brand-cyan',
     },
     {
-      title: isAr ? '??????? ????????' : 'Differential Diagnosis',
+      title: isAr ? 'التشخيص التفريقي' : 'Differential Diagnosis',
       content: caseItem.differentialDiagnosis,
       color: 'text-brand-cyan',
     },
     {
-      title: isAr ? '?? ???? ??? ?? ???? ????' : 'What to Look For',
+      title: isAr ? 'ما الذي يجب أن تبحث عنه؟' : 'What to Look For',
       content: caseItem.whatToLookFor,
       color: 'text-brand-cyan',
     },
     {
-      title: isAr ? '????? ??????' : 'Common Mistake',
+      title: isAr ? 'الخطأ الشائع' : 'Common Mistake',
       content: caseItem.commonMistake,
       color: 'text-red-400',
     },
     {
-      title: isAr ? '?????? ?????? ????????' : 'Quality & Safety Note',
+      title: isAr ? 'ملاحظة الجودة والسلامة' : 'Quality & Safety Note',
       content: caseItem.safetyQualityNote,
       color: 'text-yellow-400',
     },
     {
-      title: isAr ? '???????? ???????' : 'Final Impression',
+      title: isAr ? 'الانطباع النهائي' : 'Final Impression',
       content: caseItem.finalImpression,
       color: 'text-brand-cyan',
     },
@@ -96,9 +97,11 @@ export default function CaseDetail({ caseItem, locale }: CaseDetailProps) {
 
           <Card className="border-brand-cyan/20">
             <h2 className="text-brand-cyan font-bold text-lg mb-3">
-              {isAr ? '?????? ????????' : 'Clinical Presentation'}
+              {isAr ? 'الحالة السريرية' : 'Clinical Presentation'}
             </h2>
-            <p className="text-slate-300 leading-8">{caseItem.clinicalContext}</p>
+            <p className="text-slate-300 leading-8">
+              {caseItem.clinicalContext}
+            </p>
           </Card>
         </div>
       </div>
@@ -116,49 +119,47 @@ export default function CaseDetail({ caseItem, locale }: CaseDetailProps) {
         ))}
       </div>
 
-      {caseItem.supportingImage && (
-        <Card className="border-brand-cyan/20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-brand-darker border border-brand-border">
-              <Image
-                src={caseItem.supportingImage}
-                alt={caseItem.supportingImageDescription || ''}
-                fill
-                className="object-contain"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div>
-              <h2 className="text-brand-cyan font-bold text-xl mb-3">
-                {isAr ? 'Technical & Safety Insight' : 'Technical & Safety Insight'}
-              </h2>
-              <p className="text-slate-300 leading-8">
-                {caseItem.supportingImageDescription}
-              </p>
-            </div>
-          </div>
-        </Card>
-      )}
       <Card className="bg-brand-cyan/5 border-brand-cyan/20">
         <h2 className="text-brand-cyan font-bold text-xl mb-3">
-          {isAr ? '??????? ?????????' : 'Learning Point'}
+          {isAr ? 'الخلاصة التعليمية' : 'Learning Point'}
         </h2>
         <p className="text-white text-lg font-medium leading-8">
           {caseItem.takeaway}
         </p>
       </Card>
+
+      {caseItem.supportingImage && (
+        <Card className="border-brand-cyan/20">
+          <h2 className="text-brand-cyan font-bold text-xl mb-4">
+            {isAr ? 'الجودة والسلامة' : 'Quality & Safety'}
+          </h2>
+
+          <div className="relative aspect-[16/9] bg-brand-darker rounded-xl overflow-hidden border border-brand-border">
+            <Image
+              src={caseItem.supportingImage}
+              alt={
+                caseItem.supportingImageDescription ||
+                (isAr
+                  ? 'صورة الجودة والسلامة'
+                  : 'Quality & Safety illustration')
+              }
+              fill
+              className="object-contain"
+              sizes="(max-width: 1024px) 100vw, 900px"
+            />
+          </div>
+        </Card>
+      )}
+
       <div className="pt-2">
         <Link
           href={`/${locale}/cases`}
           className="inline-flex items-center rounded-full border border-brand-border px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-brand-cyan hover:text-brand-cyan"
         >
-          {isAr ? '? ?????? ??? ???????' : '? Back to Cases'}
+          {isAr ? '← العودة إلى الحالات' : '← Back to Cases'}
         </Link>
       </div>
     </div>
   )
 }
-
-
-
 

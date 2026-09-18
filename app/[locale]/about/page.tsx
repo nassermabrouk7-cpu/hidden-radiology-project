@@ -1,4 +1,4 @@
-import { Locale } from '@/lib/types'
+﻿import { Locale } from '@/lib/types'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
 import { Award, Heart, BookOpen, Youtube } from 'lucide-react'
@@ -10,27 +10,23 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
   const content = {
     ar: {
       title: 'عن Hidden Radiology',
-      subtitle: 'من الخبرة إلى المحتوى — رحلة 30 عاماً',
-      p1: 'Hidden Radiology (الأشعة الخفية) هي قناة ومنصة تعليمية أنشأها فني أشعة خبير بخبرة 30 عاماً في مجالات X-Ray، CT، MRI، C-ARM، و MAMMOGRAM.',
-      p2: 'هدفنا بسيط: تبسيط علم الأشعة للعامة وتقديم محتوى احترافي للفنيين الجدد والمتخصصين. نؤمن بأن المعرفة يجب أن تكون متاحة للجميع.',
-      p3: 'نقدم محتوى مجاني بالكامل على YouTube، بالإضافة إلى منتجات مدفوعة مُحكّمة للمحترفين الراغبين في التعمق.',
-      stats: [
-        { value: '30+', label: 'سنة خبرة' },
-        { value: '6+', label: 'منتجات احترافية' },
-        { value: '∞', label: 'محتوى مجاني' },
-      ],
-      cta: 'زيارة القناة',
+      subtitle: 'من الخبرة إلى الاحتراف',
+      p1: 'Hidden Radiology (الأشعة الخفية) منصة تعليمية تعكس خلاصة الممارسة والاحتراف في كافة مجالات الأشعة: X-Ray, CT, MRI, C-ARM, MAMMOGRAM, Ultrasound، و Cath Lab.',
+      p2: '',
+      p3: '',
+      stats: [],
+      cta: 'زيارة القناة'
     },
     en: {
       title: 'About Hidden Radiology',
-      subtitle: 'From Experience to Content — A 30-Year Journey',
+      subtitle: 'From Experience to Content â€” A 30-Year Journey',
       p1: 'Hidden Radiology is an educational channel and platform created by an expert radiographer with 30 years of experience in X-Ray, CT, MRI, C-ARM, and MAMMOGRAM.',
       p2: 'Our goal is simple: simplify radiology for the public and provide professional content for new technicians and specialists. We believe knowledge should be accessible to everyone.',
       p3: 'We offer completely free content on YouTube, along with curated paid products for professionals seeking deeper knowledge.',
       stats: [
         { value: '30+', label: 'Years Experience' },
         { value: '6+', label: 'Professional Products' },
-        { value: '∞', label: 'Free Content' },
+        { value: 'âˆž', label: 'Free Content' },
       ],
       cta: 'Visit Channel',
     },
@@ -86,7 +82,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           <Youtube className="w-16 h-16 text-red-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-white mb-3">Hidden Radiology YouTube</h2>
           <p className="text-slate-400 mb-6 max-w-lg mx-auto">
-            {isAr ? 'اشترك في القناة لمشاهدة محتوى مجاني بالكامل عن عالم الأشعة.' : 'Subscribe to the channel for completely free content about radiology.'}
+            {isAr ? 'Ø§Ø´ØªØ±Ùƒ ÙÙŠ Ø§Ù„Ù‚Ù†Ø§Ø© Ù„Ù…Ø´Ø§Ù‡Ø¯Ø© Ù…Ø­ØªÙˆÙ‰ Ù…Ø¬Ø§Ù†ÙŠ Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ø¹Ù† Ø¹Ø§Ù„Ù… Ø§Ù„Ø£Ø´Ø¹Ø©.' : 'Subscribe to the channel for completely free content about radiology.'}
           </p>
           <Button href="https://youtube.com/@HiddenRadiology">
             <Youtube className="w-5 h-5" />
@@ -97,3 +93,4 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
     </div>
   )
 }
+
