@@ -1,4 +1,4 @@
-﻿import { Locale } from '@/lib/types'
+import { Locale } from '@/lib/types'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
 import { Award, Heart, BookOpen, Youtube } from 'lucide-react'
@@ -82,7 +82,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           <Youtube className="w-16 h-16 text-red-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-white mb-3">Hidden Radiology YouTube</h2>
           <p className="text-slate-400 mb-6 max-w-lg mx-auto">
-            {isAr ? 'Ø§Ø´ØªØ±Ùƒ ÙÙŠ Ø§Ù„Ù‚Ù†Ø§Ø© Ù„Ù…Ø´Ø§Ù‡Ø¯Ø© Ù…Ø­ØªÙˆÙ‰ Ù…Ø¬Ø§Ù†ÙŠ Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ø¹Ù† Ø¹Ø§Ù„Ù… Ø§Ù„Ø£Ø´Ø¹Ø©.' : 'Subscribe to the channel for completely free content about radiology.'}
+            {isAr ? 'اشترك في القناة لمشاهدة محتوى مجاني بالكامل عن عالم الأشعة.' : 'Subscribe to the channel for completely free content about radiology.'}
           </p>
           <Button href="https://youtube.com/@HiddenRadiology">
             <Youtube className="w-5 h-5" />
