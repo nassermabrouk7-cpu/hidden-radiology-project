@@ -90,11 +90,11 @@ export default function LibraryPage() {
               const inCart = isInCart(product.id);
               return (
                 <div key={product.id} className="bg-[#112240] rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-[#00E5FF]/10 transition-all group border border-[#1a2f4a]">
-                  <div className="relative h-64 bg-[#0A192F] overflow-hidden">
+                  <div className="relative h-80 bg-[#0A192F] overflow-hidden">
                     <img
                       src={product.cover_url}
                       alt={lang === "ar" ? product.title_ar : product.title_en}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600'%3E%3Crect fill='%23112240' width='400' height='600'/%3E%3Ctext fill='%2300E5FF' font-family='sans-serif' font-size='24' font-weight='bold' x='50%25' y='50%25' text-anchor='middle'%3EHidden%3C/text%3E%3Ctext fill='%238892B0' font-family='sans-serif' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='2.5em'%3ERadiology%3C/text%3E%3C/svg%3E";
                       }}
@@ -149,3 +149,4 @@ export default function LibraryPage() {
     </div>
   );
 }
+
