@@ -30,24 +30,39 @@ export default function LibraryPage() {
   const [addedIds, setAddedIds] = useState<Set<string>>(new Set());
   const { lang, t } = useLanguage();
   const { addToCart, items } = useCart();
-  const isRTL = lang === "ar";
+  
+  // صمام أمان: إذا كانت اللغة غير معرفة، نعتبرها عربية افتراضياً
+  const currentLang = lang || "ar";
+  const isRTL = currentLang === "ar";
 
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
+      // نجلب كل المنتجات مرة واحدة لتجنب مشكلة الفلترة الخاطئة من السيرفر
       const { data, error } = await supabase
         .from("products")
         .select("*")
-        .eq("language", lang)
         .order("created_at", { ascending: false });
 
-      if (error) console.error("خطأ:", error);
+      if (error) console.error("خطأ في جلب المنتجات:", error);
       else setProducts(data || []);
       
       setLoading(false);
     }
     fetchProducts();
-  }, [lang]);
+  }, []); // نجلب البيانات مرة واحدة فقط عند تحميل الصفحة
+
+  // الفلترة تتم هنا في المتصفح بشكل فوري وآمن 100%
+  const filteredProducts = products.filter(p => 
+    p.language && p.language.toLowerCase().trim() === currentLang.toLowerCase().trim()
+  );
+
+  // أداة تشخيص (سنحذفها لاحقاً، لكنها مفيدة الآن للتأكد)
+  useEffect(() => {
+    console.log("🔍 اللغة الحالية:", currentLang);
+    console.log("📦 إجمالي المنتجات من قاعدة البيانات:", products.length);
+    console.log("✅ المنتجات بعد الفلتعة:", filteredProducts.length);
+  }, [currentLang, products, filteredProducts]);
 
   const handleAddToCart = (product: Product) => {
     addToCart({
@@ -74,18 +89,18 @@ export default function LibraryPage() {
     <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#0A192F] text-white font-sans">
       <Navbar />
       <div className="text-center py-12 px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{t.library_title}</h1>
-        <p className="text-gray-400 text-lg">{t.library_subtitle}</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">{t.library_title || (isRTL ? 'مكتبة Hidden Radiology' : 'Hidden Radiology Library')}</h1>
+        <p className="text-gray-400 text-lg">{t.library_subtitle || (isRTL ? 'مراجع متخصصة في الأشعة' : 'Specialized Radiology References')}</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pb-20">
         {loading ? (
-          <div className="text-center py-20 text-gray-400 text-xl">{t.loading}</div>
-        ) : products.length === 0 ? (
-          <div className="text-center py-20 text-gray-400 text-xl">{t.no_products}</div>
+          <div className="text-center py-20 text-gray-400 text-xl">{t.loading || "جاري التحميل..."}</div>
+        ) : filteredProducts.length === 0 ? (
+          <div className="text-center py-20 text-gray-400 text-xl">{t.no_products || "لا توجد منتجات"}</div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {products.map((product) => {
+            {filteredProducts.map((product) => {
               const isAdded = addedIds.has(product.id);
               const inCart = isInCart(product.id);
               return (
@@ -93,7 +108,7 @@ export default function LibraryPage() {
                   <div className="relative h-80 bg-[#0A192F] overflow-hidden">
                     <img
                       src={product.cover_url}
-                      alt={lang === "ar" ? product.title_ar : product.title_en}
+                      alt={currentLang === "ar" ? product.title_ar : product.title_en}
                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600'%3E%3Crect fill='%23112240' width='400' height='600'/%3E%3Ctext fill='%2300E5FF' font-family='sans-serif' font-size='24' font-weight='bold' x='50%25' y='50%25' text-anchor='middle'%3EHidden%3C/text%3E%3Ctext fill='%238892B0' font-family='sans-serif' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='2.5em'%3ERadiology%3C/text%3E%3C/svg%3E";
@@ -105,7 +120,7 @@ export default function LibraryPage() {
                       {product.category}
                     </div>
                     <h3 className="font-bold text-lg mb-4 line-clamp-2 leading-snug">
-                      {lang === "ar" ? product.title_ar : product.title_en}
+                      {currentLang === "ar" ? product.title_ar : product.title_en}
                     </h3>
                     <div className="flex items-center justify-between pt-4 border-t border-[#1a2f4a]">
                       <span className="text-2xl font-bold text-[#00E5FF]">${product.price}</span>
@@ -124,17 +139,17 @@ export default function LibraryPage() {
                         {isAdded ? (
                           <>
                             <Check className="w-4 h-4" />
-                            {lang === "ar" ? "تمت الإضافة" : "Added"}
+                            {currentLang === "ar" ? "تمت الإضافة" : "Added"}
                           </>
                         ) : inCart ? (
                           <>
                             <ShoppingCart className="w-4 h-4" />
-                            {lang === "ar" ? "في السلة" : "In Cart"}
+                            {currentLang === "ar" ? "في السلة" : "In Cart"}
                           </>
                         ) : (
                           <>
                             <ShoppingCart className="w-4 h-4" />
-                            {lang === "ar" ? "أضف للسلة" : "Add to Cart"}
+                            {currentLang === "ar" ? "أضف للسلة" : "Add to Cart"}
                           </>
                         )}
                       </button>
@@ -149,4 +164,3 @@ export default function LibraryPage() {
     </div>
   );
 }
-
