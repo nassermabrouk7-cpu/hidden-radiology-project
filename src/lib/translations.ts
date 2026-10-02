@@ -38,7 +38,7 @@ export const translations = {
     
     // حالة الطلب
     pending: "بانتظار تأكيد الدفع",
-    confirmed: "تم التأكيد - جاهز للتحميل!",
+    confirmedStatus: "تم التأكيد - جاهز للتحميل!",
     orderDetails: "تفاصيل الطلب",
     orderRef: "رقم الطلب:",
     customerName: "اسم العميل:",
@@ -69,7 +69,7 @@ export const translations = {
     incomingOrders: "الطلبات الواردة",
     noOrders: "لا توجد طلبات حالياً",
     noOrdersMessage: "ستظهر الطلبات الجديدة هنا بمجرد قيام العملاء بإتمام عملية الشراء.",
-    confirmed: "مؤكد",
+    confirmedBadge: "مؤكد",
     pendingConfirm: "بانتظار التأكيد",
     confirmAndDeliver: "✓ تأكيد الدفع وفتح التحميل",
     delivered: "تم تسليم الكتاب للعميل",
@@ -116,7 +116,7 @@ export const translations = {
     
     // Order Status
     pending: "Pending Payment Confirmation",
-    confirmed: "Confirmed - Ready to Download!",
+    confirmedStatus: "Confirmed - Ready to Download!",
     orderDetails: "Order Details",
     orderRef: "Order Reference:",
     customerName: "Customer Name:",
@@ -147,7 +147,7 @@ export const translations = {
     incomingOrders: "Incoming Orders",
     noOrders: "No orders yet",
     noOrdersMessage: "New orders will appear here once customers complete their purchases.",
-    confirmed: "Confirmed",
+    confirmedBadge: "Confirmed",
     pendingConfirm: "Pending Confirmation",
     confirmAndDeliver: "✓ Confirm Payment & Deliver",
     delivered: "Book Delivered to Customer",

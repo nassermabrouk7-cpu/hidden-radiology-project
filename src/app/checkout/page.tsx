@@ -216,7 +216,7 @@ export default function CheckoutPage() {
                 </div>
               )}
 
-              <button type="submit" disabled={loading || emailError} className="w-full bg-[#00E5FF] text-[#0A192F] font-bold py-4 rounded-xl hover:bg-[#00b8cc] transition-all disabled:opacity-50 flex items-center justify-center gap-2 mt-6">
+              <button type="submit" disabled={loading || !!emailError} className="w-full bg-[#00E5FF] text-[#0A192F] font-bold py-4 rounded-xl hover:bg-[#00b8cc] transition-all disabled:opacity-50 flex items-center justify-center gap-2 mt-6">
                 {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <CheckCircle className="w-5 h-5" />}
                 {loading ? (isRTL ? "جاري..." : "Processing...") : (isRTL ? "تأكيد الطلب" : "Confirm Order")}
               </button>
