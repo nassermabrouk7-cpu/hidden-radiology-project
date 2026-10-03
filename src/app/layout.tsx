@@ -3,7 +3,7 @@ import { Cairo } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
-import Script from "next/script";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 const cairo = Cairo({ 
@@ -14,12 +14,9 @@ const cairo = Cairo({
 
 export const metadata: Metadata = {
   title: "Hidden Radiology | مكتبة ومراجع الأشعة المتخصصة",
-  description: "المنصة العربية الأولى المتخصصة في مراجع وكتب الأشعة. سلسلة أنا فاهم، دليل تموضع المريض، وأكثر من 36 مرجعاً متخصصاً للأطباء وفنيي الأشعة.",
-  keywords: ["كتب أشعة", "مراجع أشعة", "Radiology books", "أنا فاهم أشعة", "دليل تموضع المريض", "Radiology positioning", "أشعة مقطعية", "رنين مغناطيسي"],
+  description: "المنصة العربية الأولى المتخصصة في مراجع وكتب الأشعة.",
+  keywords: ["كتب أشعة", "مراجع أشعة", "Radiology books"],
   authors: [{ name: "د. ناصر مبروك", url: "https://hidden-radiology-project.vercel.app" }],
-  other: {
-    'google-site-verification': 'FkjOaMGD_rFmwgEvtVQd2Grd_Av-_UlB6yIuuWt4Yx4',
-  },
 };
 
 export default function RootLayout({
@@ -30,20 +27,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={cairo.variable}>
-        {/* كود تتبع جوجل أناليتكس */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-EVPNCWLQVR"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EVPNCWLQVR');
-          `}
-        </Script>
-
+        <GoogleAnalytics />
         <LanguageProvider>
           <CartProvider>
             {children}
