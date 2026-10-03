@@ -9,8 +9,8 @@ import { useCart } from "@/context/CartContext";
 import { ShoppingCart, Check } from "lucide-react";
 
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  'https://okijdtchqrihwsyqhyss.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9raWpkdGNocXJpaHdzeXFoeXNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA1MDY4MjEsImV4cCI6MjEwNjA4MjgyMX0.ULrK5hklbO_f3lBooPH9vf8YW6dadrsUnaoY7xihQGs'
 );
 
 type Product = {
