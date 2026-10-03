@@ -12,8 +12,23 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Hidden Radiology - منصة الأشعة الشاملة",
-  description: "مراجع طبية متخصصة في الأشعة - Arabic & English Radiology References",
+  title: "Hidden Radiology | مكتبة ومراجع الأشعة المتخصصة",
+  description: "المنصة العربية الأولى المتخصصة في مراجع وكتب الأشعة. سلسلة أنا فاهم، دليل تموضع المريض، وأكثر من 36 مرجعاً متخصصاً للأطباء وفنيي الأشعة.",
+  keywords: ["كتب أشعة", "مراجع أشعة", "Radiology books", "أنا فاهم أشعة", "دليل تموضع المريض", "Radiology positioning", "أشعة مقطعية", "رنين مغناطيسي"],
+  authors: [{ name: "د. ناصر مبروك", url: "https://hidden-radiology-project.vercel.app" }],
+  openGraph: {
+    title: "Hidden Radiology | مكتبة ومراجع الأشعة المتخصصة",
+    description: "أكثر من 36 مرجعاً وكتاباً متخصصاً في مجال الأشعة والجودة.",
+    url: "https://hidden-radiology-project-chi.vercel.app",
+    siteName: "Hidden Radiology",
+    locale: "ar_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hidden Radiology | مكتبة ومراجع الأشعة المتخصصة",
+    description: "أكثر من 36 مرجعاً وكتاباً متخصصاً في مجال الأشعة والجودة.",
+  },
 };
 
 export default function RootLayout({
@@ -34,3 +49,4 @@ export default function RootLayout({
     </html>
   );
 }
+

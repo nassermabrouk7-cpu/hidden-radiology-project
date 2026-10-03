@@ -1,0 +1,5 @@
+﻿User-Agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://hidden-radiology-project-chi.vercel.app/sitemap.xml
