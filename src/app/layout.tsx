@@ -12,6 +12,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
+  verification: { google: 'FkjOaMGD_rFmwgEvtVQd2Grd_Av-_UlB6yIuuWt4Yx4' },
   title: "Hidden Radiology | مكتبة ومراجع الأشعة المتخصصة",
   description: "المنصة العربية الأولى المتخصصة في مراجع وكتب الأشعة. سلسلة أنا فاهم، دليل تموضع المريض، وأكثر من 36 مرجعاً متخصصاً للأطباء وفنيي الأشعة.",
   keywords: ["كتب أشعة", "مراجع أشعة", "Radiology books", "أنا فاهم أشعة", "دليل تموضع المريض", "Radiology positioning", "أشعة مقطعية", "رنين مغناطيسي"],
@@ -49,4 +50,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
