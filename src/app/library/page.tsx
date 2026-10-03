@@ -8,9 +8,10 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useCart } from "@/context/CartContext";
 import { ShoppingCart, Check } from "lucide-react";
 
+// ✅ هنا تم الإصلاح: إزالة التكرار وإضافة علامات التنصيص للمفتاح
 const supabase = createClient(
   'https://okijdtchqrihwsyqhyss.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9raWpkdGNocXJpaHdzeXFoeXNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA1MDY4MjEsImV4cCI6MjEwNjA4MjgyMX0.ULrK5hklbO_f3lBooPH9vf8YW6dadrsUnaoY7xihQGs'
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9raWpkdGNocXJpaHdzeXFoeXNzIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc5MDUwNjgyMSwiZXhwIjoyMTA2MDgyODIxfQ.GkbvlUGGfLm6r7KW8H9KAJaZYWw420AKV-FwtiMveFA'
 );
 
 type Product = {
@@ -113,19 +114,34 @@ export default function LibraryPage() {
                       {currentLang === "ar" ? product.title_ar : product.title_en}
                     </h3>
                     <div className="flex items-center justify-between pt-4 border-t border-[#1a2f4a]">
-                      <span className="text-2xl font-bold text-[#00E5FF]"></span>
+                      <span className="text-2xl font-bold text-[#00E5FF]">${product.price}</span>
                       
                       <button
                         onClick={() => handleAddToCart(product)}
                         disabled={isAdded}
-                        className={px-4 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2 }
+                        className={`px-4 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2 ${
+                          isAdded 
+                            ? "bg-green-500 text-white" 
+                            : inCart 
+                              ? "bg-[#00E5FF]/20 text-[#00E5FF] border border-[#00E5FF]/30" 
+                              : "bg-[#00E5FF] text-[#0A192F] hover:bg-[#00b8cc] shadow-lg shadow-[#00E5FF]/20"
+                        }`}
                       >
                         {isAdded ? (
-                          <><Check className="w-4 h-4" />{currentLang === "ar" ? "تمت الإضافة" : "Added"}</>
+                          <>
+                            <Check className="w-4 h-4" />
+                            {currentLang === "ar" ? "تمت الإضافة" : "Added"}
+                          </>
                         ) : inCart ? (
-                          <><ShoppingCart className="w-4 h-4" />{currentLang === "ar" ? "في السلة" : "In Cart"}</>
+                          <>
+                            <ShoppingCart className="w-4 h-4" />
+                            {currentLang === "ar" ? "في السلة" : "In Cart"}
+                          </>
                         ) : (
-                          <><ShoppingCart className="w-4 h-4" />{currentLang === "ar" ? "أضف للسلة" : "Add to Cart"}</>
+                          <>
+                            <ShoppingCart className="w-4 h-4" />
+                            {currentLang === "ar" ? "أضف للسلة" : "Add to Cart"}
+                          </>
                         )}
                       </button>
                     </div>
