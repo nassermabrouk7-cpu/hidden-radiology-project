@@ -31,14 +31,12 @@ export default function LibraryPage() {
   const { lang, t } = useLanguage();
   const { addToCart, items } = useCart();
   
-  // صمام أمان: إذا كانت اللغة غير معرفة، نعتبرها عربية افتراضياً
   const currentLang = lang || "ar";
   const isRTL = currentLang === "ar";
 
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
-      // نجلب كل المنتجات مرة واحدة لتجنب مشكلة الفلترة الخاطئة من السيرفر
       const { data, error } = await supabase
         .from("products")
         .select("*")
@@ -50,19 +48,11 @@ export default function LibraryPage() {
       setLoading(false);
     }
     fetchProducts();
-  }, []); // نجلب البيانات مرة واحدة فقط عند تحميل الصفحة
+  }, []);
 
-  // الفلترة تتم هنا في المتصفح بشكل فوري وآمن 100%
   const filteredProducts = products.filter(p => 
     p.language && p.language.toLowerCase().trim() === currentLang.toLowerCase().trim()
   );
-
-  // أداة تشخيص (سنحذفها لاحقاً، لكنها مفيدة الآن للتأكد)
-  useEffect(() => {
-    console.log("🔍 اللغة الحالية:", currentLang);
-    console.log("📦 إجمالي المنتجات من قاعدة البيانات:", products.length);
-    console.log("✅ المنتجات بعد الفلتعة:", filteredProducts.length);
-  }, [currentLang, products, filteredProducts]);
 
   const handleAddToCart = (product: Product) => {
     addToCart({
@@ -123,34 +113,19 @@ export default function LibraryPage() {
                       {currentLang === "ar" ? product.title_ar : product.title_en}
                     </h3>
                     <div className="flex items-center justify-between pt-4 border-t border-[#1a2f4a]">
-                      <span className="text-2xl font-bold text-[#00E5FF]">${product.price}</span>
+                      <span className="text-2xl font-bold text-[#00E5FF]"></span>
                       
                       <button
                         onClick={() => handleAddToCart(product)}
                         disabled={isAdded}
-                        className={`px-4 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2 ${
-                          isAdded 
-                            ? "bg-green-500 text-white" 
-                            : inCart 
-                              ? "bg-[#00E5FF]/20 text-[#00E5FF] border border-[#00E5FF]/30" 
-                              : "bg-[#00E5FF] text-[#0A192F] hover:bg-[#00b8cc] shadow-lg shadow-[#00E5FF]/20"
-                        }`}
+                        className={px-4 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2 }
                       >
                         {isAdded ? (
-                          <>
-                            <Check className="w-4 h-4" />
-                            {currentLang === "ar" ? "تمت الإضافة" : "Added"}
-                          </>
+                          <><Check className="w-4 h-4" />{currentLang === "ar" ? "تمت الإضافة" : "Added"}</>
                         ) : inCart ? (
-                          <>
-                            <ShoppingCart className="w-4 h-4" />
-                            {currentLang === "ar" ? "في السلة" : "In Cart"}
-                          </>
+                          <><ShoppingCart className="w-4 h-4" />{currentLang === "ar" ? "في السلة" : "In Cart"}</>
                         ) : (
-                          <>
-                            <ShoppingCart className="w-4 h-4" />
-                            {currentLang === "ar" ? "أضف للسلة" : "Add to Cart"}
-                          </>
+                          <><ShoppingCart className="w-4 h-4" />{currentLang === "ar" ? "أضف للسلة" : "Add to Cart"}</>
                         )}
                       </button>
                     </div>
