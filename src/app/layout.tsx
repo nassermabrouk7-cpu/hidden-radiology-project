@@ -12,6 +12,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
+  verification: { google: 'FkjOaMGD_rFmwgEvtVQd2Grd_Av-_UlB6yIuuWt4Yx4' },
   other: { 'google-site-verification': 'google4b6b50c9a126942a' },
   verification: { google: 'FkjOaMGD_rFmwgEvtVQd2Grd_Av-_UlB6yIuuWt4Yx4' },
   title: "Hidden Radiology | مكتبة ومراجع الأشعة المتخصصة",
@@ -51,6 +52,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 
