@@ -1,0 +1,10 @@
+[33mdad8ce8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m fix vercel.json cron + secure factory - 36 books
+[33md6558aa[m Fix: Remove broken robots.ts and ensure correct robots.txt in public
+[33m4bfa4ab[m Fix: Add Google Analytics as separate component
+[33m84a0f88[m Add Google Analytics tracking (G-EVPNCWLQVR)
+[33m5298a51[m SEO: Use generateMetadata and explicit meta tag
+[33m70bc667[m SEO: Fix Google verification with page.tsx
+[33md2c14e6[m SEO: Use Next.js route handler for Google verification (definitive fix)
+[33m327adc7[m Add Google verification file manually
+[33mb300539[m SEO: Add Google verification HTML file (Foolproof method)
+[33m33f53c2[m SEO: Clean up and finalize Google verification metadata

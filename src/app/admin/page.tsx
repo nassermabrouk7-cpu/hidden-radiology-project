@@ -30,9 +30,7 @@ export default function AdminDashboard(){
         <div className="absolute w-[500px] h-[500px] bg-[#7000FF]/10 rounded-full blur-[120px] bottom-[-150px] right-[-100px]"></div>
         <form onSubmit={login} className="relative bg-[#112240]/80 backdrop-blur-xl p-8 rounded-[24px] border border-[#00E5FF]/20 w-full max-w-[420px] space-y-6 shadow-[0_0_60px_rgba(0,229,255,0.15)]">
           <div className="text-center">
-            <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-3xl shadow-[0_0_30px_rgba(0,229,255,0.5)] mb-4">🧠</div>
-            <h1 className="text-2xl font-black text-white tracking-tight">Hidden Radiology</h1>
-            <p className="text-[11px] tracking-[0.3em] text-cyan-400 mt-1">الأشعة الخفية</p>
+            <img src="/logo-ar.png" alt="Hidden Radiology" className="w-full max-w-[280px] mx-auto drop-shadow-[0_0_30px_rgba(0,229,255,0.5)]" />
             <div className="mt-4 inline-flex items-center gap-2 bg-[#00E5FF]/10 border border-[#00E5FF]/30 px-3 py-1 rounded-full text-xs text-[#00E5FF]">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> المصنع نشط - 36 كتاب
             </div>
@@ -50,10 +48,10 @@ export default function AdminDashboard(){
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-2xl shadow-[0_0_20px_rgba(0,229,255,0.4)]">🧠</div>
+            <img src="/hr-icon.png" alt="HR" className="w-14 h-14 rounded-full shadow-[0_0_20px_rgba(0,229,255,0.4)]" />
             <div>
               <h1 className="text-xl font-black">Hidden Radiology</h1>
-              <p className="text-xs text-slate-400">الأشعة الخفية • 36 كتاب • مصنع سحابي</p>
+              <p className="text-xs text-slate-400">الأشعة الخفية • 36 كتاب • مصنع سحابي • See Beyond The Image</p>
             </div>
           </div>
           <div className="flex gap-3">
@@ -81,6 +79,9 @@ export default function AdminDashboard(){
             ) : (
               <div className="text-center py-12 text-[#8892B0] text-sm"><div className="w-12 h-12 border-2 border-cyan-500/20 border-t-cyan-400 rounded-full animate-spin mx-auto mb-3"></div>{loading ? 'جاري فحص المصنع...' : 'اضغط تحديث لفحص المصنع السحابي'}</div>
             )}
+            <div className="mt-6 pt-6 border-t border-white/5 flex justify-center">
+              <img src="/logo-ar.png" alt="Hidden Radiology Logo" className="w-64 opacity-50 hover:opacity-100 transition duration-500" />
+            </div>
           </div>
           <div className="bg-[#112240]/40 backdrop-blur border border-[#8892B0]/10 rounded-2xl p-6 text-center hover:border-[#00E5FF]/20 transition flex flex-col">
             <h2 className="font-bold mb-6 flex items-center justify-center gap-2">📦 الطلبات الحية</h2>
@@ -90,6 +91,7 @@ export default function AdminDashboard(){
               <div className="text-[#8892B0] text-xs mt-2 max-w-[200px]">أول ما حد يشتري من Gumroad أو الموقع، الطلب هيظهر هنا فورا</div>
             </div>
             <div className="mt-4 text-[10px] bg-gradient-to-r from-[#00E5FF]/10 to-[#7000FF]/10 border border-[#00E5FF]/20 text-[#00E5FF] px-4 py-2 rounded-full inline-block">المصنع ينشر تلقائيا كل ساعة ✅</div>
+            <img src="/hr-icon.png" alt="HR" className="w-16 h-16 mx-auto mt-6 opacity-20" />
           </div>
         </div>
 
@@ -99,7 +101,10 @@ export default function AdminDashboard(){
           <div className="bg-[#112240]/40 border border-white/5 p-5 rounded-2xl"><div className="text-sm font-bold">📊 See Beyond The Image</div><p className="text-xs text-slate-400 mt-1">Hidden Radiology © 2026</p></div>
         </div>
 
-        <div className="mt-8 text-center text-[11px] text-[#8892B0]/40 tracking-widest">Hidden Radiology © 2026 — الأشعة الخفية — See Beyond The Image — Built by Nasser Mabrouk</div>
+        <div className="mt-8 text-center">
+          <img src="/logo-ar.png" alt="Hidden Radiology" className="w-48 mx-auto opacity-30 mb-3" />
+          <div className="text-[11px] text-[#8892B0]/40 tracking-widest">Hidden Radiology © 2026 — الأشعة الخفية — See Beyond The Image — Built by Nasser Mabrouk</div>
+        </div>
       </div>
     </div>
   );
