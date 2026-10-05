@@ -1,41 +1,73 @@
+﻿import { createClient } from "@supabase/supabase-js";
+import { createHash } from "crypto";
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 );
 
+function hashAccessToken(token: string) {
+  return createHash("sha256").update(token).digest("hex");
+}
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
-    const referenceId = searchParams.get("ref");
 
-    if (!referenceId) {
+    const referenceId = searchParams.get("ref");
+    const accessToken = searchParams.get("token");
+
+    if (!referenceId || !/^HR-\d{6}$/.test(referenceId)) {
       return NextResponse.json(
-        { error: "رقم الطلب مطلوب" },
+        { error: "طلب غير صالح" },
         { status: 400 }
       );
     }
 
-    const { data: order, error } = await supabase
-      .from("orders")
-      .select("*")
-      .eq("reference_id", referenceId)
-      .single();
-
-    if (error || !order) {
+    if (!accessToken || accessToken.length < 32) {
       return NextResponse.json(
-        { error: "الطلب غير موجود" },
-        { status: 404 }
+        { error: "غير مصرح" },
+        { status: 401 }
       );
     }
 
-    return NextResponse.json({ success: true, order });
+    const accessTokenHash = hashAccessToken(accessToken);
+
+    const { data: order, error } = await supabase
+      .from("orders")
+      .select(
+        "id, reference_id, status, total_amount, payment_method, language, delivery_available, fulfillment_status, created_at, confirmed_at"
+      )
+      .eq("reference_id", referenceId)
+      .eq("access_token_hash", accessTokenHash)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Order status error:", error);
+
+      return NextResponse.json(
+        { error: "تعذر قراءة حالة الطلب" },
+        { status: 500 }
+      );
+    }
+
+    if (!order) {
+      return NextResponse.json(
+        { error: "غير مصرح" },
+        { status: 401 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      order
+    });
   } catch (error) {
-    console.error("خطأ في API:", error);
+    console.error("Order status API error:", error);
+
     return NextResponse.json(
-      { error: "خطأ في الخادم" },
+      { error: "خطأ داخلي في الخادم" },
       { status: 500 }
     );
   }
